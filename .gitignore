@@ -1,17 +1,22 @@
-# Compiled
-*.elc
+# Директории IDEA
+.idea/
 
-# Packaging
-.cask/
-.eask/
-.eldev/
-.keg/
+# Директории сборки и временные файлы
+out/
+build/
+target/
+*.jar
+*.war
+*.iml
 
-# Built distribution
-dist/
+# Логи и временные файлы
+*.log
+.classpath
+.project
+.settings
+*.swp
 
-# Backup files
-*~
-
-# Undo-tree save-files
-*.~undo-tree
+# IDEA-специфичные файлы
+*.iml
+.iml
+.idea/
