@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/org.aston.final.project.iml" filepath="$PROJECT_DIR$/org.aston.final.project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SortedClass.iml" filepath="$PROJECT_DIR$/SortedClass.iml" />
     </modules>
   </component>
 </project>
