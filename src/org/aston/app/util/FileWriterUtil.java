@@ -9,8 +9,11 @@ package org.aston.app.util;
  * Class FileWriterUtil
  */
 
+import org.aston.app.model.Car;
+
 /**
  * Дополнительное задание 2: запись в файл в режиме добавления
  */
 public class FileWriterUtil {
+    public static void appendToFile(String filename, Car[] cars, String nameStrategySort) {}
 }

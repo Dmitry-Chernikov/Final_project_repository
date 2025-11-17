@@ -6,7 +6,9 @@ import org.aston.app.strategy.SortByPower;
 import org.aston.app.strategy.SortByYear;
 import org.aston.app.strategy.SortEvenPowerNaturalOddKeep;
 import org.aston.app.strategy.SortStrategy;
+import org.aston.app.util.*;
 
+import java.util.IllegalFormatException;
 import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -27,9 +29,84 @@ public class SortingApplication {
         this.scanner = new Scanner(System.in);
     }
     public void run() {
-        showMenu();
-        String choice = scanner.nextLine().trim(); // Обработка ввода пользователя
+        while (true) { // Бесконечный цикл для меню
+            showMenu();
+            String choice = scanner.nextLine().trim(); // Обработка ввода пользователя
+            if ("0".equals(choice)){
+                System.out.println("Выход из программы");
+                break;
+            }
+            if (!"1".equals(choice) && !"2".equals(choice) && !"3".equals(choice)) {
+                System.out.println("Неверный выбор. Попробуйте ещё раз.");
+                continue;
+            }
 
+            System.out.println("Введите количество автомобилей: ");
+            int count;
+            try{
+                count = Integer.parseInt(scanner.nextLine().trim());
+                if (count <= 0) {
+                    System.out.println("Количество должно быть больше 0.");
+                    continue;
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Введите корректное число.");
+                continue;
+            }
+
+            Car[] cars = null;
+
+            switch (choice) {
+                case "1":
+                    cars = DataGenerator.generateRandom(count);
+                    break;
+                case "2":
+                    try {
+                        System.out.println("Введите путь к файлу: ");
+                        String path = scanner.nextLine().trim();
+                        cars = DataGenerator.fromFiles(path);
+                    } catch (Exception | NumberFormatException | IllegalFormatException e) {
+                        System.out.println("Ошибка при чтении файла: " + e.getMessage());
+                        continue;
+                    }
+                    break;
+                case "3":
+                    cars = DataGenerator.inputManually(scanner, count);
+                    break;
+            }
+            System.out.println("Исходный данные: ");
+            printArray(cars);
+
+            SortStrategy sortStrategy = getSortStrategy();
+            if (sortStrategy != null) continue;
+
+            sortStrategy.sort(cars);
+
+            System.out.println("Отсортированные данные: ");
+            printArray(cars);
+
+            // Доп. задание 2: запись в файл
+            System.out.println("Сохранить результат в файл? (y/n): ");
+            if ("y".equalsIgnoreCase(scanner.nextLine().trim())){
+                System.out.println("Введите путь к файлу: ");
+                String filename = scanner.nextLine().trim();
+                FileWriterUtil.appendToFile(filename, cars, sortStrategy.getClass().getSimpleName());
+                System.out.println("Данные сохранены в файл: " + filename);
+            }
+
+            // Доп. задание 4: подсчёт вхождений заданного power
+            System.out.println("Запустить подсчёт вхождений заданного power? (y/n): ");
+            if ("y".equalsIgnoreCase(scanner.nextLine().trim())) {
+                System.out.println("Введите значение power для поиска: ");
+                try{
+                    int targetPower = Integer.parseInt(scanner.nextLine().trim());
+                    countOccurrencesParallel(cars, targetPower);
+                }catch (NumberFormatException e) {
+                    System.out.println("Введите корректное значение power.");
+                }
+            }
+        }
+        scanner.close();
     }
     private void showMenu() {
         StringBuilder menu = new StringBuilder();
@@ -69,6 +146,10 @@ public class SortingApplication {
             System.out.println(car);
         }
     }
+
+    /**
+     * Дополнительное задание 4: многопоточный подсчет вхождений
+     */
     private void countOccurrencesParallel(Car[] cars, int targetPower) {
         int processors = Runtime.getRuntime().availableProcessors(); // Получаем количество процессоров
         ExecutorService executorService = Executors.newFixedThreadPool(processors); // Создаем пул потоков
