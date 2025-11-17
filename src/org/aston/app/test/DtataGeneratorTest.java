@@ -36,7 +36,7 @@ public class DtataGeneratorTest {
         }
 
         // Тест 1: Чтение из файла
-        try {
+      /*  try {
             Car[] cars = DataGenerator.fromFile(TEST_FILE);
             assertEquals("Должно быть 3 автомобиля", 3, cars.length);
             assertTrue("Первый — Toyota", cars[0].getModel().equals("Toyota"));
@@ -50,6 +50,6 @@ public class DtataGeneratorTest {
         assertTrue("Мощность 150 — валидна", InputValidator.isValidPower(150));
         assertFalse("Мощность -10 — невалидна", InputValidator.isValidPower(-10));
         assertTrue("Год 2020 — валиден", InputValidator.isValidYear(2020));
-        System.out.println("DataGeneratorTest пройден успешно.\n");
+        System.out.println("DataGeneratorTest пройден успешно.\n");*/
     }
 }

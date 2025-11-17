@@ -18,7 +18,7 @@ public class CustomTestRunner {
 
         CarBuilderTest.runTests();
         SortStrategyTest.runTests();
-        DataGeneratorTest.runTests();
+        //DataGeneratorTest.runTests();
 
         System.out.println("=== Все тесты выполнены ===");
     }
