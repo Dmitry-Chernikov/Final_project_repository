@@ -1,5 +1,9 @@
 package org.aston.app.util;
 
+import org.aston.app.model.Car;
+
+import java.util.Scanner;
+
 /**
  * Create by dmitry on 16.11.2025
  *
@@ -9,4 +13,13 @@ package org.aston.app.util;
  * Class DataGenerator
  */
 public class DataGenerator {
+    public static Car[] generateRandom(int count) {
+        return null;
+    }
+    public static Car[] fromFiles(String path) {
+        return null;
+    }
+    public static Car[] inputManually(Scanner scanner , int count) {
+        return null;
+    }
 }
