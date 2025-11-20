@@ -121,11 +121,11 @@ class CarTest {
 
     @Test
     void testCarNaturalOrdering() {
-        Car c1 = new Car("ModelName1", 150, 2010);
-        Car c2 = new Car("ModelName2", 120, 2010);
-        Car c3 = new Car("ModelName2", 200, 2015);
-        Car c4 = new Car("ModelName2", 100, 2005);
-        Car c5 = new Car("ModelName2", 120, 2005);
+        Car c1 = new Car.Builder().setModel("ModelName1").setPower(150).setYear(2010).build();
+        Car c2 = new Car.Builder().setModel("ModelName2").setPower(120).setYear(2010).build();
+        Car c3 = new Car.Builder().setModel("ModelName3").setPower(200).setYear(2015).build();
+        Car c4 = new Car.Builder().setModel("ModelName2").setPower(100).setYear(2005).build();
+        Car c5 = new Car.Builder().setModel("ModelName5").setPower(120).setYear(2005).build();
 
         var list = new ArrayList<>(List.of(c1, c2, c3, c4, c5));
 
