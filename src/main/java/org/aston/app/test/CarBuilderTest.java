@@ -11,6 +11,8 @@ package org.aston.app.test;
 
 import org.aston.app.model.Car;
 
+import static org.aston.app.test.TestUtils.assertTrue;
+
 /**
  * Тесты для проверки корректности Builder-а класса Car
  */

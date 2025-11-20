@@ -65,7 +65,7 @@ public class SortingApplication {
                         System.out.println("Введите путь к файлу: ");
                         String path = scanner.nextLine().trim();
                         cars = DataGenerator.fromFiles(path);
-                    } catch (Exception | NumberFormatException | IllegalFormatException e) {
+                    } catch (Exception e) {
                         System.out.println("Ошибка при чтении файла: " + e.getMessage());
                         continue;
                     }
