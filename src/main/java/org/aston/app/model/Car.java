@@ -4,6 +4,8 @@ import org.aston.app.ecxeption.CarValidationException;
 
 import java.util.Objects;
 
+import static java.time.Year.now;
+
 public class Car implements Comparable<Car> {
     private final String model;
     private final int power;
@@ -62,7 +64,7 @@ public class Car implements Comparable<Car> {
             if (year == 0) {
                 throw new CarValidationException("Year is required");
             }
-            if (year < 1886 || year > java.time.Year.now().getValue() + 1) {
+            if (year < 1886 || year > now().getValue() + 1) {
                 throw new CarValidationException("Invalid year: " + year);
             }
             if (power <= 0) {
