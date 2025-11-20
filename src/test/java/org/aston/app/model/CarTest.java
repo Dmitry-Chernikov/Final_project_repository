@@ -1,6 +1,6 @@
 package org.aston.app.model;
 
-import org.aston.app.ecxeption.CarValidationException;
+import org.aston.app.exception.CarValidationException;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
