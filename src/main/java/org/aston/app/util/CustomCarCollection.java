@@ -10,20 +10,20 @@ import java.util.Collection;
  */
 public class CustomCarCollection extends AbstractList<Car> {
 
-    private Object[] values;
+    private Car[] values;
     private int size;
 
     private static final int DEFAULT_CAPACITY = 10;
 
     public CustomCarCollection() {
-        values = new Object[DEFAULT_CAPACITY];
+        values = new Car[DEFAULT_CAPACITY];
     }
 
     public CustomCarCollection(int initialCapacity) {
         if (initialCapacity <= 0) {
             throw new IllegalArgumentException("Illegal Capacity: " + initialCapacity);
         }
-        values = new Object[initialCapacity];
+        values = new Car[initialCapacity];
     }
 
     public boolean add(Car value) {
@@ -34,19 +34,19 @@ public class CustomCarCollection extends AbstractList<Car> {
 
     public Car get(int index) {
         checkIndex(index);
-        return (Car) values[index];
+        return values[index];
     }
 
     public Car remove(int index) {
         checkIndex(index);
-        Car removedValue = (Car) values[index];
+        Car removedValue = values[index];
         System.arraycopy(values, index + 1, values, index, values.length - index - 1);
         values[--size] = null;
         return removedValue;
     }
 
     public boolean addAll(Collection<? extends Car> other) {
-        Object[] incoming = other.toArray();
+        Car[] incoming = other.toArray(Car[]::new);
         resize(size + incoming.length);
         System.arraycopy(incoming, 0, values, size, incoming.length);
         size += incoming.length;
@@ -60,7 +60,7 @@ public class CustomCarCollection extends AbstractList<Car> {
     private void resize(int i) {
         if (i > values.length) {
             int newCapacity = Math.max(i, values.length * 2);
-            var newValues = new Object[newCapacity];
+            var newValues = new Car[newCapacity];
             System.arraycopy(values, 0, newValues, 0, size);
             values = newValues;
         }
