@@ -16,7 +16,7 @@ public class DataGenerator {
     public static Car[] generateRandom(int count) {
         return null;
     }
-    public static Car[] fromFiles(String path) {
+    public static Car[] fromFiles(String path) throws NumberFormatException {
         return null;
     }
     public static Car[] inputManually(Scanner scanner , int count) {
