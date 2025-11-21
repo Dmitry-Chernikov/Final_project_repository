@@ -1,6 +1,7 @@
 package org.aston.app.util;
 
 import org.aston.app.model.Car;
+import org.aston.app.random.*;
 
 import java.io.IOException;
 import java.nio.file.Files;
@@ -23,18 +24,32 @@ public class DataGenerator {
     public static final String[] MODELS = {"Toyota", "BMW", "Audi", "Ford", "Tesla", "Honda", "Mercedes"};
 
     public static Car[] generateRandom(int count) {
-        return IntStream.range(0, count)
-                .mapToObj(i -> {
-                    String model = MODELS[random.nextInt(MODELS.length)];
-                    int power = 80 + random.nextInt(500);
-                    int year = 1990 + random.nextInt(35);
+        Car[] randomCar = new Car[count];  // создание массива машин
+        GenerationCar generationCar = null; // переменная для генерации случайного типа манины
+        Random random = new Random();
+        int min = 0;// min и max для выбора типа машины
+        int max = 4;
 
-                    return new Car.Builder()
-                            .setModel(model)
-                            .setPower(power)
-                            .setYear(year)
-                            .build();
-                }).toArray(Car[]::new);
+        for (int i = 0; i < count; i++) { // заполнение массива
+            int randCount = 0; //random.nextInt(max - min) + min;
+            switch (randCount) {
+                case 0:
+                    generationCar = new GenerationCar(new GetLowpowerCar());
+                    break;
+                case 1:
+                    generationCar = new GenerationCar(new GetMidCar());
+                    break;
+                case 2:
+                    generationCar = new GenerationCar(new GetPowerfulCar());
+                    break;
+                case 3:
+                    generationCar = new GenerationCar(new GetSportCar());
+                    break;
+            }
+
+            randomCar[i] = generationCar.generationRandomCar();
+        }
+        return randomCar;
     }
     public static Car[] fromFiles(String path) throws IOException {
         return Files.lines(Paths.get(path))
