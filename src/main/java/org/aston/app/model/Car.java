@@ -1,7 +1,10 @@
 package org.aston.app.model;
 
 import org.aston.app.exception.CarValidationException;
+import org.aston.app.validator.CarValidator;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Objects;
 
 
@@ -10,9 +13,6 @@ import java.util.Objects;
  * Реализует интерфейс Comparable для возможности сортировки автомобилей.
  */
 public class Car implements Comparable<Car> {
-    private static final int MIN_YEAR = 1885;
-    private static final int MAX_YEAR = java.time.Year.now().getValue() + 1;
-
     /**
      * Модель автомобиля. Не может быть null.
      */
@@ -99,6 +99,8 @@ public class Car implements Comparable<Car> {
          */
         private int year;
 
+        private List<CarValidator> validators = new ArrayList<>();
+
         /**
          * Устанавливает мощность двигателя.
          *
@@ -139,8 +141,9 @@ public class Car implements Comparable<Car> {
          * @throws CarValidationException если данные не проходят валидацию
          */
         public Car build() {
-            validate();
-            return new Car(model, power, year);
+            var car = new Car(model, power, year);
+            validate(car);
+            return car;
         }
 
         /**
@@ -150,19 +153,15 @@ public class Car implements Comparable<Car> {
          *
          * @throws CarValidationException если какое-либо поле не проходит валидацию
          */
-        private void validate() {
-            if ((model == null) || model.trim().isEmpty()) {
-                throw new CarValidationException("Model is required");
+        private void validate(Car car) {
+            if (!validators.isEmpty()) {
+                validators.forEach(validator -> validator.validate(car));
             }
-            if (power <= 0) {
-                throw new CarValidationException("Horsepower must be positive - Horsepower is required" );
-            }
-            if (year == 0) {
-                throw new CarValidationException("Year is required");
-            }
-            if (year < MIN_YEAR || year > MAX_YEAR) {
-                throw new CarValidationException("Invalid year: " + year);
-            }
+        }
+
+        public Builder setValidator(List<CarValidator> validators) {
+            this.validators = validators;
+            return this;
         }
     }
 
