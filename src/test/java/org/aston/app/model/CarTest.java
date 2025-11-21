@@ -1,6 +1,9 @@
 package org.aston.app.model;
 
 import org.aston.app.exception.CarValidationException;
+import org.aston.app.validator.ModelValidator;
+import org.aston.app.validator.PowerValidator;
+import org.aston.app.validator.YearValidator;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -16,6 +19,7 @@ class CarTest {
             .setPower(150)
             .setModel("ModelName")
             .setYear(2020)
+            .setValidator(List.of(new ModelValidator(), new PowerValidator(), new YearValidator()))
             .build();
 
         assertEquals(150, car.getPower());
@@ -29,12 +33,14 @@ class CarTest {
             .setPower(100)
             .setModel("ModelName")
             .setYear(2018)
+            .setValidator(List.of(new ModelValidator(), new PowerValidator(), new YearValidator()))
             .build();
 
         Car c2 = new Car.Builder()
             .setPower(100)
             .setModel("ModelName")
             .setYear(2018)
+            .setValidator(List.of(new ModelValidator(), new PowerValidator(), new YearValidator()))
             .build();
 
         assertEquals(c1, c2);
@@ -47,6 +53,7 @@ class CarTest {
             .setPower(200)
             .setModel("ModelName")
             .setYear(2021)
+            .setValidator(List.of(new ModelValidator(), new PowerValidator(), new YearValidator()))
             .build();
 
         String s = car.toString();
@@ -62,6 +69,7 @@ class CarTest {
             new Car.Builder()
                 .setModel("ModelName")
                 .setYear(2020)
+                .setValidator(List.of(new ModelValidator(), new PowerValidator(), new YearValidator()))
                 .build()
         );
     }
@@ -72,6 +80,7 @@ class CarTest {
             new Car.Builder()
                 .setPower(120)
                 .setYear(2020)
+                .setValidator(List.of(new ModelValidator(), new PowerValidator(), new YearValidator()))
                 .build()
         );
     }
@@ -82,6 +91,7 @@ class CarTest {
             new Car.Builder()
                 .setPower(120)
                 .setModel("ModelName")
+                .setValidator(List.of(new ModelValidator(), new PowerValidator(), new YearValidator()))
                 .build()
         );
     }
@@ -93,6 +103,7 @@ class CarTest {
                 .setPower(120)
                 .setModel("ModelName")
                 .setYear(1700)
+                .setValidator(List.of(new ModelValidator(), new PowerValidator(), new YearValidator()))
                 .build()
         );
     }
@@ -104,6 +115,7 @@ class CarTest {
                 .setPower(0)
                 .setModel("ModelName")
                 .setYear(2020)
+                .setValidator(List.of(new ModelValidator(), new PowerValidator(), new YearValidator()))
                 .build()
         );
     }
@@ -115,6 +127,7 @@ class CarTest {
                 .setPower(120)
                 .setModel(" ")
                 .setYear(2020)
+                .setValidator(List.of(new ModelValidator(), new PowerValidator(), new YearValidator()))
                 .build()
         );
     }
