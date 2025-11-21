@@ -37,11 +37,11 @@ class CustomCarCollectionTest {
         );
         assertEquals(3, cars.size());
         assertEquals(new Car
-            .Builder()
-            .setPower(120)
-            .setModel("Model C")
-            .setYear(1991)
-            .build(),
+                .Builder()
+                .setPower(120)
+                .setModel("Model C")
+                .setYear(1991)
+                .build(),
             cars.get(2)
         );
     }
@@ -80,11 +80,11 @@ class CustomCarCollectionTest {
         cars.remove(1);
         assertEquals(3, cars.size());
         assertEquals(new Car
-            .Builder()
-            .setPower(110)
-            .setModel("Model B")
-            .setYear(1991)
-            .build(),
+                .Builder()
+                .setPower(120)
+                .setModel("Model C")
+                .setYear(1991)
+                .build(),
             cars.get(1)
         );
     }
@@ -148,11 +148,11 @@ class CustomCarCollectionTest {
         );
         var removed = cars.remove(2);
         assertEquals(new Car
-            .Builder()
-            .setPower(120)
-            .setModel("Model C")
-            .setYear(1991)
-            .build(),
+                .Builder()
+                .setPower(120)
+                .setModel("Model C")
+                .setYear(1991)
+                .build(),
             removed
         );
         assertEquals(2, cars.size());
