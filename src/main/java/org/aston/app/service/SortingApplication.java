@@ -7,6 +7,7 @@ import org.aston.app.strategy.SortByYear;
 import org.aston.app.strategy.SortEvenPowerNaturalOddKeep;
 import org.aston.app.strategy.SortStrategy;
 import org.aston.app.util.*;
+import org.w3c.dom.css.Counter;
 
 import java.util.IllegalFormatException;
 import java.util.Scanner;
@@ -28,6 +29,7 @@ public class SortingApplication {
     public SortingApplication() {
         this.scanner = new Scanner(System.in);
     }
+
     public void run() {
         while (true) { // Бесконечный цикл для меню
             showMenu();
@@ -66,7 +68,7 @@ public class SortingApplication {
                         ///Users/maksimkustkov/IdeaProjects/Final_project_repository/src/main/java/org/aston/app/util/cars_input_list.txt
                         String path = scanner.nextLine().trim();
                         cars = DataGenerator.fromFiles(path);
-                    } catch (Exception e) {
+                    } catch (Exception  e) { /*| NumberFormatException | IllegalFormatException*/
                         System.out.println("Ошибка при чтении файла: " + e.getMessage());
                         continue;
                     }
