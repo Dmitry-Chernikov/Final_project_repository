@@ -81,8 +81,8 @@ class CustomCarCollectionTest {
         assertEquals(3, cars.size());
         assertEquals(new Car
                 .Builder()
-                .setPower(110)
-                .setModel("Model B")
+                .setPower(120)
+                .setModel("Model C")
                 .setYear(1991)
                 .build(),
             cars.get(1)

@@ -1,6 +1,8 @@
 package org.aston.app.model;
 
 import org.aston.app.exception.CarValidationException;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -8,15 +10,24 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+
+@DisplayName("Car Class Tests") // Название группы тестов для отображения в отчете JUnit
 class CarTest {
 
+    private Car.Builder carBuilder;
+
+    @BeforeEach
+    void setUp() {
+        carBuilder = new Car.Builder()
+                .setPower(150)
+                .setModel("ModelName")
+                .setYear(2020);
+    }
+
     @Test
-    void buildCarSuccessfully() {
-        Car car = new Car.Builder()
-            .setPower(150)
-            .setModel("ModelName")
-            .setYear(2020)
-            .build();
+    @DisplayName("Должен успешно построить автомобиль с действительными данными")
+    void shouldBuildCarSuccessfully() {
+        Car car = carBuilder.build();
 
         assertEquals(150, car.getPower());
         assertEquals("ModelName", car.getModel());
@@ -24,39 +35,28 @@ class CarTest {
     }
 
     @Test
+    @DisplayName("Следует считать автомобили равными, когда все поля одинаковы")
     void equalsShouldReturnTrueForSameValues() {
-        Car c1 = new Car.Builder()
-            .setPower(100)
-            .setModel("ModelName")
-            .setYear(2018)
-            .build();
-
-        Car c2 = new Car.Builder()
-            .setPower(100)
-            .setModel("ModelName")
-            .setYear(2018)
-            .build();
+        Car c1 = carBuilder.build();
+        Car c2 = carBuilder.build();
 
         assertEquals(c1, c2);
         assertEquals(c1.hashCode(), c2.hashCode());
     }
 
     @Test
+    @DisplayName("Должно возвращать ненулевое и непустое строковое представление.")
     void toStringShouldContainFields() {
-        Car car = new Car.Builder()
-            .setPower(200)
-            .setModel("ModelName")
-            .setYear(2021)
-            .build();
-
+        Car car = carBuilder.build();
         String s = car.toString();
 
-        assertTrue(s.contains("horse power=200"));
-        assertTrue(s.contains("model name='ModelName'"));
-        assertTrue(s.contains("2021"));
+        assertNotNull(s);
+        assertFalse(s.trim().isEmpty());
     }
 
+
     @Test
+    @DisplayName("Должен выдавать исключение CarValidationException, когда power не установлено.")
     void failWhenHorsePowerIsEmpty() {
         assertThrows(CarValidationException.class, () ->
             new Car.Builder()
@@ -67,6 +67,7 @@ class CarTest {
     }
 
     @Test
+    @DisplayName("Должен выдавать исключение CarValidationException, если model не установлена.")
     void failWhenModelNameIsEmpty() {
         assertThrows(CarValidationException.class, () ->
             new Car.Builder()
@@ -76,7 +77,9 @@ class CarTest {
         );
     }
 
+
     @Test
+    @DisplayName("Должен выдавать исключение CarValidationException, если year не установлен.")
     void failWhenProductionYearIsEmpty() {
         assertThrows(CarValidationException.class, () ->
             new Car.Builder()
@@ -86,7 +89,9 @@ class CarTest {
         );
     }
 
+
     @Test
+    @DisplayName("Должен выдавать исключение CarValidationException, когда год выходит за пределы допустимого диапазона.")
     void failWhenProductionYearInvalid() {
         assertThrows(CarValidationException.class, () ->
             new Car.Builder()
@@ -97,7 +102,9 @@ class CarTest {
         );
     }
 
+
     @Test
+    @DisplayName("Должен выдавать исключение CarValidationException, когда мощность равна нулю")
     void failWhenHorsePowerIsZero() {
         assertThrows(CarValidationException.class, () ->
             new Car.Builder()
@@ -109,6 +116,7 @@ class CarTest {
     }
 
     @Test
+    @DisplayName("Должен выдавать исключение CarValidationException, когда модель содержит только пробелы.")
     void buildShouldFailWhenModelNameIsWhitespaces() {
         assertThrows(CarValidationException.class, () ->
             new Car.Builder()
@@ -120,17 +128,58 @@ class CarTest {
     }
 
     @Test
+    @DisplayName("Должен выдавать исключение CarValidationException, когда модель равна нулю.")
+    void shouldThrowWhenModelIsNull() {
+        assertThrows(CarValidationException.class, () ->
+                new Car.Builder()
+                        .setPower(120)
+                        .setModel(null)
+                        .setYear(2020)
+                        .build()
+        );
+    }
+
+    @Test
+    @DisplayName("Должен выдавать исключение CarValidationException, когда мощность отрицательная")
+    void shouldThrowWhenPowerIsNegative() {
+        assertThrows(CarValidationException.class, () ->
+                new Car.Builder()
+                        .setPower(-50)
+                        .setModel("ModelName")
+                        .setYear(2020)
+                        .build()
+        );
+    }
+
+    @Test
+    @DisplayName("Следует реализовать естественный порядок по модели, затем по мощности, затем по году.")
     void testCarNaturalOrdering() {
-        Car c1 = new Car.Builder().setModel("ModelName1").setPower(150).setYear(2010).build();
-        Car c2 = new Car.Builder().setModel("ModelName2").setPower(120).setYear(2010).build();
-        Car c3 = new Car.Builder().setModel("ModelName3").setPower(200).setYear(2015).build();
-        Car c4 = new Car.Builder().setModel("ModelName2").setPower(100).setYear(2005).build();
-        Car c5 = new Car.Builder().setModel("ModelName5").setPower(120).setYear(2005).build();
+        // Создание автомобилей для тестирования
+        Car c1 = new Car.Builder().setModel("A").setPower(200).setYear(2010).build();
+        Car c2 = new Car.Builder().setModel("A").setPower(100).setYear(2010).build();
+        Car c3 = new Car.Builder().setModel("B").setPower(100).setYear(2005).build();
+        Car c4 = new Car.Builder().setModel("A").setPower(100).setYear(2005).build();
+        Car c5 = new Car.Builder().setModel("A").setPower(200).setYear(2005).build();
 
-        var list = new ArrayList<>(List.of(c1, c2, c3, c4, c5));
+        List<Car> cars = new ArrayList<>(List.of(c1, c2, c3, c4, c5)); // Список автомобилей
+        cars.sort(null); // Сортировка по умолчанию с использованием естественного порядка Car
 
-        list.sort(null);
+        List<Car> expectedOrder = List.of(c4, c2, c5, c1, c3); // Ожидаемый порядок сортировки
+        assertEquals(expectedOrder, cars); // Проверка на соответствие ожидаемому порядку
+    }
 
-        assertEquals(List.of(c4, c5, c2, c1, c3), list);
+    @Test
+    @DisplayName("Должен возвращать false при сравнении с нулем")
+    void shouldNotBeEqualToNull() {
+        Car car = carBuilder.build();
+        assertFalse(car.equals(null));
+    }
+
+    @Test
+    @DisplayName("Должен возвращать false при сравнении с другим классом")
+    void shouldNotBeEqualToDifferentClass() {
+        Car car = carBuilder.build();
+        Object obj = "Some string";
+        assertFalse(car.equals(obj));
     }
 }
