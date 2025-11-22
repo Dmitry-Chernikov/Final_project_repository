@@ -75,4 +75,9 @@ public class CustomCarCollection extends AbstractList<Car> {
             throw new IndexOutOfBoundsException("Index: " + index + ", size: " + size);
         }
     }
+
+    @Override
+    public Car[] toArray() {
+        return values;
+    }
 }

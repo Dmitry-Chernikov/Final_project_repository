@@ -20,7 +20,7 @@ import java.util.stream.IntStream;
 public class DataGenerator {
 
     private static final Random random = new Random();
-    private static final String[] MODELS = {"Toyota", "BMW", "Audi", "Ford", "Tesla", "Honda", "Mercedes"};
+    public static final String[] MODELS = {"Toyota", "BMW", "Audi", "Ford", "Tesla", "Honda", "Mercedes"};
 
     public static Car[] generateRandom(int count) {
         return IntStream.range(0, count)
@@ -56,6 +56,54 @@ public class DataGenerator {
                 .toArray(Car[]::new);
     }
     public static Car[] inputManually(Scanner scanner , int count) {
-        return null;
+        CustomCarCollection collection = new CustomCarCollection(count);
+        for (int i = 0; i < count; i++) {
+            System.out.println("Введите данные для автомобиля " + (i + 1) + ":");
+
+            String model;
+            do {
+                System.out.print("Модель: ");
+                model = scanner.nextLine().trim();
+                if (!InputValidator.isValidModel(model)) {
+                    System.out.println("Некорректная модель. Повторите ввод.");
+                }
+            } while (!InputValidator.isValidModel(model));
+
+            int power = 0;
+            do {
+                System.out.print("Мощность (л.с.): ");
+                try {
+                    power = Integer.parseInt(scanner.nextLine().trim());
+                    if (!InputValidator.isValidPower(power)) {
+                        System.out.println("Мощность должна быть от 1 до 2000.");
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("Введите корректное число.");
+                    power = 0;
+                }
+            } while (!InputValidator.isValidPower(power));
+
+            int year = 0;
+            do {
+                System.out.print("Год производства: ");
+                try {
+                    year = Integer.parseInt(scanner.nextLine().trim());
+                    if (!InputValidator.isValidYear(year)) {
+                        System.out.println("Год должен быть от 1885 до 2025.");
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("Введите корректное число.");
+                    year = 0;
+                }
+            } while (!InputValidator.isValidYear(year));
+
+            Car car = new Car.Builder()
+                    .setModel(model)
+                    .setPower(power)
+                    .setYear(year)
+                    .build();
+            collection.add(car);
+        }
+        return collection.toArray();
     }
 }

@@ -72,6 +72,7 @@ public class SortingApplication {
                     }
                     break;
                 case "3":
+                    //"Toyota", "BMW", "Audi", "Ford", "Tesla", "Honda", "Mercedes"
                     cars = DataGenerator.inputManually(scanner, count);
                     break;
             }
