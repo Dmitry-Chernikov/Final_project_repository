@@ -63,6 +63,7 @@ public class SortingApplication {
                 case "2":
                     try {
                         System.out.println("Введите путь к файлу: ");
+                        ///Users/maksimkustkov/IdeaProjects/Final_project_repository/src/main/java/org/aston/app/util/cars_input_list.txt
                         String path = scanner.nextLine().trim();
                         cars = DataGenerator.fromFiles(path);
                     } catch (Exception e) {
