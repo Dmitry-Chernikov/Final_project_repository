@@ -1,15 +1,15 @@
 package org.aston.app.service;
 
 import org.aston.app.model.Car;
+import org.aston.app.strategy.SortByAllFieldsComparator;
+import org.aston.app.strategy.SortByAllFilesComparable;
 import org.aston.app.strategy.SortByModel;
 import org.aston.app.strategy.SortByPower;
 import org.aston.app.strategy.SortByYear;
 import org.aston.app.strategy.SortEvenPowerNaturalOddKeep;
 import org.aston.app.strategy.SortStrategy;
 import org.aston.app.util.*;
-import org.w3c.dom.css.Counter;
 
-import java.util.IllegalFormatException;
 import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -43,7 +43,7 @@ public class SortingApplication {
                 continue;
             }
 
-            System.out.println("Введите количество автомобилей: ");
+            System.out.print("Введите количество автомобилей: ");
             int count;
             try{
                 count = Integer.parseInt(scanner.nextLine().trim());
@@ -82,7 +82,10 @@ public class SortingApplication {
             printArray(cars);
 
             SortStrategy sortStrategy = getSortStrategy();
-            if (sortStrategy != null) continue;
+
+            if (sortStrategy == null) {
+                continue;
+            }
 
             sortStrategy.sort(cars);
 
@@ -120,31 +123,36 @@ public class SortingApplication {
                     .append("3. Вывести вручную \n")
                     .append("0. Выход \n")
                     .append("Выберете способ заполнения: ");
-        System.out.println(menu);
+        System.out.print(menu);
     }
     private SortStrategy getSortStrategy() {
         StringBuilder menu = new StringBuilder();
         menu.append("\n Выберите поле по которому будет сортировка: \n")
-                    .append("1. По модели \n")
-                    .append("2. По мощности \n")
-                    .append("3. По году \n")
-                    .append("4. По чётным/нечётным (по полю мощность, чётные - сортировать) \n")
+                    .append("1. По всем полям Comparator \n")
+                    .append("2. По всем полям Comparable \n")
+                    .append("3. По модели \n")
+                    .append("4. По мощности \n")
+                    .append("5. По году \n")
+                    .append("6. По чётным/нечётным (по полю мощность, чётные - сортировать) \n")
                     .append("Ваш выбор: ");
-        System.out.println(menu);
+        System.out.print(menu);
 
         String choice = scanner.nextLine().trim();
 
         return switch (choice) {
-            case "1" -> new SortByModel();
-            case "2" -> new SortByPower();
-            case "3" -> new SortByYear();
-            case "4" -> new SortEvenPowerNaturalOddKeep();
+            case "1" -> new SortByAllFieldsComparator();
+            case "2" -> new SortByAllFilesComparable();
+            case "3" -> new SortByModel();
+            case "4" -> new SortByPower();
+            case "5" -> new SortByYear();
+            case "6" -> new SortEvenPowerNaturalOddKeep();
             default -> {
                 System.out.println("Неверный выбор");
                 yield null; // Возвращаем null, если выбор неверный yield это ключевое слово для возврата значения из switch Java 14
             }
         };
     }
+
     private void printArray(Car[] cars) {
         for (Car car : cars) {
             System.out.println(car);

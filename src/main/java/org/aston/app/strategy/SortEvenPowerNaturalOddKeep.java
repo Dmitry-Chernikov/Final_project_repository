@@ -15,29 +15,21 @@ import org.aston.app.model.Car;
  * Дополнительное задание 1: сортировка по полю power.
  * Четные значения сортируются по возрастанию, нечетные остаются на своих местах.
  */
-public class SortEvenPowerNaturalOddKeep implements SortStrategy {
+public class SortEvenPowerNaturalOddKeep implements SortStrategy<Car> {
     @Override
     public void sort(Car[] cars) {
         // Извлекаем четные значения мощности
-        int[] evenPowers = new int[cars.length];
+        Car[] carEvenPowers = new Car[cars.length];
         int evenCount = 0;
 
         for (Car car : cars) {
             if (car.getPower() % 2 == 0) {
-                evenPowers[evenCount++] = car.getPower();
+                carEvenPowers[evenCount++] = car;
             }
         }
 
         // Сортируем четные значения
-        for (int i = 0; i < evenCount - 1; i++) {
-            for (int j = 0; j < evenCount - 1 - i; j++) {
-                if (evenPowers[j] > evenPowers[j + 1]) {
-                    int temp = evenPowers[j];
-                    evenPowers[j] = evenPowers[j + 1];
-                    evenPowers[j + 1] = temp;
-                }
-            }
-        }
+        quickSort(carEvenPowers, 0, evenCount - 1);
 
         // Возвращаем отсортированные четные значения обратно в массив
         int evenIndex = 0;
@@ -45,17 +37,27 @@ public class SortEvenPowerNaturalOddKeep implements SortStrategy {
             if (cars[i].getPower() % 2 == 0) {
                 int originalPower = cars[i].getPower();
                 // Находим отсортированное значение
-                int newPower = evenPowers[evenIndex++];
-                if (newPower != originalPower) {
-                    // Пересоздаем объект через Builder (неизменяемость)
-                    Car newCar = new Car.Builder()
-                            .setModel(cars[i].getModel())
-                            .setPower(newPower)
-                            .setYear(cars[i].getYear())
-                            .build();
-                    cars[i] = newCar;
+                Car carNewPower = carEvenPowers[evenIndex++];
+                if (carNewPower.getPower() != originalPower) {
+                    // Пересоздаем объект
+                    cars[i] = carNewPower;
                 }
             }
         }
+    }
+
+    @Override
+    public int partition(Car[] cars, int low, int high) {
+        Integer pivot = cars[high].getPower(); // Опорный элемент — последний
+        int i = low - 1; // Индекс меньшего элемента
+
+        for (int j = low; j < high; j++) {
+            if ( ((Integer)cars[j].getPower()).compareTo(pivot) <= 0) { // Если текущий элемент меньше или равен опорному
+                i++;
+                swap(cars, i, j); // Меняем местами элементы
+            }
+        }
+        swap(cars, i + 1, high); // Меняем местами опорный элемент с элементом на позиции i+1
+        return i + 1;
     }
 }

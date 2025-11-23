@@ -3,14 +3,14 @@ package org.aston.app.strategy;
 import org.aston.app.model.Car;
 
 /**
- * Create by dmitry on 16.11.2025
+ * Create by dmitry on 23.11.2025
  *
  * @author : Dmitry Chernikov
- * @date : 16.11.2025
+ * @date : 23.11.2025
  * @project : org.aston.final.project
- * Class SortByModel
+ * Class SortByAllFilesComparable
  */
-public class SortByModel implements SortStrategy<Car> {
+public class SortByAllFilesComparable implements SortStrategy<Car> {
     @Override
     public void sort(Car[] cars) {
         quickSort(cars, 0, cars.length - 1);
@@ -18,11 +18,11 @@ public class SortByModel implements SortStrategy<Car> {
 
     @Override
     public int partition(Car[] cars, int low, int high) {
-        String pivot = cars[high].getModel(); // Опорный элемент — последний
+        Car pivot = cars[high]; // Опорный элемент — последний
         int i = low - 1; // Индекс меньшего элемента
 
         for (int j = low; j < high; j++) {
-            if (cars[j].getModel().compareTo(pivot) <= 0) { // Если текущий элемент меньше или равен опорному
+            if (cars[j].compareTo(pivot)  <= 0) { // Если текущий элемент меньше или равен опорному
                 i++;
                 swap(cars, i, j); // Меняем местами элементы
             }
