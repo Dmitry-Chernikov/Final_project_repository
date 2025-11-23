@@ -10,6 +10,7 @@ import org.aston.app.util.*;
 import org.w3c.dom.css.Counter;
 
 import java.util.IllegalFormatException;
+import java.util.Objects;
 import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -64,8 +65,8 @@ public class SortingApplication {
                     break;
                 case "2":
                     try {
-                        System.out.println("Введите путь к файлу, например: /Users/maksimkustkov/IdeaProjects/Final_project_repository/src/main/java/org/aston/app/util/cars_input_list.txt: ");
-                        String path = scanner.nextLine().trim();
+                        System.out.println("Введите путь к файлу, например: /cars_input_list.txt: ");
+                        String path = Objects.requireNonNull(getClass().getResource(scanner.nextLine().trim())).toURI().getPath();
                         cars = DataGenerator.fromFiles(path);
                     } catch (Exception  e) { /*| NumberFormatException | IllegalFormatException*/
                         System.out.println("Ошибка при чтении файла: " + e.getMessage());
