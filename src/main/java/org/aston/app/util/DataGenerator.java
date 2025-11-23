@@ -62,7 +62,7 @@ public class DataGenerator {
 
             String model;
             do {
-                System.out.print("Модель: ");
+                System.out.print("Модель из списка (\"Toyota\", \"BMW\", \"Audi\", \"Ford\", \"Tesla\", \"Honda\", \"Mercedes\"): ");
                 model = scanner.nextLine().trim();
                 if (!InputValidator.isValidModel(model)) {
                     System.out.println("Некорректная модель. Повторите ввод.");

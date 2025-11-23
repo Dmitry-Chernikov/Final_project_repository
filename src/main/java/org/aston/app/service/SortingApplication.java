@@ -64,8 +64,7 @@ public class SortingApplication {
                     break;
                 case "2":
                     try {
-                        System.out.println("Введите путь к файлу: ");
-                        ///Users/maksimkustkov/IdeaProjects/Final_project_repository/src/main/java/org/aston/app/util/cars_input_list.txt
+                        System.out.println("Введите путь к файлу, например: /Users/maksimkustkov/IdeaProjects/Final_project_repository/src/main/java/org/aston/app/util/cars_input_list.txt: ");
                         String path = scanner.nextLine().trim();
                         cars = DataGenerator.fromFiles(path);
                     } catch (Exception  e) { /*| NumberFormatException | IllegalFormatException*/
@@ -74,7 +73,6 @@ public class SortingApplication {
                     }
                     break;
                 case "3":
-                    //"Toyota", "BMW", "Audi", "Ford", "Tesla", "Honda", "Mercedes"
                     cars = DataGenerator.inputManually(scanner, count);
                     break;
             }
