@@ -5,7 +5,7 @@ import java.util.Arrays;
 public class InputValidator {
 
     public static boolean isValidModel(String model) {
-        return Arrays.asList(DataGenerator.MODELS).contains(model);
+        return Arrays.stream(DataGenerator.MODELS).anyMatch(model::equalsIgnoreCase);
     }
 
     public static boolean isValidPower(int power) {
