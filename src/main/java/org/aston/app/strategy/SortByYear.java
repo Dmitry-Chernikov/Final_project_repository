@@ -10,17 +10,24 @@ import org.aston.app.model.Car;
  * @project : org.aston.final.project
  * Class SortByYear
  */
-public class SortByYear implements SortStrategy {
+public class SortByYear implements SortStrategy<Car> {
     @Override
     public void sort(Car[] cars) {
-        for (int i = 0; i < cars.length - 1; i++) {
-            for (int j = 0; j < cars.length - 1 - i; j++) {
-                if (cars[j].getYear() > cars[j + 1].getYear()) {
-                    Car temp = cars[j];
-                    cars[j] = cars[j + 1];
-                    cars[j + 1] = temp;
-                }
+        quickSort(cars, 0, cars.length - 1);
+    }
+
+    @Override
+    public int partition(Car[] cars, int low, int high) {
+        Integer pivot = cars[high].getYear(); // Опорный элемент — последний
+        int i = low - 1; // Индекс меньшего элемента
+
+        for (int j = low; j < high; j++) {
+            if ( ((Integer)cars[j].getPower()).compareTo(pivot) <= 0) { // Если текущий элемент меньше или равен опорному
+                i++;
+                swap(cars, i, j); // Меняем местами элементы
             }
         }
+        swap(cars, i + 1, high); // Меняем местами опорный элемент с элементом на позиции i+1
+        return i + 1;
     }
 }
