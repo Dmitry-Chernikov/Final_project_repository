@@ -31,7 +31,7 @@ public class DataGenerator {
         int max = 4;
 
         for (int i = 0; i < count; i++) { // заполнение массива
-            int randCount = 0; //random.nextInt(max - min) + min;
+            int randCount = random.nextInt(max - min) + min;
             switch (randCount) {
                 case 0:
                     generationCar = new GenerationCar(new GetLowpowerCar());

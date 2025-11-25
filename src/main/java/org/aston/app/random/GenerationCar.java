@@ -9,7 +9,7 @@ public class GenerationCar {
         this.random = random;
     }
 
-    public Car generationRandomCar(){
+    public Car generationRandomCar() {
         return random.randomCar();
     }
 }
