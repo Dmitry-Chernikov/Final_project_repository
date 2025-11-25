@@ -28,4 +28,12 @@ public class TestUtils {
     public static void assertEquals(String message, int expected, int actual) {
         assertTrue(message + " (expected: " + expected + ", actual: " + actual + ")", expected == actual);
     }
+
+    public static void assertFalse(String message, boolean condition) {
+        if (condition) {
+            System.err.println("FAIL: " + message);
+        } else {
+            System.out.println("OK: " + message);
+        }
+    }
 }

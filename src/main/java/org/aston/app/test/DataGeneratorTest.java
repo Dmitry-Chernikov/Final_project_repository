@@ -11,16 +11,19 @@ package org.aston.app.test;
 
 import org.aston.app.model.Car;
 import org.aston.app.util.DataGenerator;
+import org.aston.app.util.InputValidator;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 
+import static org.aston.app.test.TestUtils.*;
+
 /**
  * Тесты для DataGenerator
  */
-public class DtataGeneratorTest {
+public class DataGeneratorTest {
     private static final String TEST_FILE = "test_data.txt";
 
     public static void runTests() {
@@ -36,8 +39,8 @@ public class DtataGeneratorTest {
         }
 
         // Тест 1: Чтение из файла
-      /*  try {
-            Car[] cars = DataGenerator.fromFile(TEST_FILE);
+       try {
+            Car[] cars = DataGenerator.fromFiles(TEST_FILE);
             assertEquals("Должно быть 3 автомобиля", 3, cars.length);
             assertTrue("Первый — Toyota", cars[0].getModel().equals("Toyota"));
             assertTrue("Последний — BMW", cars[2].getModel().equals("BMW"));
@@ -50,6 +53,6 @@ public class DtataGeneratorTest {
         assertTrue("Мощность 150 — валидна", InputValidator.isValidPower(150));
         assertFalse("Мощность -10 — невалидна", InputValidator.isValidPower(-10));
         assertTrue("Год 2020 — валиден", InputValidator.isValidYear(2020));
-        System.out.println("DataGeneratorTest пройден успешно.\n");*/
+        System.out.println("DataGeneratorTest пройден успешно.\n");
     }
 }
