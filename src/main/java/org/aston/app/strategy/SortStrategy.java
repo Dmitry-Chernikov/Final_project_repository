@@ -10,19 +10,61 @@ import org.aston.app.model.Car;
  * @project : org.aston.final.project
  * Interface SortStrategy
  */
-public interface SortStrategy <T> {
+
+/**
+ * Интерфейс SortStrategy определяет контракт для алгоритмов сортировки объектов.
+ * <p>
+ * Предоставляет обобщённый метод сортировки и стандартные вспомогательные методы,
+ * такие как быстрая сортировка, разделение массива и обмен элементами.
+ *
+ * @param <T> тип сортируемых объектов
+ */
+public interface SortStrategy<T> {
+
+    /**
+     * Выполняет сортировку переданного массива объектов.
+     *
+     * @param cars массив объектов, который необходимо отсортировать
+     */
     void sort(T[] cars);
 
+    /**
+     * Рекурсивная реализация алгоритма быстрой сортировки.
+     * <p>
+     * Разделяет массив на подмассивы относительно опорного элемента и рекурсивно
+     * сортирует левую и правую части.
+     *
+     * @param cars массив объектов для сортировки
+     * @param low  начальный индекс подмассива
+     * @param high конечный индекс подмассива
+     */
     default void quickSort(T[] cars, int low, int high) {
         if (low < high) {
-            int pivotIndex = partition(cars, low, high); // Разделение на-под массивы и получение индекса опорного элемента
-            quickSort(cars, low, pivotIndex - 1); // Сортировка левой части массива от low до pivotIndex - 1
-            quickSort(cars, pivotIndex + 1, high); // Сортировка правой части массива от pivotIndex + 1 до high
+            int pivotIndex = partition(cars, low, high); // Разделение массива и получение индекса опорного элемента
+            quickSort(cars, low, pivotIndex - 1); // Рекурсивная сортировка левой части
+            quickSort(cars, pivotIndex + 1, high); // Рекурсивная сортировка правой части
         }
     }
 
+    /**
+     * Выполняет разделение подмассива на две части относительно опорного элемента.
+     * <p>
+     * Элементы, меньшие или равные опорному, помещаются слева, остальные — справа.
+     *
+     * @param cars массив объектов
+     * @param low  начальный индекс подмассива
+     * @param high конечный индекс подмассива
+     * @return индекс опорного элемента после разделения
+     */
     int partition(T[] cars, int low, int high);
 
+    /**
+     * Меняет местами два элемента в массиве.
+     *
+     * @param elements массив, в котором выполняется обмен
+     * @param i        индекс первого элемента
+     * @param j        индекс второго элемента
+     */
     default void swap(T[] elements, int i, int j) {
         T temp = elements[i];
         elements[i] = elements[j];

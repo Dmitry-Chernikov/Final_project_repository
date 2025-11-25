@@ -2,6 +2,9 @@ package org.aston.app.model;
 
 import org.aston.app.exception.CarValidationException;
 import org.aston.app.validator.CarValidator;
+import org.aston.app.validator.ModelValidator;
+import org.aston.app.validator.PowerValidator;
+import org.aston.app.validator.YearValidator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -100,7 +103,6 @@ public class Car implements Comparable<Car> {
         private int year;
 
         private List<CarValidator> validators = new ArrayList<>();
-
         /**
          * Устанавливает мощность двигателя.
          *
@@ -159,8 +161,8 @@ public class Car implements Comparable<Car> {
             }
         }
 
-        public Builder setValidator(List<CarValidator> validators) {
-            this.validators = validators;
+        public Builder addValidator(List<CarValidator> validators) {
+            this.validators.addAll(validators);
             return this;
         }
     }

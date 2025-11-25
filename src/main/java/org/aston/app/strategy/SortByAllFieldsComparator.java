@@ -15,14 +15,46 @@ import java.util.Comparator;
  * @project : org.aston.final.project
  * Class SortByAllFieldsComparator
  */
+
+/**
+ * Класс SortByAllFieldsComparator реализует интерфейс SortStrategy и предназначен для сортировки
+ * массива объектов Car по всем полям одновременно, используя композицию компараторов.
+ * <p>
+ * Порядок сортировки: сначала по модели (лексикографически), затем по мощности (возрастание),
+ * затем по году выпуска (возрастание). Использует алгоритм быстрой сортировки (quicksort).
+ */
 public class SortByAllFieldsComparator implements SortStrategy<Car> {
+
+    /**
+     * Композиция компараторов, определяющая общий порядок сравнения объектов Car.
+     * Сначала сравниваются модели, затем — мощность, затем — год выпуска.
+     */
     private Comparator<Car> totalComparator = new CarModelComparator().thenComparing(new CarPowerComparator()).thenComparing(new CarYearComparator());
 
+    /**
+     * Выполняет сортировку массива автомобилей по всем полям с использованием композиции компараторов.
+     * <p>
+     * Использует алгоритм быстрой сортировки, начиная с первого (0)
+     * и последнего (length - 1) индексов массива.
+     *
+     * @param cars массив объектов Car, который необходимо отсортировать
+     */
     @Override
     public void sort(Car[] cars) {
         quickSort(cars, 0, cars.length - 1);
     }
 
+    /**
+     * Выполняет разделение подмассива cars[low..high] на две части относительно опорного элемента.
+     * <p>
+     * В качестве опорного выбирается последний элемент подмассива (по индексу high).
+     * Все элементы, которые меньше или равны опорному (согласно totalComparator), перемещаются в левую часть.
+     *
+     * @param cars массив объектов Car, подлежащий разделению
+     * @param low  начальный индекс подмассива
+     * @param high конечный индекс подмассива
+     * @return индекс опорного элемента после завершения разделения
+     */
     @Override
     public int partition(Car[] cars, int low, int high) {
         Car pivot = cars[high]; // Опорный элемент — последний

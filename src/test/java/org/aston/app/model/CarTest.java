@@ -1,6 +1,10 @@
 package org.aston.app.model;
 
 import org.aston.app.exception.CarValidationException;
+import org.aston.app.validator.CarValidator;
+import org.aston.app.validator.ModelValidator;
+import org.aston.app.validator.PowerValidator;
+import org.aston.app.validator.YearValidator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -15,6 +19,11 @@ import static org.junit.jupiter.api.Assertions.*;
 class CarTest {
 
     private Car.Builder carBuilder;
+    private List<CarValidator> validators = new ArrayList<>(){{
+        add(new ModelValidator());
+        add(new PowerValidator());
+        add(new YearValidator());
+    }};
 
     @BeforeEach
     void setUp() {
@@ -62,6 +71,7 @@ class CarTest {
             new Car.Builder()
                 .setModel("ModelName")
                 .setYear(2020)
+                .addValidator(validators)
                 .build()
         );
     }
@@ -73,6 +83,7 @@ class CarTest {
             new Car.Builder()
                 .setPower(120)
                 .setYear(2020)
+                .addValidator(validators)
                 .build()
         );
     }
@@ -85,6 +96,7 @@ class CarTest {
             new Car.Builder()
                 .setPower(120)
                 .setModel("ModelName")
+                .addValidator(validators)
                 .build()
         );
     }
@@ -98,6 +110,7 @@ class CarTest {
                 .setPower(120)
                 .setModel("ModelName")
                 .setYear(1700)
+                .addValidator(validators)
                 .build()
         );
     }
@@ -111,6 +124,7 @@ class CarTest {
                 .setPower(0)
                 .setModel("ModelName")
                 .setYear(2020)
+                .addValidator(validators)
                 .build()
         );
     }
@@ -123,6 +137,7 @@ class CarTest {
                 .setPower(120)
                 .setModel(" ")
                 .setYear(2020)
+                .addValidator(validators)
                 .build()
         );
     }
@@ -135,6 +150,7 @@ class CarTest {
                         .setPower(120)
                         .setModel(null)
                         .setYear(2020)
+                        .addValidator(validators)
                         .build()
         );
     }
@@ -147,6 +163,7 @@ class CarTest {
                         .setPower(-50)
                         .setModel("ModelName")
                         .setYear(2020)
+                        .addValidator(validators)
                         .build()
         );
     }
@@ -155,16 +172,16 @@ class CarTest {
     @DisplayName("Следует реализовать естественный порядок по модели, затем по мощности, затем по году.")
     void testCarNaturalOrdering() {
         // Создание автомобилей для тестирования
-        Car c1 = new Car.Builder().setModel("A").setPower(200).setYear(2010).build();
-        Car c2 = new Car.Builder().setModel("A").setPower(100).setYear(2010).build();
-        Car c3 = new Car.Builder().setModel("B").setPower(100).setYear(2005).build();
-        Car c4 = new Car.Builder().setModel("A").setPower(100).setYear(2005).build();
-        Car c5 = new Car.Builder().setModel("A").setPower(200).setYear(2005).build();
+        Car c1 = new Car.Builder().setModel("A").setPower(90).setYear(1986).addValidator(validators).build();
+        Car c2 = new Car.Builder().setModel("A").setPower(120).setYear(2010).addValidator(validators).build();
+        Car c3 = new Car.Builder().setModel("B").setPower(100).setYear(2000).addValidator(validators).build();
+        Car c4 = new Car.Builder().setModel("A").setPower(200).setYear(1995).addValidator(validators).build();
+        Car c5 = new Car.Builder().setModel("A").setPower(110).setYear(2025).addValidator(validators).build();
 
         List<Car> cars = new ArrayList<>(List.of(c1, c2, c3, c4, c5)); // Список автомобилей
         cars.sort(null); // Сортировка по умолчанию с использованием естественного порядка Car
 
-        List<Car> expectedOrder = List.of(c4, c2, c5, c1, c3); // Ожидаемый порядок сортировки
+        List<Car> expectedOrder = List.of(c1, c5, c2, c4, c3); // Ожидаемый порядок сортировки
         assertEquals(expectedOrder, cars); // Проверка на соответствие ожидаемому порядку
     }
 
