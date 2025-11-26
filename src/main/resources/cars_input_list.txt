@@ -1,0 +1,37 @@
+Audi,120,2015
+BMW,315,2021
+Mercedes-Benz,300,2024
+Porsche,415,2025
+Volkswagen,110,2012
+Toyota,145,2025
+Honda,150,2014
+Nissan,120,2009
+Mazda,210,2015
+Subaru,350,2020
+Mitsubishi,215,2010
+Lexus,100,2025
+Ford,150,2015
+Chevrolet,135,2017
+Tesla,215,2020
+Cadillac,685,2025
+Buick,315,2015
+BYD,125,2021
+Geely,315,2026
+Chery,150,2020
+Nio,125,2025
+XPeng,130,2020
+Aston Martin,615,2021
+Bentley,350,2025
+Jaguar,375,2020
+Land Rover,250,2014
+McLaren,750,2022
+Ferrari,615,2020
+Lamborghini,750,2025
+Maserati,415,2018
+Alfa Romeo,350,2015
+Hyundai,100,2025
+Kia,120,2021
+Genesis,125,2013
+Renault,140,2011
+Peugeot,121,2012
+Citroën,150,2015
