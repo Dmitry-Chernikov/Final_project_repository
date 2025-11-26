@@ -9,6 +9,7 @@ import org.aston.app.random.*;
 
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
@@ -85,13 +86,14 @@ public class DataGenerator {
      * Каждая строка файла должна содержать три значения, разделённые запятыми:
      * модель, мощность и год выпуска. Файл читается построчно с использованием {@link Files#lines}.
      *
-     * @param path путь к файлу, из которого нужно загрузить данные
+     * @param fileName имя файла, из которого нужно загрузить данные, файл находиться в проекте /src/main/resources/
      * @return массив объектов Car, созданных на основе данных из файла
      * @throws IOException если произошла ошибка при чтении файла
      * @throws IllegalArgumentException если строка в файле имеет некорректный формат
      */
-    public static Car[] fromFiles(String path) throws IOException {
-        return Files.lines(Paths.get(path))
+    public static Car[] fromFiles(String fileName) throws IOException {
+
+        return Files.lines(Paths.get("src", "main", "resources").resolve(fileName))
                 .map(line -> {
                     String[] parts = line.split(",");
                     if (parts.length != 3) {

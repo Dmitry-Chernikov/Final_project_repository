@@ -10,7 +10,6 @@ import org.aston.app.strategy.SortEvenPowerNaturalOddKeep;
 import org.aston.app.strategy.SortStrategy;
 import org.aston.app.util.*;
 
-import java.util.IllegalFormatException;
 import java.util.Objects;
 import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
@@ -66,10 +65,9 @@ public class SortingApplication {
                     break;
                 case "2":
                     try {
-                        System.out.println("Введите путь к файлу, например: /cars_input_list.txt: ");
-                        String path = Objects.requireNonNull(getClass().getResource(scanner.nextLine().trim())).toURI().getPath();
-                        cars = DataGenerator.fromFiles(path);
-                    } catch (Exception  e) { /*| NumberFormatException | IllegalFormatException*/
+                        System.out.print("Введите путь к файлу, например - cars_input_list.txt : ");
+                        cars = DataGenerator.fromFiles(scanner.nextLine().trim());
+                    } catch (Exception  e) {
                         System.out.println("Ошибка при чтении файла: " + e.getMessage());
                         continue;
                     }
@@ -93,16 +91,17 @@ public class SortingApplication {
             printArray(cars);
 
             // Доп. задание 2: запись в файл
-            System.out.println("Сохранить результат в файл? (y/n): ");
+            System.out.print("Сохранить результат в файл? (y/n): ");
             if ("y".equalsIgnoreCase(scanner.nextLine().trim())){
-                System.out.println("Введите путь к файлу: ");
+                System.out.print("Введите имя файла, например - output.txt : ");
                 String filename = scanner.nextLine().trim();
                 FileWriterUtil.appendToFile(filename, cars, sortStrategy.getClass().getSimpleName());
                 System.out.println("Данные сохранены в файл: " + filename);
+                System.out.println();
             }
 
             // Доп. задание 4: подсчёт вхождений заданного power
-            System.out.println("Запустить подсчёт вхождений заданного power? (y/n): ");
+            System.out.print("Запустить подсчёт вхождений заданного power? (y/n): ");
             if ("y".equalsIgnoreCase(scanner.nextLine().trim())) {
                 System.out.println("Введите значение power для поиска: ");
                 try{
