@@ -1,23 +1,26 @@
 package org.aston.app.test;
 
-/**
- * Create by dmitry on 17.11.2025
- *
- * @author : Dmitry Chernikov
- * @date : 17.11.2025
- * @project : org.aston.final.project
- * Class CarBuilderTest
- */
-
 import org.aston.app.model.Car;
-import static org.aston.app.test.TestUtils.assertTrue;
 
 import static org.aston.app.test.TestUtils.assertTrue;
 
 /**
- * Тесты для проверки корректности Builder-а класса Car
+ * Тестовый класс для проверки функциональности паттерна Builder в классе Car.
+ * <p>
+ * Содержит методы для тестирования корректного создания объектов Car
+ * с использованием билдера, а также проверки значений полей.
+ * Для проверок используется утилита TestUtils.
  */
 public class CarBuilderTest {
+    /**
+     * Запускает тесты, связанные с построением объекта Car с помощью Builder.
+     * <p>
+     * Проверяет, что:
+     * - объект создаётся без исключений;
+     * - все установленные значения (модель, мощность, год) корректно сохраняются.
+     * <p>
+     * Выводит сообщение об успешном прохождении теста.
+     */
     public static void runTests() {
         System.out.println("Запуск тестов CarBuilder...");
 

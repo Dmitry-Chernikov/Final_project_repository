@@ -3,15 +3,6 @@ package org.aston.app.model;
 import java.util.Comparator;
 
 /**
- * Create by dmitry on 20.11.2025
- *
- * @author : Dmitry Chernikov
- * @date : 20.11.2025
- * @project : org.aston.final.project
- * Class CarModelComparator
- */
-
-/**
  * Класс CarModelComparator реализует интерфейс Comparator и предназначен для сравнения
  * объектов Car по модели в лексикографическом порядке.
  * <p>

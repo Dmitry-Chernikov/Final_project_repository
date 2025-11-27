@@ -1,14 +1,5 @@
 package org.aston.app.test;
 
-/**
- * Create by dmitry on 17.11.2025
- *
- * @author : Dmitry Chernikov
- * @date : 17.11.2025
- * @project : org.aston.final.project
- * Class DtataGeneratorTest
- */
-
 import org.aston.app.model.Car;
 import org.aston.app.util.DataGenerator;
 import org.aston.app.util.InputValidator;
@@ -18,21 +9,38 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 
-import static org.aston.app.test.TestUtils.*;
+import static org.aston.app.test.TestUtils.assertEquals;
+import static org.aston.app.test.TestUtils.assertFalse;
+import static org.aston.app.test.TestUtils.assertTrue;
 
 /**
- * Тесты для DataGenerator
+ * Тестовый класс для проверки функциональности класса DataGenerator.
+ * <p>
+ * Содержит методы для тестирования чтения данных из файла и валидации входных значений.
+ * Для проверок используется утилита TestUtils.
  */
 public class DataGeneratorTest {
+    /**
+     * Имя временного тестового файла, используемого для проверки чтения данных.
+     */
     private static final String TEST_FILE = "test_data.txt";
 
+    /**
+     * Запускает все тесты, связанные с классом DataGenerator.
+     * <p>
+     * Проверяет:
+     * - корректность чтения данных из файла;
+     * - валидацию входных данных (мощность, год).
+     * <p>
+     * Перед тестированием создаётся временный файл с тестовыми данными.
+     */
     public static void runTests() {
         System.out.println("Запуск тестов DataGenerator...");
 
         // Подготовка: создание тестового файла
         try {
             String content = "Toyota,150,2010\nHonda,180,2015\nBMW,300,2020";
-            Files.write(Paths.get(TEST_FILE), content.getBytes(), StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
+            Files.write(Paths.get("src", "main", "resources").resolve(TEST_FILE), content.getBytes(), StandardOpenOption.CREATE, StandardOpenOption.TRUNCATE_EXISTING);
         } catch (IOException e) {
             System.out.println("Ошибка создания тестового файла: " + e.getMessage());
             return;

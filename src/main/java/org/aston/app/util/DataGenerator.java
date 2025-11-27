@@ -1,30 +1,23 @@
 package org.aston.app.util;
 
 import org.aston.app.model.Car;
+import org.aston.app.random.GenerationCar;
+import org.aston.app.random.GetLowpowerCar;
+import org.aston.app.random.GetMidCar;
+import org.aston.app.random.GetPowerfulCar;
+import org.aston.app.random.GetSportCar;
 import org.aston.app.validator.CarValidator;
 import org.aston.app.validator.ModelValidator;
 import org.aston.app.validator.PowerValidator;
 import org.aston.app.validator.YearValidator;
-import org.aston.app.random.*;
 
 import java.io.IOException;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
-import java.util.stream.IntStream;
-
-/**
- * Create by dmitry on 16.11.2025
- *
- * @author : Dmitry Chernikov
- * @date : 16.11.2025
- * @project : org.aston.final.project
- * Class DataGenerator
- */
 
 /**
  * Утилитарный класс для генерации и загрузки данных об автомобилях.
@@ -44,16 +37,26 @@ public class DataGenerator {
      */
     public static final String[] MODELS = {"Toyota", "BMW", "Audi", "Ford", "Tesla", "Honda", "Mercedes"};
 
+    /**
+     * Список валидаторов, используемых при создании автомобилей для проверки корректности данных.
+     * Включает валидацию модели, мощности и года выпуска.
+     */
     private static List<CarValidator> validators = new ArrayList<>(){{
         add(new ModelValidator());
         add(new PowerValidator());
         add(new YearValidator());
     }};
 
-
+    /**
+     * Генерирует указанное количество случайных объектов Car с использованием стратегий генерации
+     * для разных типов автомобилей: низкой, средней и высокой мощности, а также спортивных автомобилей.
+     *
+     * @param count количество объектов Car для генерации
+     * @return массив из {@code count} случайно сгенерированных объектов Car
+     */
     public static Car[] generateRandom(int count) {
         Car[] randomCar = new Car[count];  // создание массива машин
-        GenerationCar generationCar = null; // переменная для генерации случайного типа манины
+        GenerationCar generationCar = null; // переменная для генерации случайного типа машины
         Random random = new Random();
         int min = 0;// min и max для выбора типа машины
         int max = 4;

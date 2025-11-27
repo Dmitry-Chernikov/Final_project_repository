@@ -124,3 +124,11 @@ Car{horse power=130, model name='XPeng', production year=2020}
 
 ==================================================
 
+=== Стратегия сортировки: SortByAllFieldsComparator ===
+Время записи: 2025-11-27 14:15:46
+Car{horse power=200, model name='Audi', production year=2000}
+Car{horse power=100, model name='BMW', production year=1986}
+Car{horse power=50, model name='ford', production year=2010}
+
+==================================================
+

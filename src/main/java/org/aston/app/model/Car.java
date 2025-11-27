@@ -2,9 +2,6 @@ package org.aston.app.model;
 
 import org.aston.app.exception.CarValidationException;
 import org.aston.app.validator.CarValidator;
-import org.aston.app.validator.ModelValidator;
-import org.aston.app.validator.PowerValidator;
-import org.aston.app.validator.YearValidator;
 
 import java.util.ArrayList;
 import java.util.List;

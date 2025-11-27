@@ -8,29 +8,71 @@ import org.aston.app.strategy.SortByPower;
 import org.aston.app.strategy.SortByYear;
 import org.aston.app.strategy.SortEvenPowerNaturalOddKeep;
 import org.aston.app.strategy.SortStrategy;
-import org.aston.app.util.*;
+import org.aston.app.test.CustomTestRunner;
+import org.aston.app.util.DataGenerator;
+import org.aston.app.util.FileWriterUtil;
 
-import java.util.Objects;
+import java.awt.*;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
+
 /**
- * Create by dmitry on 16.11.2025
- *
- * @author : Dmitry Chernikov
- * @date : 16.11.2025
- * @project : org.aston.final.project
- * Class SortingApplication
+ * Основной класс приложения, реализующий цикл взаимодействия с пользователем.
+ * <p>
+ * Предоставляет меню для выбора способа заполнения данных, метода сортировки и
+ * дополнительных действий (запись в файл, подсчёт вхождений). Использует паттерн "Стратегия"
+ * для реализации различных алгоритмов сортировки.
  */
 public class SortingApplication {
+    /**
+     * Сканер для чтения пользовательского ввода из консоли.
+     */
     private final Scanner scanner;
 
+    /**
+     * Конструктор класса.
+     * Инициализирует сканер для чтения ввода.
+     */
     public SortingApplication() {
         this.scanner = new Scanner(System.in);
     }
 
+    /**
+     * Открывает HTML-файл в браузере по умолчанию.
+     *
+     * @param path путь к HTML-файлу
+     */
+    public static void openHtmlFile(String path) {
+        try {
+            File file = new File(path);
+            if (file.exists()) {
+                if (Desktop.isDesktopSupported()) {
+                    Desktop.getDesktop().browse(file.toURI());
+                    System.out.println("✅ Открыт index.html в браузере: " + file.getAbsolutePath());
+                } else {
+                    System.err.println("❌ Desktop не поддерживается на этой системе.");
+                }
+            } else {
+                System.err.println("❌ Файл не найден: " + file.getAbsolutePath());
+            }
+        } catch (IOException e) {
+            System.err.println("❌ Ошибка открытия файла: " + e.getMessage());
+        }
+    }
+
+    /**
+     * Основной метод, запускающий цикл приложения.
+     * <p>
+     * Отображает меню, обрабатывает выбор пользователя, запускает тесты,
+     * генерирует данные, выполняет сортировку, записывает результаты в файл
+     * и подсчитывает вхождения заданного значения мощности.
+     */
     public void run() {
         while (true) { // Бесконечный цикл для меню
             showMenu();
@@ -39,6 +81,27 @@ public class SortingApplication {
                 System.out.println("Выход из программы");
                 break;
             }
+            if ("4".equals(choice)) {
+                CustomTestRunner.run();
+                continue;
+            }
+            if ("5".equals(choice)) {
+                StringBuilder authors = new StringBuilder();
+                authors.append("\nАвторы:\n")
+                        .append("Дмитрий Черников \n")
+                        .append("Лучкин Дмитрий \n")
+                        .append("Иван Феофанов \n")
+                        .append("Наталия Абызова \n")
+                        .append("Максим Кустков \n");
+
+                System.out.print(authors);
+                continue;
+            }
+            if ("6".equals(choice)) {
+                openHtmlFile(Paths.get("doc", "html").resolve("index.html").toString());
+                continue;
+            }
+
             if (!"1".equals(choice) && !"2".equals(choice) && !"3".equals(choice)) {
                 System.out.println("Неверный выбор. Попробуйте ещё раз.");
                 continue;
@@ -103,7 +166,7 @@ public class SortingApplication {
             // Доп. задание 4: подсчёт вхождений заданного power
             System.out.print("Запустить подсчёт вхождений заданного power? (y/n): ");
             if ("y".equalsIgnoreCase(scanner.nextLine().trim())) {
-                System.out.println("Введите значение power для поиска: ");
+                System.out.print("Введите значение power для поиска: ");
                 try{
                     int targetPower = Integer.parseInt(scanner.nextLine().trim());
                     countOccurrencesParallel(cars, targetPower);
@@ -114,16 +177,31 @@ public class SortingApplication {
         }
         scanner.close();
     }
+
+    /**
+     * Отображает главное меню приложения с возможными действиями.
+     */
     private void showMenu() {
         StringBuilder menu = new StringBuilder();
         menu.append("\n === Меню === \n")
                     .append("1. Заполнить случайно \n")
                     .append("2. Заполнить из файла \n")
                     .append("3. Вывести вручную \n")
+                .append("4. Запустить тесты \n")
+                .append("5. Об авторах \n")
+                .append("6. Документация \n")
                     .append("0. Выход \n")
                     .append("Выберете способ заполнения: ");
         System.out.print(menu);
     }
+
+    /**
+     * Запрашивает у пользователя выбор стратегии сортировки.
+     * <p>
+     * Возвращает соответствующую реализацию SortStrategy или null при неверном выборе.
+     *
+     * @return выбранная стратегия сортировки или null
+     */
     private SortStrategy getSortStrategy() {
         StringBuilder menu = new StringBuilder();
         menu.append("\n Выберите поле по которому будет сортировка: \n")
@@ -150,12 +228,6 @@ public class SortingApplication {
                 yield null; // Возвращаем null, если выбор неверный yield это ключевое слово для возврата значения из switch Java 14
             }
         };
-    }
-
-    private void printArray(Car[] cars) {
-        for (Car car : cars) {
-            System.out.println(car);
-        }
     }
 
     /**
@@ -192,6 +264,22 @@ public class SortingApplication {
         }
         System.out.println("Количество элементов с мощностью " + targetPower + ": " + counter.value);
     }
+
+    /**
+     * Выводит все элементы массива автомобилей в консоль.
+     *
+     * @param cars массив объектов Car для вывода
+     */
+    private void printArray(Car[] cars) {
+        for (Car car : cars) {
+            System.out.println(car);
+        }
+    }
+
+    /**
+     * Внутренний класс для хранения счётчика вхождений.
+     * Используется для атомарного обновления значения из нескольких потоков.
+     */
     private static class Counter {
         int value = 0; // Счетчик
     }

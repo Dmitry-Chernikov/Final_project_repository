@@ -3,15 +3,6 @@ package org.aston.app.strategy;
 import org.aston.app.model.Car;
 
 /**
- * Create by dmitry on 16.11.2025
- *
- * @author : Dmitry Chernikov
- * @date : 16.11.2025
- * @project : org.aston.final.project
- * Class SortByYear
- */
-
-/**
  * Класс SortByYear реализует интерфейс SortStrategy и предназначен для сортировки
  * массива объектов Car по году выпуска в порядке возрастания.
  * <p>

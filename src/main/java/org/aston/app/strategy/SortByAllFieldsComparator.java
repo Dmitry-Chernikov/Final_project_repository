@@ -8,15 +8,6 @@ import org.aston.app.model.CarYearComparator;
 import java.util.Comparator;
 
 /**
- * Create by dmitry on 20.11.2025
- *
- * @author : Dmitry Chernikov
- * @date : 20.11.2025
- * @project : org.aston.final.project
- * Class SortByAllFieldsComparator
- */
-
-/**
  * Класс SortByAllFieldsComparator реализует интерфейс SortStrategy и предназначен для сортировки
  * массива объектов Car по всем полям одновременно, используя композицию компараторов.
  * <p>

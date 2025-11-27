@@ -1,24 +1,31 @@
 package org.aston.app.test;
 
-/**
- * Create by dmitry on 17.11.2025
- *
- * @author : Dmitry Chernikov
- * @date : 17.11.2025
- * @project : org.aston.final.project
- * Class SortStrategyTest
- */
-
 import org.aston.app.model.Car;
 import org.aston.app.strategy.SortByPower;
 import org.aston.app.strategy.SortEvenPowerNaturalOddKeep;
 
+import static org.aston.app.test.TestUtils.assertTrue;
+
 /**
- * Ручные тесты для стратегий сортировки
+ * Тестовый класс для проверки реализации стратегий сортировки.
+ * <p>
+ * Содержит методы для тестирования корректности работы алгоритмов сортировки,
+ * включая обычную сортировку по мощности и специальную стратегию сортировки чётных значений.
+ * Для проверок используется утилита TestUtils.
  */
 public class SortStrategyTest {
+    /**
+     * Запускает все тесты, связанные с реализациями SortStrategy.
+     * <p>
+     * Проверяет:
+     * - корректность сортировки по мощности в порядке возрастания;
+     * - работу стратегии сортировки, при которой чётные значения power сортируются,
+     * а нечётные остаются на своих позициях.
+     * <p>
+     * Выводит сообщения о статусе каждого теста.
+     */
     public static void runTests() {
-       /* System.out.println("Запуск тестов SortStrategy...");
+        System.out.println("Запуск тестов SortStrategy...");
 
         // Тест 1: Сортировка по мощности (возрастание)
         Car[] cars = {
@@ -53,6 +60,6 @@ public class SortStrategyTest {
         assertTrue("Ожидается 200", mixedCars[1].getPower() == 200);
         assertTrue("Ожидается 300", mixedCars[3].getPower() == 300);
 
-        System.out.println("SortEvenPowerNaturalOddKeepTest пройден успешно.\n");*/
+        System.out.println("SortEvenPowerNaturalOddKeepTest пройден успешно.\n");
     }
 }
