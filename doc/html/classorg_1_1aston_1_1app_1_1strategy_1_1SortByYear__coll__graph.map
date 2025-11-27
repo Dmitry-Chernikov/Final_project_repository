@@ -1,0 +1,5 @@
+<map id="org.aston.app.strategy.SortByYear" name="org.aston.app.strategy.SortByYear">
+<area shape="rect" id="Node000001" title="Класс SortByYear реализует интерфейс SortStrategy и предназначен для сортировки массива объектов Car ..." alt="" coords="5,93,185,133"/>
+<area shape="rect" id="Node000002" href="$interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy.html" title=" " alt="" coords="5,5,185,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="98,59,98,93,93,93,93,59"/>
+</map>

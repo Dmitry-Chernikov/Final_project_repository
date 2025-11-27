@@ -1,0 +1,123 @@
+\doxysection{Класс org.\+aston.\+app.\+strategy.\+Sort\+By\+All\+Files\+Comparable}
+\hypertarget{classorg_1_1aston_1_1app_1_1strategy_1_1SortByAllFilesComparable}{}\label{classorg_1_1aston_1_1app_1_1strategy_1_1SortByAllFilesComparable}\index{org.aston.app.strategy.SortByAllFilesComparable@{org.aston.app.strategy.SortByAllFilesComparable}}
+
+
+Класс Sort\+By\+All\+Files\+Comparable реализует интерфейс Sort\+Strategy и предназначен для сортировки массива объектов Car по всем полям одновременно, используя естественный порядок сравнения.  
+
+
+
+
+Граф наследования\+:org.\+aston.\+app.\+strategy.\+Sort\+By\+All\+Files\+Comparable\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{classorg_1_1aston_1_1app_1_1strategy_1_1SortByAllFilesComparable__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса org.\+aston.\+app.\+strategy.\+Sort\+By\+All\+Files\+Comparable\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{classorg_1_1aston_1_1app_1_1strategy_1_1SortByAllFilesComparable__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1strategy_1_1SortByAllFilesComparable_aee7c5bfbc1c0479dc6b03f11ef8b0a0b}{sort}} (Car\mbox{[}$\,$\mbox{]} cars)
+\begin{DoxyCompactList}\small\item\em Выполняет сортировку массива автомобилей с использованием естественного порядка сравнения. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1strategy_1_1SortByAllFilesComparable_a7e3665d8dba4bded7a03790d56b8abd0}{partition}} (Car\mbox{[}$\,$\mbox{]} cars, int low, int high)
+\begin{DoxyCompactList}\small\item\em Выполняет разделение подмассива cars\mbox{[}low..high\mbox{]} на две части относительно опорного элемента. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Открытые члены унаследованные от \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy}{org.\+aston.\+app.\+strategy.\+Sort\+Strategy$<$ Car $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_a68d0d9041d04b3bb952278ea951b7892}{sort}} (T\mbox{[}$\,$\mbox{]} cars)
+\begin{DoxyCompactList}\small\item\em Выполняет сортировку переданного массива объектов. \end{DoxyCompactList}\item 
+default void \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_a989dd029620ab0917ea7bb8ff2de5911}{quick\+Sort}} (T\mbox{[}$\,$\mbox{]} cars, int low, int high)
+\begin{DoxyCompactList}\small\item\em Рекурсивная реализация алгоритма быстрой сортировки. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_afb7493d6f143eda66cebd81e1d842dbf}{partition}} (T\mbox{[}$\,$\mbox{]} cars, int low, int high)
+\begin{DoxyCompactList}\small\item\em Выполняет разделение подмассива на две части относительно опорного элемента. \end{DoxyCompactList}\item 
+default void \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_ab388e9cd0834b25ceea010dc533855dc}{swap}} (T\mbox{[}$\,$\mbox{]} elements, int i, int j)
+\begin{DoxyCompactList}\small\item\em Меняет местами два элемента в массиве. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс Sort\+By\+All\+Files\+Comparable реализует интерфейс Sort\+Strategy и предназначен для сортировки массива объектов Car по всем полям одновременно, используя естественный порядок сравнения. 
+
+Для сравнения объектов Car используется реализация метода compare\+To в классе Car. Алгоритм сортировки — быстрая сортировка (quicksort). 
+
+См. определение в файле \mbox{\hyperlink{SortByAllFilesComparable_8java_source}{Sort\+By\+All\+Files\+Comparable.\+java}} строка \mbox{\hyperlink{SortByAllFilesComparable_8java_source_l00012}{12}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{classorg_1_1aston_1_1app_1_1strategy_1_1SortByAllFilesComparable_a7e3665d8dba4bded7a03790d56b8abd0}\label{classorg_1_1aston_1_1app_1_1strategy_1_1SortByAllFilesComparable_a7e3665d8dba4bded7a03790d56b8abd0} 
+\index{org.aston.app.strategy.SortByAllFilesComparable@{org.aston.app.strategy.SortByAllFilesComparable}!partition@{partition}}
+\index{partition@{partition}!org.aston.app.strategy.SortByAllFilesComparable@{org.aston.app.strategy.SortByAllFilesComparable}}
+\doxysubsubsection{\texorpdfstring{partition()}{partition()}}
+{\footnotesize\ttfamily int org.\+aston.\+app.\+strategy.\+Sort\+By\+All\+Files\+Comparable.\+partition (\begin{DoxyParamCaption}\item[{Car\mbox{[}$\,$\mbox{]}}]{cars,  }\item[{int}]{low,  }\item[{int}]{high }\end{DoxyParamCaption})}
+
+
+
+Выполняет разделение подмассива cars\mbox{[}low..high\mbox{]} на две части относительно опорного элемента. 
+
+В качестве опорного выбирается последний элемент подмассива (по индексу high). Все элементы, которые меньше или равны опорному (согласно методу compare\+To), перемещаются в левую часть.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em cars} & массив объектов Car, подлежащий разделению \\
+\hline
+{\em low} & начальный индекс подмассива \\
+\hline
+{\em high} & конечный индекс подмассива \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+индекс опорного элемента после завершения разделения 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{SortByAllFilesComparable_8java_source}{Sort\+By\+All\+Files\+Comparable.\+java}} строка \mbox{\hyperlink{SortByAllFilesComparable_8java_source_l00039}{39}}
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1aston_1_1app_1_1strategy_1_1SortByAllFilesComparable_a7e3665d8dba4bded7a03790d56b8abd0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classorg_1_1aston_1_1app_1_1strategy_1_1SortByAllFilesComparable_aee7c5bfbc1c0479dc6b03f11ef8b0a0b}\label{classorg_1_1aston_1_1app_1_1strategy_1_1SortByAllFilesComparable_aee7c5bfbc1c0479dc6b03f11ef8b0a0b} 
+\index{org.aston.app.strategy.SortByAllFilesComparable@{org.aston.app.strategy.SortByAllFilesComparable}!sort@{sort}}
+\index{sort@{sort}!org.aston.app.strategy.SortByAllFilesComparable@{org.aston.app.strategy.SortByAllFilesComparable}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily void org.\+aston.\+app.\+strategy.\+Sort\+By\+All\+Files\+Comparable.\+sort (\begin{DoxyParamCaption}\item[{Car\mbox{[}$\,$\mbox{]}}]{cars }\end{DoxyParamCaption})}
+
+
+
+Выполняет сортировку массива автомобилей с использованием естественного порядка сравнения. 
+
+Использует алгоритм быстрой сортировки, начиная с первого (0) и последнего (length -\/ 1) индексов массива.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em cars} & массив объектов Car, который необходимо отсортировать по всем полям \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{SortByAllFilesComparable_8java_source}{Sort\+By\+All\+Files\+Comparable.\+java}} строка \mbox{\hyperlink{SortByAllFilesComparable_8java_source_l00023}{23}}
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1aston_1_1app_1_1strategy_1_1SortByAllFilesComparable_aee7c5bfbc1c0479dc6b03f11ef8b0a0b_cgraph}
+\end{center}
+\end{figure}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/org/aston/app/strategy/\mbox{\hyperlink{SortByAllFilesComparable_8java}{Sort\+By\+All\+Files\+Comparable.\+java}}\end{DoxyCompactItemize}

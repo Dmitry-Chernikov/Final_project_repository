@@ -1,0 +1,77 @@
+\doxysection{Класс org.\+aston.\+app.\+validator.\+Power\+Validator}
+\hypertarget{classorg_1_1aston_1_1app_1_1validator_1_1PowerValidator}{}\label{classorg_1_1aston_1_1app_1_1validator_1_1PowerValidator}\index{org.aston.app.validator.PowerValidator@{org.aston.app.validator.PowerValidator}}
+
+
+Класс Power\+Validator реализует интерфейс Car\+Validator и предназначен для валидации поля мощности автомобиля (power, л.  
+
+
+
+
+Граф наследования\+:org.\+aston.\+app.\+validator.\+Power\+Validator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classorg_1_1aston_1_1app_1_1validator_1_1PowerValidator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса org.\+aston.\+app.\+validator.\+Power\+Validator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classorg_1_1aston_1_1app_1_1validator_1_1PowerValidator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1validator_1_1PowerValidator_aa1b60cd704a5aa5abcd76a8307430938}{validate}} (Car car)
+\begin{DoxyCompactList}\small\item\em Выполняет валидацию мощности автомобиля. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс Power\+Validator реализует интерфейс Car\+Validator и предназначен для валидации поля мощности автомобиля (power, л. 
+
+с.) в объекте Car. 
+
+Проверяет, что значение мощности является положительным числом. Нулевое или отрицательное значение недопустимо, так как мощность двигателя должна быть строго больше нуля. 
+
+См. определение в файле \mbox{\hyperlink{PowerValidator_8java_source}{Power\+Validator.\+java}} строка \mbox{\hyperlink{PowerValidator_8java_source_l00013}{13}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{classorg_1_1aston_1_1app_1_1validator_1_1PowerValidator_aa1b60cd704a5aa5abcd76a8307430938}\label{classorg_1_1aston_1_1app_1_1validator_1_1PowerValidator_aa1b60cd704a5aa5abcd76a8307430938} 
+\index{org.aston.app.validator.PowerValidator@{org.aston.app.validator.PowerValidator}!validate@{validate}}
+\index{validate@{validate}!org.aston.app.validator.PowerValidator@{org.aston.app.validator.PowerValidator}}
+\doxysubsubsection{\texorpdfstring{validate()}{validate()}}
+{\footnotesize\ttfamily void org.\+aston.\+app.\+validator.\+Power\+Validator.\+validate (\begin{DoxyParamCaption}\item[{Car}]{car }\end{DoxyParamCaption})}
+
+
+
+Выполняет валидацию мощности автомобиля. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em car} & объект автомобиля, поле power которого необходимо проверить \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em Car\+Validation\+Exception} & если мощность меньше или равна нулю \\
+\hline
+\end{DoxyExceptions}
+
+
+Замещает \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1validator_1_1CarValidator_aaa43a930db37f5e56997ff13b7fd5f6c}{org.\+aston.\+app.\+validator.\+Car\+Validator}}.
+
+
+
+См. определение в файле \mbox{\hyperlink{PowerValidator_8java_source}{Power\+Validator.\+java}} строка \mbox{\hyperlink{PowerValidator_8java_source_l00022}{22}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/org/aston/app/validator/\mbox{\hyperlink{PowerValidator_8java}{Power\+Validator.\+java}}\end{DoxyCompactItemize}

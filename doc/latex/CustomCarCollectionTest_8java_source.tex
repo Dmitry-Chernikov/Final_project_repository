@@ -1,0 +1,178 @@
+\doxysection{Custom\+Car\+Collection\+Test.\+java}
+\hypertarget{CustomCarCollectionTest_8java_source}{}\label{CustomCarCollectionTest_8java_source}\index{src/test/java/org/aston/app/util/CustomCarCollectionTest.java@{src/test/java/org/aston/app/util/CustomCarCollectionTest.java}}
+\mbox{\hyperlink{CustomCarCollectionTest_8java}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00001}00001\ \textcolor{keyword}{package\ }org.aston.app.util;}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00003}00003\ \textcolor{keyword}{import}\ org.aston.app.model.Car;}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00004}00004\ \textcolor{keyword}{import}\ org.junit.jupiter.api.Test;}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00006}00006\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00008}00008\ \textcolor{keyword}{import}\ \textcolor{keyword}{static}\ org.junit.jupiter.api.Assertions.assertEquals;}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00009}00009\ \textcolor{keyword}{import}\ \textcolor{keyword}{static}\ org.junit.jupiter.api.Assertions.assertNull;}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00010}00010\ \textcolor{keyword}{import}\ \textcolor{keyword}{static}\ org.junit.jupiter.api.Assertions.assertThrows;}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00012}00012\ \textcolor{keyword}{class\ }CustomCarCollectionTest\ \{}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00014}00014\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00015}00015\ \ \ \ \ \textcolor{keywordtype}{void}\ testAddAll()\ \{}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00016}00016\ \ \ \ \ \ \ \ \ CustomCarCollection\ cars\ =\ \textcolor{keyword}{new}\ CustomCarCollection(2);}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00017}00017\ \ \ \ \ \ \ \ \ cars.add(\textcolor{keyword}{new}\ Car}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ .Builder()}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ .setPower(100)}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ .setModel(\textcolor{stringliteral}{"{}Model\ A"{}})}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ .setYear(1990)}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ .build()}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00023}00023\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00024}00024\ \ \ \ \ \ \ \ \ cars.addAll(}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ List.of(}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ Car}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00027}00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Builder()}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setPower(110)}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setModel(\textcolor{stringliteral}{"{}Model\ B"{}})}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setYear(1991)}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .build(),}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ Car}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Builder()}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setPower(120)}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setModel(\textcolor{stringliteral}{"{}Model\ C"{}})}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setYear(1991)}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .build()}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ )}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ assertEquals(3,\ cars.size());}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ assertEquals(\textcolor{keyword}{new}\ Car}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Builder()}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setPower(120)}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setModel(\textcolor{stringliteral}{"{}Model\ C"{}})}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setYear(1991)}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .build(),}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ cars.get(2)}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00048}00048\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00049}00049\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00051}00051\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00052}00052\ \ \ \ \ \textcolor{keywordtype}{void}\ testRemove()\ \{}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00053}00053\ \ \ \ \ \ \ \ \ CustomCarCollection\ cars\ =\ \textcolor{keyword}{new}\ CustomCarCollection();}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00054}00054\ \ \ \ \ \ \ \ \ cars.addAll(}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ List.of(}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ Car}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Builder()}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setPower(100)}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setModel(\textcolor{stringliteral}{"{}Model\ A"{}})}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setYear(1990)}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .build(),}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ Car}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Builder()}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setPower(110)}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setModel(\textcolor{stringliteral}{"{}Model\ B"{}})}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setYear(1991)}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .build(),}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00068}00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ Car}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Builder()}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setPower(120)}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setModel(\textcolor{stringliteral}{"{}Model\ C"{}})}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setYear(1991)}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .build(),}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ Car}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Builder()}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setPower(130)}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setModel(\textcolor{stringliteral}{"{}Model\ D"{}})}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setYear(1993)}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .build()}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ )}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00081}00081\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00082}00082\ \ \ \ \ \ \ \ \ cars.remove(1);}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00083}00083\ \ \ \ \ \ \ \ \ assertEquals(3,\ cars.size());}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00084}00084\ \ \ \ \ \ \ \ \ assertEquals(\textcolor{keyword}{new}\ Car}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Builder()}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setPower(120)}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setModel(\textcolor{stringliteral}{"{}Model\ C"{}})}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setYear(1991)}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .build(),}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ cars.get(1)}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00091}00091\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00092}00092\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00094}00094\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00095}00095\ \ \ \ \ \textcolor{keywordtype}{void}\ testConstructorWithNegativeCapacity()\ \{}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00096}00096\ \ \ \ \ \ \ \ \ assertThrows(IllegalArgumentException.class,\ ()\ -\/>\ \textcolor{keyword}{new}\ CustomCarCollection(-\/5));}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00097}00097\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00099}00099\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00100}00100\ \ \ \ \ \textcolor{keywordtype}{void}\ testGetInvalidIndex()\ \{}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00101}00101\ \ \ \ \ \ \ \ \ CustomCarCollection\ cars\ =\ \textcolor{keyword}{new}\ CustomCarCollection();}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00102}00102\ \ \ \ \ \ \ \ \ cars.add(\textcolor{keyword}{new}\ Car}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ .Builder()}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ .setPower(100)}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ .setModel(\textcolor{stringliteral}{"{}Model\ A"{}})}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ .setYear(1991)}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ .build()}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00108}00108\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00109}00109\ \ \ \ \ \ \ \ \ assertThrows(IndexOutOfBoundsException.class,\ ()\ -\/>\ cars.get(1));}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00110}00110\ \ \ \ \ \ \ \ \ assertThrows(IndexOutOfBoundsException.class,\ ()\ -\/>\ cars.get(-\/1));}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00111}00111\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00112}00112\ }
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00113}00113\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00114}00114\ \ \ \ \ \textcolor{keywordtype}{void}\ testRemoveInvalidIndex()\ \{}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00115}00115\ \ \ \ \ \ \ \ \ CustomCarCollection\ cars\ =\ \textcolor{keyword}{new}\ CustomCarCollection();}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00116}00116\ \ \ \ \ \ \ \ \ cars.add(\textcolor{keyword}{new}\ Car}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ .Builder()}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ .setPower(100)}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ .setModel(\textcolor{stringliteral}{"{}Model\ A"{}})}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ .setYear(1990)}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ .build()}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00122}00122\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00123}00123\ \ \ \ \ \ \ \ \ assertThrows(IndexOutOfBoundsException.class,\ ()\ -\/>\ cars.remove(1));}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00124}00124\ \ \ \ \ \ \ \ \ assertThrows(IndexOutOfBoundsException.class,\ ()\ -\/>\ cars.remove(-\/1));}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00125}00125\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00126}00126\ }
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00127}00127\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00128}00128\ \ \ \ \ \textcolor{keywordtype}{void}\ testRemoveLastElement()\ \{}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00129}00129\ \ \ \ \ \ \ \ \ CustomCarCollection\ cars\ =\ \textcolor{keyword}{new}\ CustomCarCollection();}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00130}00130\ \ \ \ \ \ \ \ \ cars.addAll(}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ List.of(\textcolor{keyword}{new}\ Car}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Builder()}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setPower(100)}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setModel(\textcolor{stringliteral}{"{}Model\ A"{}})}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setYear(1990)}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .build(),}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ Car}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Builder()}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setPower(110)}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setModel(\textcolor{stringliteral}{"{}Model\ B"{}})}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setYear(1991)}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .build(),}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ Car}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Builder()}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setPower(120)}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setModel(\textcolor{stringliteral}{"{}Model\ C"{}})}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setYear(1991)}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .build()}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ )}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00150}00150\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00151}00151\ \ \ \ \ \ \ \ \ var\ removed\ =\ cars.remove(2);}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00152}00152\ \ \ \ \ \ \ \ \ assertEquals(\textcolor{keyword}{new}\ Car}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Builder()}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setPower(120)}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setModel(\textcolor{stringliteral}{"{}Model\ C"{}})}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setYear(1991)}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .build(),}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ removed}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00159}00159\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00160}00160\ \ \ \ \ \ \ \ \ assertEquals(2,\ cars.size());}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00161}00161\ \ \ \ \ \ \ \ \ assertThrows(IndexOutOfBoundsException.class,\ ()\ -\/>\ cars.get(2));}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00162}00162\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00163}00163\ }
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00164}00164\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00165}00165\ \ \ \ \ \textcolor{keywordtype}{void}\ testNullElements()\ \{}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00166}00166\ \ \ \ \ \ \ \ \ CustomCarCollection\ cars\ =\ \textcolor{keyword}{new}\ CustomCarCollection();}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00167}00167\ \ \ \ \ \ \ \ \ cars.add(\textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00168}00168\ \ \ \ \ \ \ \ \ assertNull(cars.getFirst());}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00169}00169\ \ \ \ \ \ \ \ \ assertEquals(1,\ cars.size());}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00170}00170\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00171}00171\ }
+\DoxyCodeLine{\Hypertarget{CustomCarCollectionTest_8java_source_l00172}00172\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,57 @@
+\doxysection{Класс org.\+aston.\+app.\+test.\+Custom\+Test\+Runner}
+\hypertarget{classorg_1_1aston_1_1app_1_1test_1_1CustomTestRunner}{}\label{classorg_1_1aston_1_1app_1_1test_1_1CustomTestRunner}\index{org.aston.app.test.CustomTestRunner@{org.aston.app.test.CustomTestRunner}}
+
+
+Класс Custom\+Test\+Runner предназначен для запуска ручных тестов компонентов приложения.  
+
+
+\doxysubsubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1test_1_1CustomTestRunner_a178bd735faa6b705eded506d33c95a5b}{run}} ()
+\begin{DoxyCompactList}\small\item\em Запускает все тесты приложения. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс Custom\+Test\+Runner предназначен для запуска ручных тестов компонентов приложения. 
+
+Содержит статический метод run(), который последовательно вызывает тесты для различных модулей\+: построения объектов Car, стратегий сортировки и генератора данных. 
+
+Используется вместо сторонних тестовых фреймворков (например, JUnit), в соответствии с требованиями задания — тесты реализованы вручную. 
+
+См. определение в файле \mbox{\hyperlink{CustomTestRunner_8java_source}{Custom\+Test\+Runner.\+java}} строка \mbox{\hyperlink{CustomTestRunner_8java_source_l00012}{12}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{classorg_1_1aston_1_1app_1_1test_1_1CustomTestRunner_a178bd735faa6b705eded506d33c95a5b}\label{classorg_1_1aston_1_1app_1_1test_1_1CustomTestRunner_a178bd735faa6b705eded506d33c95a5b} 
+\index{org.aston.app.test.CustomTestRunner@{org.aston.app.test.CustomTestRunner}!run@{run}}
+\index{run@{run}!org.aston.app.test.CustomTestRunner@{org.aston.app.test.CustomTestRunner}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily static void org.\+aston.\+app.\+test.\+Custom\+Test\+Runner.\+run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Запускает все тесты приложения. 
+
+Выводит информационные сообщения о начале и завершении тестирования. Вызывает методы запуска тестов для каждого компонента системы\+:
+\begin{DoxyItemize}
+\item Проверка работы паттерна Builder для класса Car
+\item Проверка корректности работы стратегий сортировки
+\item Проверка функций генерации данных (из файла, вручную, случайно) 
+\end{DoxyItemize}
+
+См. определение в файле \mbox{\hyperlink{CustomTestRunner_8java_source}{Custom\+Test\+Runner.\+java}} строка \mbox{\hyperlink{CustomTestRunner_8java_source_l00023}{23}}
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1aston_1_1app_1_1test_1_1CustomTestRunner_a178bd735faa6b705eded506d33c95a5b_cgraph}
+\end{center}
+\end{figure}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/org/aston/app/test/\mbox{\hyperlink{CustomTestRunner_8java}{Custom\+Test\+Runner.\+java}}\end{DoxyCompactItemize}

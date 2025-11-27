@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Система сортировки автомобилей: Исходный файл src/main/java/org/aston/app/util/CustomCarCollection.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="LogoAston.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Система сортировки автомобилей<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">Проект реализует консольное приложение для сортировки коллекций объектов типа Автомобиль.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('CustomCarCollection_8java_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">CustomCarCollection.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="CustomCarCollection_8java.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="namespaceorg_1_1aston_1_1app_1_1util.html">    1</a></span><span class="keyword">package </span>org.aston.app.util;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> org.aston.app.model.Car;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">import</span> java.util.AbstractList;</div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> java.util.Arrays;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> java.util.Collection;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="foldopen" id="foldopen00018" data-start="{" data-end="};">
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html">   18</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html">CustomCarCollection</a> <span class="keyword">extends</span> AbstractList&lt;Car&gt; {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">private</span> Car[] values;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">private</span> <span class="keywordtype">int</span> size;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keywordtype">int</span> DEFAULT_CAPACITY = 10;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html#ac22179193b668105ebd3d3dddfe8c86c">   40</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html#ac22179193b668105ebd3d3dddfe8c86c">CustomCarCollection</a>() {</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        values = <span class="keyword">new</span> Car[DEFAULT_CAPACITY];</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    }</div>
+</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="foldopen" id="foldopen00050" data-start="{" data-end="}">
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html#abffb5db44bbf11d4ba8a5a23c9474473">   50</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html#abffb5db44bbf11d4ba8a5a23c9474473">CustomCarCollection</a>(<span class="keywordtype">int</span> initialCapacity) {</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        <span class="keywordflow">if</span> (initialCapacity &lt;= 0) {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> IllegalArgumentException(<span class="stringliteral">&quot;Illegal Capacity: &quot;</span> + initialCapacity);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        }</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>        values = <span class="keyword">new</span> Car[initialCapacity];</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    }</div>
+</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="foldopen" id="foldopen00065" data-start="{" data-end="}">
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html#a9ff8d4e4f5fd2afceffc845bc676fb4d">   65</a></span>    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html#a9ff8d4e4f5fd2afceffc845bc676fb4d">add</a>(Car value) {</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        resize();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        values[size++] = value;</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    }</div>
+</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="foldopen" id="foldopen00078" data-start="{" data-end="}">
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html#a1a25238eaeef6fe0a8e4f87b59d71ffc">   78</a></span>    <span class="keyword">public</span> Car <span class="keyword">get</span>(<span class="keywordtype">int</span> index) {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        checkIndex(index);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>        <span class="keywordflow">return</span> values[index];</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    }</div>
+</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
+<div class="foldopen" id="foldopen00090" data-start="{" data-end="}">
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno"><a class="line" href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html#a2086656b8e0c8c2e372ff8214f8a6677">   90</a></span>    <span class="keyword">public</span> Car <span class="keyword">remove</span>(<span class="keywordtype">int</span> index) {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>        checkIndex(index);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        Car removedValue = values[index];</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        System.arraycopy(values, index + 1, values, index, values.length - index - 1);</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        values[--size] = <span class="keyword">null</span>;</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordflow">return</span> removedValue;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    }</div>
+</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span> </div>
+<div class="foldopen" id="foldopen00105" data-start="{" data-end="}">
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html#a4c5f0c0b2d3217f7d046135b8365b0a1">  105</a></span>    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html#a4c5f0c0b2d3217f7d046135b8365b0a1">addAll</a>(Collection&lt;? extends Car&gt; other) {</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>        Car[] incoming = other.toArray(Car[]::new);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>        resize(size + incoming.length);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        System.arraycopy(incoming, 0, values, size, incoming.length);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        size += incoming.length;</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    }</div>
+</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
+<div class="foldopen" id="foldopen00118" data-start="{" data-end="}">
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno"><a class="line" href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html#aa6c7d07833328bd841dcb3466e70ada3">  118</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html#aa6c7d07833328bd841dcb3466e70ada3">size</a>() {</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>        <span class="keywordflow">return</span> size;</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>    }</div>
+</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span> </div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> resize(<span class="keywordtype">int</span> i) {</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        <span class="keywordflow">if</span> (i &gt; values.length) {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            <span class="keywordtype">int</span> newCapacity = Math.max(i, values.length * 2);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            var newValues = <span class="keyword">new</span> Car[newCapacity];</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>            System.arraycopy(values, 0, newValues, 0, size);</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            values = newValues;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>        }</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>    }</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> resize() {</div>
+<div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span>        resize(size + 1);</div>
+<div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span>    }</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span> </div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    <span class="keyword">private</span> <span class="keywordtype">void</span> checkIndex(<span class="keywordtype">int</span> index) {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        <span class="keywordflow">if</span> (index &lt; 0 || index &gt;= size) {</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>            <span class="keywordflow">throw</span> <span class="keyword">new</span> IndexOutOfBoundsException(<span class="stringliteral">&quot;Index: &quot;</span> + index + <span class="stringliteral">&quot;, size: &quot;</span> + size);</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>        }</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>    }</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span> </div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>    @Override</div>
+<div class="foldopen" id="foldopen00164" data-start="{" data-end="}">
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno"><a class="line" href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html#aaa2b0eaadd5efd640260def8bbf17ad8">  164</a></span>    <span class="keyword">public</span> Car[] <a class="code hl_function" href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html#aaa2b0eaadd5efd640260def8bbf17ad8">toArray</a>() {</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>        <span class="keywordflow">return</span> values;</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>    }</div>
+</div>
+<div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>}</div>
+</div>
+<div class="ttc" id="aclassorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_html"><div class="ttname"><a href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html">org.aston.app.util.CustomCarCollection</a></div><div class="ttdoc">Кастомная реализация коллекции автомобилей на основе массива.</div><div class="ttdef"><b>Definition</b> <a href="CustomCarCollection_8java_source.html#l00018">CustomCarCollection.java:18</a></div></div>
+<div class="ttc" id="aclassorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_html_a4c5f0c0b2d3217f7d046135b8365b0a1"><div class="ttname"><a href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html#a4c5f0c0b2d3217f7d046135b8365b0a1">org.aston.app.util.CustomCarCollection.addAll</a></div><div class="ttdeci">boolean addAll(Collection&lt;? extends Car &gt; other)</div><div class="ttdoc">Добавляет все автомобили из указанной коллекции в текущую.</div><div class="ttdef"><b>Definition</b> <a href="CustomCarCollection_8java_source.html#l00105">CustomCarCollection.java:105</a></div></div>
+<div class="ttc" id="aclassorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_html_a9ff8d4e4f5fd2afceffc845bc676fb4d"><div class="ttname"><a href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html#a9ff8d4e4f5fd2afceffc845bc676fb4d">org.aston.app.util.CustomCarCollection.add</a></div><div class="ttdeci">boolean add(Car value)</div><div class="ttdoc">Добавляет указанный автомобиль в конец коллекции.</div><div class="ttdef"><b>Definition</b> <a href="CustomCarCollection_8java_source.html#l00065">CustomCarCollection.java:65</a></div></div>
+<div class="ttc" id="aclassorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_html_aa6c7d07833328bd841dcb3466e70ada3"><div class="ttname"><a href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html#aa6c7d07833328bd841dcb3466e70ada3">org.aston.app.util.CustomCarCollection.size</a></div><div class="ttdeci">int size()</div><div class="ttdoc">Возвращает текущее количество элементов в коллекции.</div><div class="ttdef"><b>Definition</b> <a href="CustomCarCollection_8java_source.html#l00118">CustomCarCollection.java:118</a></div></div>
+<div class="ttc" id="aclassorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_html_aaa2b0eaadd5efd640260def8bbf17ad8"><div class="ttname"><a href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html#aaa2b0eaadd5efd640260def8bbf17ad8">org.aston.app.util.CustomCarCollection.toArray</a></div><div class="ttdeci">Car[] toArray()</div><div class="ttdoc">Возвращает массив, содержащий все элементы коллекции.</div><div class="ttdef"><b>Definition</b> <a href="CustomCarCollection_8java_source.html#l00164">CustomCarCollection.java:164</a></div></div>
+<div class="ttc" id="aclassorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_html_abffb5db44bbf11d4ba8a5a23c9474473"><div class="ttname"><a href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html#abffb5db44bbf11d4ba8a5a23c9474473">org.aston.app.util.CustomCarCollection.CustomCarCollection</a></div><div class="ttdeci">CustomCarCollection(int initialCapacity)</div><div class="ttdoc">Конструктор с указанием начальной ёмкости.</div><div class="ttdef"><b>Definition</b> <a href="CustomCarCollection_8java_source.html#l00050">CustomCarCollection.java:50</a></div></div>
+<div class="ttc" id="aclassorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_html_ac22179193b668105ebd3d3dddfe8c86c"><div class="ttname"><a href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html#ac22179193b668105ebd3d3dddfe8c86c">org.aston.app.util.CustomCarCollection.CustomCarCollection</a></div><div class="ttdeci">CustomCarCollection()</div><div class="ttdoc">Конструктор по умолчанию.</div><div class="ttdef"><b>Definition</b> <a href="CustomCarCollection_8java_source.html#l00040">CustomCarCollection.java:40</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a class="el" href="dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a class="el" href="dir_daf7592b8ade76cad5a1e82d805df54b.html">org</a></li><li class="navelem"><a class="el" href="dir_6731ac4a8bdd4a654cf310ace42bc18f.html">aston</a></li><li class="navelem"><a class="el" href="dir_f0350216b77b7c6a6b05f842e3435737.html">app</a></li><li class="navelem"><a class="el" href="dir_33f2bb1e8d1d3dc73f39c79c575c3314.html">util</a></li><li class="navelem"><a class="el" href="CustomCarCollection_8java.html">CustomCarCollection.java</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

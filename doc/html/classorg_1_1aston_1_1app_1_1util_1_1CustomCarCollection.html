@@ -1,0 +1,430 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Система сортировки автомобилей: Класс org.aston.app.util.CustomCarCollection</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="LogoAston.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Система сортировки автомобилей<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">Проект реализует консольное приложение для сортировки коллекций объектов типа Автомобиль.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Открытые члены</a> &#124;
+<a href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection-members.html">Полный список членов класса</a>  </div>
+  <div class="headertitle"><div class="title">Класс org.aston.app.util.CustomCarCollection</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Кастомная реализация коллекции автомобилей на основе массива.  
+ <a href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html#details">Подробнее...</a></p>
+<div class="dynheader">
+Граф наследования:org.aston.app.util.CustomCarCollection:</div>
+<div class="dyncontent">
+<div class="center"><img src="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection__inherit__graph.png" border="0" usemap="#aorg_8aston_8app_8util_8CustomCarCollection_inherit__map" alt="Inheritance graph"/></div>
+<map name="aorg_8aston_8app_8util_8CustomCarCollection_inherit__map" id="aorg_8aston_8app_8util_8CustomCarCollection_inherit__map">
+<area shape="rect" title="Кастомная реализация коллекции автомобилей на основе массива." alt="" coords="5,79,177,119"/>
+<area shape="rect" title=" " alt="" coords="23,5,159,31"/>
+<area shape="poly" title=" " alt="" coords="94,44,94,79,89,79,89,44"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">см. легенду</a>]</span></center></div>
+<div class="dynheader">
+Граф связей класса org.aston.app.util.CustomCarCollection:</div>
+<div class="dyncontent">
+<div class="center"><img src="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection__coll__graph.png" border="0" usemap="#aorg_8aston_8app_8util_8CustomCarCollection_coll__map" alt="Collaboration graph"/></div>
+<map name="aorg_8aston_8app_8util_8CustomCarCollection_coll__map" id="aorg_8aston_8app_8util_8CustomCarCollection_coll__map">
+<area shape="rect" title="Кастомная реализация коллекции автомобилей на основе массива." alt="" coords="5,79,177,119"/>
+<area shape="rect" title=" " alt="" coords="23,5,159,31"/>
+<area shape="poly" title=" " alt="" coords="94,44,94,79,89,79,89,44"/>
+</map>
+<center><span class="legend">[<a target="top" href="graph_legend.html">см. легенду</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Открытые члены</h2></td></tr>
+<tr class="memitem:ac22179193b668105ebd3d3dddfe8c86c" id="r_ac22179193b668105ebd3d3dddfe8c86c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html#ac22179193b668105ebd3d3dddfe8c86c">CustomCarCollection</a> ()</td></tr>
+<tr class="memdesc:ac22179193b668105ebd3d3dddfe8c86c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор по умолчанию.  <br /></td></tr>
+<tr class="separator:ac22179193b668105ebd3d3dddfe8c86c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abffb5db44bbf11d4ba8a5a23c9474473" id="r_abffb5db44bbf11d4ba8a5a23c9474473"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html#abffb5db44bbf11d4ba8a5a23c9474473">CustomCarCollection</a> (int initialCapacity)</td></tr>
+<tr class="memdesc:abffb5db44bbf11d4ba8a5a23c9474473"><td class="mdescLeft">&#160;</td><td class="mdescRight">Конструктор с указанием начальной ёмкости.  <br /></td></tr>
+<tr class="separator:abffb5db44bbf11d4ba8a5a23c9474473"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ff8d4e4f5fd2afceffc845bc676fb4d" id="r_a9ff8d4e4f5fd2afceffc845bc676fb4d"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html#a9ff8d4e4f5fd2afceffc845bc676fb4d">add</a> (Car value)</td></tr>
+<tr class="memdesc:a9ff8d4e4f5fd2afceffc845bc676fb4d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет указанный автомобиль в конец коллекции.  <br /></td></tr>
+<tr class="separator:a9ff8d4e4f5fd2afceffc845bc676fb4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a25238eaeef6fe0a8e4f87b59d71ffc" id="r_a1a25238eaeef6fe0a8e4f87b59d71ffc"><td class="memItemLeft" align="right" valign="top">Car&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html#a1a25238eaeef6fe0a8e4f87b59d71ffc">get</a> (int index)</td></tr>
+<tr class="memdesc:a1a25238eaeef6fe0a8e4f87b59d71ffc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает автомобиль по указанному индексу.  <br /></td></tr>
+<tr class="separator:a1a25238eaeef6fe0a8e4f87b59d71ffc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2086656b8e0c8c2e372ff8214f8a6677" id="r_a2086656b8e0c8c2e372ff8214f8a6677"><td class="memItemLeft" align="right" valign="top">Car&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html#a2086656b8e0c8c2e372ff8214f8a6677">remove</a> (int index)</td></tr>
+<tr class="memdesc:a2086656b8e0c8c2e372ff8214f8a6677"><td class="mdescLeft">&#160;</td><td class="mdescRight">Удаляет автомобиль по указанному индексу.  <br /></td></tr>
+<tr class="separator:a2086656b8e0c8c2e372ff8214f8a6677"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c5f0c0b2d3217f7d046135b8365b0a1" id="r_a4c5f0c0b2d3217f7d046135b8365b0a1"><td class="memItemLeft" align="right" valign="top">boolean&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html#a4c5f0c0b2d3217f7d046135b8365b0a1">addAll</a> (Collection&lt;? extends Car &gt; other)</td></tr>
+<tr class="memdesc:a4c5f0c0b2d3217f7d046135b8365b0a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Добавляет все автомобили из указанной коллекции в текущую.  <br /></td></tr>
+<tr class="separator:a4c5f0c0b2d3217f7d046135b8365b0a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa6c7d07833328bd841dcb3466e70ada3" id="r_aa6c7d07833328bd841dcb3466e70ada3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html#aa6c7d07833328bd841dcb3466e70ada3">size</a> ()</td></tr>
+<tr class="memdesc:aa6c7d07833328bd841dcb3466e70ada3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает текущее количество элементов в коллекции.  <br /></td></tr>
+<tr class="separator:aa6c7d07833328bd841dcb3466e70ada3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa2b0eaadd5efd640260def8bbf17ad8" id="r_aaa2b0eaadd5efd640260def8bbf17ad8"><td class="memItemLeft" align="right" valign="top">Car[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html#aaa2b0eaadd5efd640260def8bbf17ad8">toArray</a> ()</td></tr>
+<tr class="memdesc:aaa2b0eaadd5efd640260def8bbf17ad8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Возвращает массив, содержащий все элементы коллекции.  <br /></td></tr>
+<tr class="separator:aaa2b0eaadd5efd640260def8bbf17ad8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Подробное описание</h2>
+<div class="textblock"><p>Кастомная реализация коллекции автомобилей на основе массива. </p>
+<p>Дополнительное задание 3*: кастомная коллекция на основе массива </p>
+<p>Класс расширяет <code><a class="el" href="">AbstractList</a></code>, предоставляя базовую функциональность списка и реализуя методы добавления, удаления, получения элементов и другие стандартные операции. </p>
+<p>Внутреннее хранилище автоматически расширяется при необходимости. </p>
+
+<p class="definition">См. определение в файле <a class="el" href="CustomCarCollection_8java_source.html">CustomCarCollection.java</a> строка <a class="el" href="CustomCarCollection_8java_source.html#l00018">18</a></p>
+</div><h2 class="groupheader">Конструктор(ы)</h2>
+<a id="ac22179193b668105ebd3d3dddfe8c86c" name="ac22179193b668105ebd3d3dddfe8c86c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac22179193b668105ebd3d3dddfe8c86c">&#9670;&#160;</a></span>CustomCarCollection() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">org.aston.app.util.CustomCarCollection.CustomCarCollection </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Конструктор по умолчанию. </p>
+<p>Создаёт внутренний массив ёмкостью по умолчанию (10 элементов). </p>
+
+<p class="definition">См. определение в файле <a class="el" href="CustomCarCollection_8java_source.html">CustomCarCollection.java</a> строка <a class="el" href="CustomCarCollection_8java_source.html#l00040">40</a></p>
+
+</div>
+</div>
+<a id="abffb5db44bbf11d4ba8a5a23c9474473" name="abffb5db44bbf11d4ba8a5a23c9474473"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abffb5db44bbf11d4ba8a5a23c9474473">&#9670;&#160;</a></span>CustomCarCollection() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">org.aston.app.util.CustomCarCollection.CustomCarCollection </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>initialCapacity</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Конструктор с указанием начальной ёмкости. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">initialCapacity</td><td>начальная ёмкость внутреннего массива </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">IllegalArgumentException</td><td>если указанная ёмкость меньше или равна нулю </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="CustomCarCollection_8java_source.html">CustomCarCollection.java</a> строка <a class="el" href="CustomCarCollection_8java_source.html#l00050">50</a></p>
+
+</div>
+</div>
+<h2 class="groupheader">Методы</h2>
+<a id="a9ff8d4e4f5fd2afceffc845bc676fb4d" name="a9ff8d4e4f5fd2afceffc845bc676fb4d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9ff8d4e4f5fd2afceffc845bc676fb4d">&#9670;&#160;</a></span>add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean org.aston.app.util.CustomCarCollection.add </td>
+          <td>(</td>
+          <td class="paramtype">Car&#160;</td>
+          <td class="paramname"><em>value</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет указанный автомобиль в конец коллекции. </p>
+<p>Если текущий массив заполнен, происходит автоматическое расширение.</p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">value</td><td>объект Car, который необходимо добавить </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>всегда возвращает true (в соответствии с контрактом Collection) </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="CustomCarCollection_8java_source.html">CustomCarCollection.java</a> строка <a class="el" href="CustomCarCollection_8java_source.html#l00065">65</a></p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_a9ff8d4e4f5fd2afceffc845bc676fb4d_icgraph.png" border="0" usemap="#aclassorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_a9ff8d4e4f5fd2afceffc845bc676fb4d_icgraph" alt=""/></div>
+<map name="aclassorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_a9ff8d4e4f5fd2afceffc845bc676fb4d_icgraph" id="aclassorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_a9ff8d4e4f5fd2afceffc845bc676fb4d_icgraph">
+<area shape="rect" title="Добавляет указанный автомобиль в конец коллекции." alt="" coords="296,5,468,45"/>
+<area shape="rect" href="classorg_1_1aston_1_1app_1_1util_1_1DataGenerator.html#a9d96efa73740772f49709a075af25f46" title="Запрашивает у пользователя данные для создания автомобилей через консоль." alt="" coords="5,5,248,45"/>
+<area shape="poly" title=" " alt="" coords="282,28,248,28,248,23,282,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a4c5f0c0b2d3217f7d046135b8365b0a1" name="a4c5f0c0b2d3217f7d046135b8365b0a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c5f0c0b2d3217f7d046135b8365b0a1">&#9670;&#160;</a></span>addAll()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">boolean org.aston.app.util.CustomCarCollection.addAll </td>
+          <td>(</td>
+          <td class="paramtype">Collection&lt;? extends Car &gt;&#160;</td>
+          <td class="paramname"><em>other</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Добавляет все автомобили из указанной коллекции в текущую. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">other</td><td>коллекция, элементы которой нужно добавить </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>всегда возвращает true, если коллекция была изменена </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">NullPointerException</td><td>если переданная коллекция равна null </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="CustomCarCollection_8java_source.html">CustomCarCollection.java</a> строка <a class="el" href="CustomCarCollection_8java_source.html#l00105">105</a></p>
+
+</div>
+</div>
+<a id="a1a25238eaeef6fe0a8e4f87b59d71ffc" name="a1a25238eaeef6fe0a8e4f87b59d71ffc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a25238eaeef6fe0a8e4f87b59d71ffc">&#9670;&#160;</a></span>get()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Car org.aston.app.util.CustomCarCollection.get </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает автомобиль по указанному индексу. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>позиция элемента в коллекции (от 0 до size - 1) </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>объект Car, находящийся по указанному индексу </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">IndexOutOfBoundsException</td><td>если индекс выходит за допустимые границы </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="CustomCarCollection_8java_source.html">CustomCarCollection.java</a> строка <a class="el" href="CustomCarCollection_8java_source.html#l00078">78</a></p>
+
+</div>
+</div>
+<a id="a2086656b8e0c8c2e372ff8214f8a6677" name="a2086656b8e0c8c2e372ff8214f8a6677"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2086656b8e0c8c2e372ff8214f8a6677">&#9670;&#160;</a></span>remove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Car org.aston.app.util.CustomCarCollection.remove </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Удаляет автомобиль по указанному индексу. </p>
+<dl class="params"><dt>Аргументы</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">index</td><td>позиция элемента, который необходимо удалить </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Возвращает</dt><dd>удалённый объект Car </dd></dl>
+<dl class="exception"><dt>Исключения</dt><dd>
+  <table class="exception">
+    <tr><td class="paramname">IndexOutOfBoundsException</td><td>если индекс выходит за допустимые границы </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">См. определение в файле <a class="el" href="CustomCarCollection_8java_source.html">CustomCarCollection.java</a> строка <a class="el" href="CustomCarCollection_8java_source.html#l00090">90</a></p>
+
+</div>
+</div>
+<a id="aa6c7d07833328bd841dcb3466e70ada3" name="aa6c7d07833328bd841dcb3466e70ada3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa6c7d07833328bd841dcb3466e70ada3">&#9670;&#160;</a></span>size()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int org.aston.app.util.CustomCarCollection.size </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает текущее количество элементов в коллекции. </p>
+<dl class="section return"><dt>Возвращает</dt><dd>количество автомобилей в коллекции </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="CustomCarCollection_8java_source.html">CustomCarCollection.java</a> строка <a class="el" href="CustomCarCollection_8java_source.html#l00118">118</a></p>
+
+</div>
+</div>
+<a id="aaa2b0eaadd5efd640260def8bbf17ad8" name="aaa2b0eaadd5efd640260def8bbf17ad8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa2b0eaadd5efd640260def8bbf17ad8">&#9670;&#160;</a></span>toArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Car[] org.aston.app.util.CustomCarCollection.toArray </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Возвращает массив, содержащий все элементы коллекции. </p>
+<p>Возвращает внутренний массив целиком (включая null-элементы после size). Для корректного копирования следует использовать <code><a class="el" href="">Arrays#copyOf(Object[], int)</a></code>.</p>
+<dl class="section return"><dt>Возвращает</dt><dd>внутренний массив значений </dd></dl>
+
+<p class="definition">См. определение в файле <a class="el" href="CustomCarCollection_8java_source.html">CustomCarCollection.java</a> строка <a class="el" href="CustomCarCollection_8java_source.html#l00164">164</a></p>
+<div class="dynheader">
+Граф вызова функции:</div>
+<div class="dyncontent">
+<div class="center"><img src="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_aaa2b0eaadd5efd640260def8bbf17ad8_icgraph.png" border="0" usemap="#aclassorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_aaa2b0eaadd5efd640260def8bbf17ad8_icgraph" alt=""/></div>
+<map name="aclassorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_aaa2b0eaadd5efd640260def8bbf17ad8_icgraph" id="aclassorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_aaa2b0eaadd5efd640260def8bbf17ad8_icgraph">
+<area shape="rect" title="Возвращает массив, содержащий все элементы коллекции." alt="" coords="296,5,468,45"/>
+<area shape="rect" href="classorg_1_1aston_1_1app_1_1util_1_1DataGenerator.html#a9d96efa73740772f49709a075af25f46" title="Запрашивает у пользователя данные для создания автомобилей через консоль." alt="" coords="5,5,248,45"/>
+<area shape="poly" title=" " alt="" coords="282,28,248,28,248,23,282,23"/>
+</map>
+</div>
+
+</div>
+</div>
+<hr/>Объявления и описания членов класса находятся в файле:<ul>
+<li>src/main/java/org/aston/app/util/<a class="el" href="CustomCarCollection_8java_source.html">CustomCarCollection.java</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><b>org</b></li><li class="navelem"><b>aston</b></li><li class="navelem"><a class="el" href="namespaceorg_1_1aston_1_1app.html">app</a></li><li class="navelem"><a class="el" href="namespaceorg_1_1aston_1_1app_1_1util.html">util</a></li><li class="navelem"><a class="el" href="classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection.html">CustomCarCollection</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

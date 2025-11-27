@@ -1,0 +1,5 @@
+<map id="org.aston.app.validator.YearValidator" name="org.aston.app.validator.YearValidator">
+<area shape="rect" id="Node000001" title="Класс YearValidator реализует интерфейс CarValidator и предназначен для валидации поля года выпуска а..." alt="" coords="5,93,163,133"/>
+<area shape="rect" id="Node000002" href="$interfaceorg_1_1aston_1_1app_1_1validator_1_1CarValidator.html" title="Интерфейс CarValidator определяет контракт для валидации объектов класса Car." alt="" coords="5,5,163,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="87,59,87,93,81,93,81,59"/>
+</map>

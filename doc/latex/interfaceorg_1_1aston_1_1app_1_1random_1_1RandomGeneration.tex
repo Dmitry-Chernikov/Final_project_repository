@@ -1,0 +1,66 @@
+\doxysection{Интерфейс org.\+aston.\+app.\+random.\+Random\+Generation}
+\hypertarget{interfaceorg_1_1aston_1_1app_1_1random_1_1RandomGeneration}{}\label{interfaceorg_1_1aston_1_1app_1_1random_1_1RandomGeneration}\index{org.aston.app.random.RandomGeneration@{org.aston.app.random.RandomGeneration}}
+
+
+Интерфейс Random\+Generation определяет контракт для генерации объектов Car со случайными данными.  
+
+
+
+
+Граф наследования\+:org.\+aston.\+app.\+random.\+Random\+Generation\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfaceorg_1_1aston_1_1app_1_1random_1_1RandomGeneration__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+Car \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1random_1_1RandomGeneration_ac6de31191302f3e8c9a88cc47a8a5c4a}{random\+Car}} ()
+\begin{DoxyCompactList}\small\item\em Создаёт и возвращает новый объект Car со случайно сгенерированными полями. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Интерфейс Random\+Generation определяет контракт для генерации объектов Car со случайными данными. 
+
+Классы, реализующие этот интерфейс, отвечают за создание экземпляров автомобиля с различными характеристиками (модель, мощность, год выпуска) в соответствии с определённой стратегией. 
+
+Позволяет реализовать принцип инъекции зависимости, обеспечивая гибкость при выборе типа генерации (например, низкая, средняя, высокая мощность, спорткары и т.\+д.). 
+
+См. определение в файле \mbox{\hyperlink{RandomGeneration_8java_source}{Random\+Generation.\+java}} строка \mbox{\hyperlink{RandomGeneration_8java_source_l00014}{14}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{interfaceorg_1_1aston_1_1app_1_1random_1_1RandomGeneration_ac6de31191302f3e8c9a88cc47a8a5c4a}\label{interfaceorg_1_1aston_1_1app_1_1random_1_1RandomGeneration_ac6de31191302f3e8c9a88cc47a8a5c4a} 
+\index{org.aston.app.random.RandomGeneration@{org.aston.app.random.RandomGeneration}!randomCar@{randomCar}}
+\index{randomCar@{randomCar}!org.aston.app.random.RandomGeneration@{org.aston.app.random.RandomGeneration}}
+\doxysubsubsection{\texorpdfstring{randomCar()}{randomCar()}}
+{\footnotesize\ttfamily Car org.\+aston.\+app.\+random.\+Random\+Generation.\+random\+Car (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Создаёт и возвращает новый объект Car со случайно сгенерированными полями. 
+
+Конкретная реализация определяет, как именно генерируются значения\+: какие модели доступны, в каком диапазоне мощность, и т.\+п.
+
+\begin{DoxyReturn}{Возвращает}
+объект Car, построенный с использованием паттерна Builder 
+\end{DoxyReturn}
+
+
+Замещается в \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1random_1_1GetLowpowerCar_a911843e1f95c9378f7aaf6db2edaedfd}{org.\+aston.\+app.\+random.\+Get\+Lowpower\+Car}}, \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1random_1_1GetMidCar_a5a136b663734f75e311f2a44456ca4e6}{org.\+aston.\+app.\+random.\+Get\+Mid\+Car}}, \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1random_1_1GetPowerfulCar_a931f99ee9efbea333c3fe2fe413fa3e7}{org.\+aston.\+app.\+random.\+Get\+Powerful\+Car}} и \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1random_1_1GetSportCar_a42bed067657d7e7b9d03ff68c12fe88c}{org.\+aston.\+app.\+random.\+Get\+Sport\+Car}}.
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfaceorg_1_1aston_1_1app_1_1random_1_1RandomGeneration_ac6de31191302f3e8c9a88cc47a8a5c4a_icgraph}
+\end{center}
+\end{figure}
+
+
+Объявления и описания членов интерфейса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/org/aston/app/random/\mbox{\hyperlink{RandomGeneration_8java}{Random\+Generation.\+java}}\end{DoxyCompactItemize}

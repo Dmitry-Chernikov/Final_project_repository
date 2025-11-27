@@ -1,0 +1,63 @@
+\doxysection{Класс org.\+aston.\+app.\+util.\+File\+Writer\+Util}
+\hypertarget{classorg_1_1aston_1_1app_1_1util_1_1FileWriterUtil}{}\label{classorg_1_1aston_1_1app_1_1util_1_1FileWriterUtil}\index{org.aston.app.util.FileWriterUtil@{org.aston.app.util.FileWriterUtil}}
+
+
+Утилитарный класс для записи отсортированных данных об автомобилях в файл.  
+
+
+\doxysubsubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1util_1_1FileWriterUtil_a0526044a1d3b56900104ff6499d115f5}{append\+To\+File}} (String file\+Name, Car\mbox{[}$\,$\mbox{]} cars, String name\+Strategy\+Sort)
+\begin{DoxyCompactList}\small\item\em Записывает массив автомобилей в файл в режиме добавления. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Утилитарный класс для записи отсортированных данных об автомобилях в файл. 
+
+Дополнительное задание 2\+: запись в файл в режиме добавления 
+
+Предоставляет метод для добавления информации о результатах сортировки в указанный файл в поддиректории ресурсов проекта. 
+
+См. определение в файле \mbox{\hyperlink{FileWriterUtil_8java_source}{File\+Writer\+Util.\+java}} строка \mbox{\hyperlink{FileWriterUtil_8java_source_l00023}{23}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{classorg_1_1aston_1_1app_1_1util_1_1FileWriterUtil_a0526044a1d3b56900104ff6499d115f5}\label{classorg_1_1aston_1_1app_1_1util_1_1FileWriterUtil_a0526044a1d3b56900104ff6499d115f5} 
+\index{org.aston.app.util.FileWriterUtil@{org.aston.app.util.FileWriterUtil}!appendToFile@{appendToFile}}
+\index{appendToFile@{appendToFile}!org.aston.app.util.FileWriterUtil@{org.aston.app.util.FileWriterUtil}}
+\doxysubsubsection{\texorpdfstring{appendToFile()}{appendToFile()}}
+{\footnotesize\ttfamily static void org.\+aston.\+app.\+util.\+File\+Writer\+Util.\+append\+To\+File (\begin{DoxyParamCaption}\item[{String}]{file\+Name,  }\item[{Car\mbox{[}$\,$\mbox{]}}]{cars,  }\item[{String}]{name\+Strategy\+Sort }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Записывает массив автомобилей в файл в режиме добавления. 
+
+Добавляет заголовок с названием стратегии сортировки, временную метку, строковое представление каждого автомобиля и разделители. 
+
+Файл сохраняется в директории src/main/resources.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em file\+Name} & имя файла, в который будет производиться запись \\
+\hline
+{\em cars} & массив объектов Car, содержащий отсортированные данные \\
+\hline
+{\em name\+Strategy\+Sort} & название стратегии сортировки для логирования \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em IOException} & если возникает ошибка ввода-\/вывода при записи в файл \\
+\hline
+\end{DoxyExceptions}
+
+
+См. определение в файле \mbox{\hyperlink{FileWriterUtil_8java_source}{File\+Writer\+Util.\+java}} строка \mbox{\hyperlink{FileWriterUtil_8java_source_l00044}{44}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/org/aston/app/util/\mbox{\hyperlink{FileWriterUtil_8java}{File\+Writer\+Util.\+java}}\end{DoxyCompactItemize}

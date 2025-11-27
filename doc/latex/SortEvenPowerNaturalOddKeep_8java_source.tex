@@ -1,0 +1,57 @@
+\doxysection{Sort\+Even\+Power\+Natural\+Odd\+Keep.\+java}
+\hypertarget{SortEvenPowerNaturalOddKeep_8java_source}{}\label{SortEvenPowerNaturalOddKeep_8java_source}\index{src/main/java/org/aston/app/strategy/SortEvenPowerNaturalOddKeep.java@{src/main/java/org/aston/app/strategy/SortEvenPowerNaturalOddKeep.java}}
+\mbox{\hyperlink{SortEvenPowerNaturalOddKeep_8java}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00001}00001\ \textcolor{keyword}{package\ }org.aston.app.strategy;}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00003}00003\ \textcolor{keyword}{import}\ org.aston.app.model.Car;}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00015}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1strategy_1_1SortEvenPowerNaturalOddKeep}{00015}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1strategy_1_1SortEvenPowerNaturalOddKeep}{SortEvenPowerNaturalOddKeep}}\ \textcolor{keyword}{implements}\ \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy}{SortStrategy}}<Car>\ \{}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00023}00023\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00024}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1strategy_1_1SortEvenPowerNaturalOddKeep_a205c635b01a9d49d706423731bdf367c}{00024}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1strategy_1_1SortEvenPowerNaturalOddKeep_a205c635b01a9d49d706423731bdf367c}{sort}}(Car[]\ cars)\ \{}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00025}00025\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Извлекаем\ чётные\ значения\ мощности}}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00026}00026\ \ \ \ \ \ \ \ \ Car[]\ carEvenPowers\ =\ \textcolor{keyword}{new}\ Car[cars.length];}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ evenCount\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (Car\ car\ :\ cars)\ \{}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (car.getPower()\ \%\ 2\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ carEvenPowers[evenCount++]\ =\ car;}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00033}00033\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Сортируем\ чётные\ значения}}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00036}00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_a989dd029620ab0917ea7bb8ff2de5911}{quickSort}}(carEvenPowers,\ 0,\ evenCount\ -\/\ 1);}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Возвращаем\ отсортированные\ чётные\ значения\ обратно\ в\ исходный\ массив}}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ evenIndex\ =\ 0;}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ cars.length;\ i++)\ \{}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (cars[i].getPower()\ \%\ 2\ ==\ 0)\ \{}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ originalPower\ =\ cars[i].getPower();}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Находим\ отсортированное\ значение}}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Car\ carNewPower\ =\ carEvenPowers[evenIndex++];}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (carNewPower.getPower()\ !=\ originalPower)\ \{}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Пересоздаём\ объект\ (необходимо,\ так\ как\ объекты\ Car\ неизменяемы)}}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ cars[i]\ =\ carNewPower;}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00050}00050\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00051}00051\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00064}00064\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00065}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1strategy_1_1SortEvenPowerNaturalOddKeep_a4f4c82e22cab4529fb4de4ce92c6c649}{00065}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1strategy_1_1SortEvenPowerNaturalOddKeep_a4f4c82e22cab4529fb4de4ce92c6c649}{partition}}(Car[]\ cars,\ \textcolor{keywordtype}{int}\ low,\ \textcolor{keywordtype}{int}\ high)\ \{}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00066}00066\ \ \ \ \ \ \ \ \ Integer\ pivot\ =\ cars[high].getPower();\ \textcolor{comment}{//\ Опорный\ элемент\ —\ последний}}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ low\ -\/\ 1;\ \textcolor{comment}{//\ Индекс\ меньшего\ элемента}}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00069}00069\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ low;\ j\ <\ high;\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (((Integer)\ cars[j].getPower()).compareTo(pivot)\ <=\ 0)\ \{\ \textcolor{comment}{//\ Если\ текущий\ элемент\ меньше\ или\ равен\ опорному}}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_ab388e9cd0834b25ceea010dc533855dc}{swap}}(cars,\ i,\ j);\ \textcolor{comment}{//\ Меняем\ местами\ элементы}}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00074}00074\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00075}00075\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_ab388e9cd0834b25ceea010dc533855dc}{swap}}(cars,\ i\ +\ 1,\ high);\ \textcolor{comment}{//\ Меняем\ местами\ опорный\ элемент\ с\ элементом\ на\ позиции\ i+1}}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ i\ +\ 1;}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00077}00077\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SortEvenPowerNaturalOddKeep_8java_source_l00078}00078\ \}}
+
+\end{DoxyCode}

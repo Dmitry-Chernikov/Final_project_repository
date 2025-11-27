@@ -1,0 +1,175 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Система сортировки автомобилей: Проект: Система сортировки автомобилей</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="LogoAston.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Система сортировки автомобилей<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">Проект реализует консольное приложение для сортировки коллекций объектов типа Автомобиль.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('index.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div><div class="header">
+  <div class="headertitle"><div class="title">Проект: Система сортировки автомобилей </div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><p><a class="anchor" id="md_README"></a> </p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Введение</h1>
+<p>Данный проект реализует консольное приложение для сортировки коллекций объектов типа <code>Car</code> (Автомобиль) по различным критериям. Приложение разработано на языке Java с соблюдением принципов ООП, чистоты кода и конвенций языка.</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Основное задание</h1>
+<p>Реализовано приложение, позволяющее:</p>
+<ul>
+<li>Выбирать способ заполнения массива автомобилей: вручную, из файла или случайной генерацией.</li>
+<li>Задавать количество элементов.</li>
+<li>Сортировать массив по трём полям: модель, мощность, год выпуска.</li>
+<li>Использовать паттерн "Стратегия" для выбора алгоритма сортировки.</li>
+<li>Применять паттерн "Строитель (Builder)" при создании объектов <code>Car</code>.</li>
+<li>Выполнять валидацию всех входных данных (включая данные из файла).</li>
+<li>Работать в цикле до явного выхода пользователя.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Дополнительные задания</h1>
+<ol type="1">
+<li>Реализована сортировка: чётные значения поля "мощность" — в натуральном порядке, нечётные — на своих местах.</li>
+<li>Добавлена функция записи отсортированных данных в файл в режиме добавления.</li>
+<li>Заполнение коллекций осуществляется с использованием Java Stream API. <br  />
+ <em>Кастомная коллекция <code>CustomCarCollection</code> реализована на основе массива.</em></li>
+<li>Реализован многопоточный подсчёт вхождений заданного значения мощности.</li>
+</ol>
+<h1><a class="anchor" id="autotoc_md4"></a>
+Архитектура</h1>
+<ul>
+<li><b>Паттерны</b>: Строитель (Builder), Стратегия (Strategy), Валидатор (Chain of Responsibility)</li>
+<li><b>Валидация</b>: отдельные классы-валидаторы для каждого поля</li>
+<li><b>Сортировка</b>: реализована вручную (без <code>Arrays.sort</code>), на основе алгоритма быстрой сортировки</li>
+<li><b>Тестирование</b>: ручные тесты в отдельных классах (без использования JUnit)</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md5"></a>
+Основные классы</h1>
+<ul>
+<li><code>Car</code> — сущность автомобиля с полями: модель, мощность, год выпуска</li>
+<li><code>Car.Builder</code> — паттерн Builder с валидацией</li>
+<li><code>SortStrategy</code> — интерфейс стратегии сортировки</li>
+<li><code>SortByModel</code>, <code>SortByPower</code>, <code>SortByYear</code> — реализации стратегий</li>
+<li><code>CustomCarCollection</code> — кастомная коллекция на основе массива</li>
+<li><code>DataGenerator</code> — генерация данных (ручная, файл, случайная)</li>
+<li><code>FileWriterUtil</code> — запись в файл в режиме добавления</li>
+<li><code>SortingApplication</code> — основной цикл приложения</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md6"></a>
+Команда</h1>
+<p>Проект разрабатывался в команде, с использованием Git. Каждый участник работал в своей ветке, все ветки впоследствии были смерджены в <code>main</code>.</p>
+<h1><a class="anchor" id="autotoc_md7"></a>
+Авторы</h1>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Участник   </th><th class="markdownTableHeadNone">Контакты    </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Черников Дмитрий   </td><td class="markdownTableBodyNone"><a href="https://t.me/dZvCLssWZ2n">Telegram</a>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Иван Феофанов   </td><td class="markdownTableBodyNone"><a href="https://t.me/duracheck">Telegram</a>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Лучкин Дмитрий   </td><td class="markdownTableBodyNone"><a href="https://t.me/LuchkinDS">Telegram</a>    </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">Наталия Абызова   </td><td class="markdownTableBodyNone"><a href="https://t.me/AbizovaNatalia">Telegram</a>    </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">Максим Кустков   </td><td class="markdownTableBodyNone"><a href="https://t.me/kumaser33">Telegram</a>   </td></tr>
+</table>
+<h1><a class="anchor" id="autotoc_md8"></a>
+Заключение</h1>
+<p>Приложение полностью соответствует поставленным требованиям, реализует все основные и дополнительные функции, имеет читаемую архитектуру и поддерживает расширение. </p>
+</div></div><!-- PageDoc -->
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

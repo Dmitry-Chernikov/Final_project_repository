@@ -1,0 +1,33 @@
+\doxysection{Test\+Utils.\+java}
+\hypertarget{TestUtils_8java_source}{}\label{TestUtils_8java_source}\index{src/main/java/org/aston/app/test/TestUtils.java@{src/main/java/org/aston/app/test/TestUtils.java}}
+\mbox{\hyperlink{TestUtils_8java}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{TestUtils_8java_source_l00001}00001\ \textcolor{keyword}{package\ }org.aston.app.test;}
+\DoxyCodeLine{\Hypertarget{TestUtils_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{TestUtils_8java_source_l00012}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1test_1_1TestUtils}{00012}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1test_1_1TestUtils}{TestUtils}}\ \{}
+\DoxyCodeLine{\Hypertarget{TestUtils_8java_source_l00022}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1test_1_1TestUtils_a4f3233c392eb29a2ffc39bb2ab199cca}{00022}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1test_1_1TestUtils_a4f3233c392eb29a2ffc39bb2ab199cca}{assertTrue}}(String\ message,\ \textcolor{keywordtype}{boolean}\ condition)\ \{}
+\DoxyCodeLine{\Hypertarget{TestUtils_8java_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!condition)\ \{}
+\DoxyCodeLine{\Hypertarget{TestUtils_8java_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ System.err.println(\textcolor{stringliteral}{"{}FAIL:\ "{}}\ +\ message);}
+\DoxyCodeLine{\Hypertarget{TestUtils_8java_source_l00025}00025\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{TestUtils_8java_source_l00026}00026\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}OK:\ "{}}\ +\ message);}
+\DoxyCodeLine{\Hypertarget{TestUtils_8java_source_l00027}00027\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TestUtils_8java_source_l00028}00028\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TestUtils_8java_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{TestUtils_8java_source_l00040}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1test_1_1TestUtils_aef7a02484ad19ae37eac955f01ca60da}{00040}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1test_1_1TestUtils_aef7a02484ad19ae37eac955f01ca60da}{assertEquals}}(String\ message,\ Object\ expected,\ Object\ actual)\ \{}
+\DoxyCodeLine{\Hypertarget{TestUtils_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1test_1_1TestUtils_a4f3233c392eb29a2ffc39bb2ab199cca}{assertTrue}}(message\ +\ \textcolor{stringliteral}{"{}\ (expected:\ "{}}\ +\ expected\ +\ \textcolor{stringliteral}{"{},\ actual:\ "{}}\ +\ actual\ +\ \textcolor{stringliteral}{"{})"{}},\ expected.equals(actual));}
+\DoxyCodeLine{\Hypertarget{TestUtils_8java_source_l00042}00042\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TestUtils_8java_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{TestUtils_8java_source_l00054}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1test_1_1TestUtils_a210519034bc6a55199b1ce918cff90f0}{00054}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1test_1_1TestUtils_a210519034bc6a55199b1ce918cff90f0}{assertEquals}}(String\ message,\ \textcolor{keywordtype}{int}\ expected,\ \textcolor{keywordtype}{int}\ actual)\ \{}
+\DoxyCodeLine{\Hypertarget{TestUtils_8java_source_l00055}00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1test_1_1TestUtils_a4f3233c392eb29a2ffc39bb2ab199cca}{assertTrue}}(message\ +\ \textcolor{stringliteral}{"{}\ (expected:\ "{}}\ +\ expected\ +\ \textcolor{stringliteral}{"{},\ actual:\ "{}}\ +\ actual\ +\ \textcolor{stringliteral}{"{})"{}},\ expected\ ==\ actual);}
+\DoxyCodeLine{\Hypertarget{TestUtils_8java_source_l00056}00056\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TestUtils_8java_source_l00057}00057\ }
+\DoxyCodeLine{\Hypertarget{TestUtils_8java_source_l00067}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1test_1_1TestUtils_a67072fbb6babc103c12f16a023f9ee95}{00067}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1test_1_1TestUtils_a67072fbb6babc103c12f16a023f9ee95}{assertFalse}}(String\ message,\ \textcolor{keywordtype}{boolean}\ condition)\ \{}
+\DoxyCodeLine{\Hypertarget{TestUtils_8java_source_l00068}00068\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (condition)\ \{}
+\DoxyCodeLine{\Hypertarget{TestUtils_8java_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ System.err.println(\textcolor{stringliteral}{"{}FAIL:\ "{}}\ +\ message);}
+\DoxyCodeLine{\Hypertarget{TestUtils_8java_source_l00070}00070\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{TestUtils_8java_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}OK:\ "{}}\ +\ message);}
+\DoxyCodeLine{\Hypertarget{TestUtils_8java_source_l00072}00072\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TestUtils_8java_source_l00073}00073\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{TestUtils_8java_source_l00074}00074\ \}}
+
+\end{DoxyCode}

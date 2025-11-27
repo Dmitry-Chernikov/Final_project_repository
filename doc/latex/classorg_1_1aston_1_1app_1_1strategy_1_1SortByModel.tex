@@ -1,0 +1,123 @@
+\doxysection{Класс org.\+aston.\+app.\+strategy.\+Sort\+By\+Model}
+\hypertarget{classorg_1_1aston_1_1app_1_1strategy_1_1SortByModel}{}\label{classorg_1_1aston_1_1app_1_1strategy_1_1SortByModel}\index{org.aston.app.strategy.SortByModel@{org.aston.app.strategy.SortByModel}}
+
+
+Класс Sort\+By\+Model реализует интерфейс Sort\+Strategy и предназначен для сортировки массива объектов Car по модели в лексикографическом порядке.  
+
+
+
+
+Граф наследования\+:org.\+aston.\+app.\+strategy.\+Sort\+By\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{classorg_1_1aston_1_1app_1_1strategy_1_1SortByModel__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса org.\+aston.\+app.\+strategy.\+Sort\+By\+Model\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{classorg_1_1aston_1_1app_1_1strategy_1_1SortByModel__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1strategy_1_1SortByModel_a938e6b02ab0467202b5f20899c964c25}{sort}} (Car\mbox{[}$\,$\mbox{]} cars)
+\begin{DoxyCompactList}\small\item\em Выполняет сортировку массива автомобилей по модели. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1strategy_1_1SortByModel_adb0df9b73a0cd8b0c5f68d6518946844}{partition}} (Car\mbox{[}$\,$\mbox{]} cars, int low, int high)
+\begin{DoxyCompactList}\small\item\em Выполняет разделение подмассива cars\mbox{[}low..high\mbox{]} на две части относительно опорного элемента. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Открытые члены унаследованные от \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy}{org.\+aston.\+app.\+strategy.\+Sort\+Strategy$<$ Car $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_a68d0d9041d04b3bb952278ea951b7892}{sort}} (T\mbox{[}$\,$\mbox{]} cars)
+\begin{DoxyCompactList}\small\item\em Выполняет сортировку переданного массива объектов. \end{DoxyCompactList}\item 
+default void \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_a989dd029620ab0917ea7bb8ff2de5911}{quick\+Sort}} (T\mbox{[}$\,$\mbox{]} cars, int low, int high)
+\begin{DoxyCompactList}\small\item\em Рекурсивная реализация алгоритма быстрой сортировки. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_afb7493d6f143eda66cebd81e1d842dbf}{partition}} (T\mbox{[}$\,$\mbox{]} cars, int low, int high)
+\begin{DoxyCompactList}\small\item\em Выполняет разделение подмассива на две части относительно опорного элемента. \end{DoxyCompactList}\item 
+default void \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_ab388e9cd0834b25ceea010dc533855dc}{swap}} (T\mbox{[}$\,$\mbox{]} elements, int i, int j)
+\begin{DoxyCompactList}\small\item\em Меняет местами два элемента в массиве. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс Sort\+By\+Model реализует интерфейс Sort\+Strategy и предназначен для сортировки массива объектов Car по модели в лексикографическом порядке. 
+
+Использует алгоритм быстрой сортировки (quicksort) с реализацией метода partition, специфичного для поля model. 
+
+См. определение в файле \mbox{\hyperlink{SortByModel_8java_source}{Sort\+By\+Model.\+java}} строка \mbox{\hyperlink{SortByModel_8java_source_l00012}{12}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{classorg_1_1aston_1_1app_1_1strategy_1_1SortByModel_adb0df9b73a0cd8b0c5f68d6518946844}\label{classorg_1_1aston_1_1app_1_1strategy_1_1SortByModel_adb0df9b73a0cd8b0c5f68d6518946844} 
+\index{org.aston.app.strategy.SortByModel@{org.aston.app.strategy.SortByModel}!partition@{partition}}
+\index{partition@{partition}!org.aston.app.strategy.SortByModel@{org.aston.app.strategy.SortByModel}}
+\doxysubsubsection{\texorpdfstring{partition()}{partition()}}
+{\footnotesize\ttfamily int org.\+aston.\+app.\+strategy.\+Sort\+By\+Model.\+partition (\begin{DoxyParamCaption}\item[{Car\mbox{[}$\,$\mbox{]}}]{cars,  }\item[{int}]{low,  }\item[{int}]{high }\end{DoxyParamCaption})}
+
+
+
+Выполняет разделение подмассива cars\mbox{[}low..high\mbox{]} на две части относительно опорного элемента. 
+
+В качестве опорного выбирается последний элемент подмассива (по индексу high). Все элементы, модель которых меньше или равна опорной (лексикографически), перемещаются в левую часть.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em cars} & массив объектов Car, подлежащий разделению \\
+\hline
+{\em low} & начальный индекс подмассива \\
+\hline
+{\em high} & конечный индекс подмассива \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+индекс опорного элемента после завершения разделения 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{SortByModel_8java_source}{Sort\+By\+Model.\+java}} строка \mbox{\hyperlink{SortByModel_8java_source_l00039}{39}}
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1aston_1_1app_1_1strategy_1_1SortByModel_adb0df9b73a0cd8b0c5f68d6518946844_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classorg_1_1aston_1_1app_1_1strategy_1_1SortByModel_a938e6b02ab0467202b5f20899c964c25}\label{classorg_1_1aston_1_1app_1_1strategy_1_1SortByModel_a938e6b02ab0467202b5f20899c964c25} 
+\index{org.aston.app.strategy.SortByModel@{org.aston.app.strategy.SortByModel}!sort@{sort}}
+\index{sort@{sort}!org.aston.app.strategy.SortByModel@{org.aston.app.strategy.SortByModel}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily void org.\+aston.\+app.\+strategy.\+Sort\+By\+Model.\+sort (\begin{DoxyParamCaption}\item[{Car\mbox{[}$\,$\mbox{]}}]{cars }\end{DoxyParamCaption})}
+
+
+
+Выполняет сортировку массива автомобилей по модели. 
+
+Использует алгоритм быстрой сортировки, начиная с первого (0) и последнего (length -\/ 1) индексов массива.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em cars} & массив объектов Car, который необходимо отсортировать по модели \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{SortByModel_8java_source}{Sort\+By\+Model.\+java}} строка \mbox{\hyperlink{SortByModel_8java_source_l00023}{23}}
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1aston_1_1app_1_1strategy_1_1SortByModel_a938e6b02ab0467202b5f20899c964c25_cgraph}
+\end{center}
+\end{figure}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/org/aston/app/strategy/\mbox{\hyperlink{SortByModel_8java}{Sort\+By\+Model.\+java}}\end{DoxyCompactItemize}

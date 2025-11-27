@@ -1,0 +1,211 @@
+\doxysection{Car\+Test.\+java}
+\hypertarget{CarTest_8java_source}{}\label{CarTest_8java_source}\index{src/test/java/org/aston/app/model/CarTest.java@{src/test/java/org/aston/app/model/CarTest.java}}
+\mbox{\hyperlink{CarTest_8java}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00001}00001\ \textcolor{keyword}{package\ }org.aston.app.model;}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00003}00003\ \textcolor{keyword}{import}\ org.aston.app.exception.CarValidationException;}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00004}00004\ \textcolor{keyword}{import}\ org.aston.app.validator.CarValidator;}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00005}00005\ \textcolor{keyword}{import}\ org.aston.app.validator.ModelValidator;}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00006}00006\ \textcolor{keyword}{import}\ org.aston.app.validator.PowerValidator;}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00007}00007\ \textcolor{keyword}{import}\ org.aston.app.validator.YearValidator;}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00008}00008\ \textcolor{keyword}{import}\ org.junit.jupiter.api.BeforeEach;}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00009}00009\ \textcolor{keyword}{import}\ org.junit.jupiter.api.DisplayName;}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00010}00010\ \textcolor{keyword}{import}\ org.junit.jupiter.api.Test;}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00012}00012\ \textcolor{keyword}{import}\ java.util.ArrayList;}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00013}00013\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00015}00015\ \textcolor{keyword}{import}\ \textcolor{keyword}{static}\ org.junit.jupiter.api.Assertions.assertEquals;}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00016}00016\ \textcolor{keyword}{import}\ \textcolor{keyword}{static}\ org.junit.jupiter.api.Assertions.assertFalse;}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00017}00017\ \textcolor{keyword}{import}\ \textcolor{keyword}{static}\ org.junit.jupiter.api.Assertions.assertNotNull;}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00018}00018\ \textcolor{keyword}{import}\ \textcolor{keyword}{static}\ org.junit.jupiter.api.Assertions.assertThrows;}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00021}00021\ @DisplayName(\textcolor{stringliteral}{"{}Car\ Class\ Tests"{}})\ \textcolor{comment}{//\ Название\ группы\ тестов\ для\ отображения\ в\ отчете\ JUnit}}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00022}00022\ class\ CarTest\ \{}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00024}00024\ \ \ \ \ \textcolor{keyword}{private}\ Car.Builder\ carBuilder;}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00025}00025\ \ \ \ \ \textcolor{keyword}{private}\ List<CarValidator>\ validators\ =\ \textcolor{keyword}{new}\ ArrayList<>()\{\{}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00026}00026\ \ \ \ \ \ \ \ \ add(\textcolor{keyword}{new}\ ModelValidator());}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00027}00027\ \ \ \ \ \ \ \ \ add(\textcolor{keyword}{new}\ PowerValidator());}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00028}00028\ \ \ \ \ \ \ \ \ add(\textcolor{keyword}{new}\ YearValidator());}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00029}00029\ \ \ \ \ \}\};}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00031}00031\ \ \ \ \ @BeforeEach}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00032}00032\ \ \ \ \ \textcolor{keywordtype}{void}\ setUp()\ \{}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00033}00033\ \ \ \ \ \ \ \ \ carBuilder\ =\ \textcolor{keyword}{new}\ Car.Builder()}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setPower(150)}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setModel(\textcolor{stringliteral}{"{}ModelName"{}})}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setYear(2020);}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00037}00037\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00039}00039\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00040}00040\ \ \ \ \ @DisplayName(\textcolor{stringliteral}{"{}Должен\ успешно\ построить\ автомобиль\ с\ действительными\ данными"{}})}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00041}00041\ \ \ \ \ void\ shouldBuildCarSuccessfully()\ \{}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ Car\ car\ =\ carBuilder.build();}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ assertEquals(150,\ car.getPower());}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ assertEquals(\textcolor{stringliteral}{"{}ModelName"{}},\ car.getModel());}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ assertEquals(2020,\ car.getYear());}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00047}00047\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00049}00049\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00050}00050\ \ \ \ \ @DisplayName(\textcolor{stringliteral}{"{}Следует\ считать\ автомобили\ равными,\ когда\ все\ поля\ одинаковы"{}})}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00051}00051\ \ \ \ \ void\ equalsShouldReturnTrueForSameValues()\ \{}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00052}00052\ \ \ \ \ \ \ \ \ Car\ c1\ =\ carBuilder.build();}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00053}00053\ \ \ \ \ \ \ \ \ Car\ c2\ =\ carBuilder.build();}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00055}00055\ \ \ \ \ \ \ \ \ assertEquals(c1,\ c2);}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ assertEquals(c1.hashCode(),\ c2.hashCode());}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00057}00057\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00059}00059\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00060}00060\ \ \ \ \ @DisplayName(\textcolor{stringliteral}{"{}Должно\ возвращать\ ненулевое\ и\ непустое\ строковое\ представление."{}})}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00061}00061\ \ \ \ \ void\ toStringShouldContainFields()\ \{}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00062}00062\ \ \ \ \ \ \ \ \ Car\ car\ =\ carBuilder.build();}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00063}00063\ \ \ \ \ \ \ \ \ String\ s\ =\ car.toString();}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00065}00065\ \ \ \ \ \ \ \ \ assertNotNull(s);}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00066}00066\ \ \ \ \ \ \ \ \ assertFalse(s.trim().isEmpty());}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00067}00067\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00069}00069\ }
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00070}00070\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00071}00071\ \ \ \ \ @DisplayName(\textcolor{stringliteral}{"{}Должен\ выдавать\ исключение\ CarValidationException,\ когда\ power\ не\ установлено."{}})}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00072}00072\ \ \ \ \ void\ failWhenHorsePowerIsEmpty()\ \{}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00073}00073\ \ \ \ \ \ \ \ \ assertThrows(CarValidationException.class,\ ()\ -\/>}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00074}00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ Car.Builder()}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setModel(\textcolor{stringliteral}{"{}ModelName"{}})}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setYear(2020)}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addValidator(validators)}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .build()}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00079}00079\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00080}00080\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00082}00082\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00083}00083\ \ \ \ \ @DisplayName(\textcolor{stringliteral}{"{}Должен\ выдавать\ исключение\ CarValidationException,\ если\ model\ не\ установлена."{}})}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00084}00084\ \ \ \ \ void\ failWhenModelNameIsEmpty()\ \{}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00085}00085\ \ \ \ \ \ \ \ \ assertThrows(CarValidationException.class,\ ()\ -\/>}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ Car.Builder()}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00087}00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setPower(120)}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00088}00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setYear(2020)}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00089}00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addValidator(validators)}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00090}00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .build()}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00091}00091\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00092}00092\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00093}00093\ }
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00094}00094\ }
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00095}00095\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00096}00096\ \ \ \ \ @DisplayName(\textcolor{stringliteral}{"{}Должен\ выдавать\ исключение\ CarValidationException,\ если\ year\ не\ установлен."{}})}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00097}00097\ \ \ \ \ void\ failWhenProductionYearIsEmpty()\ \{}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00098}00098\ \ \ \ \ \ \ \ \ assertThrows(CarValidationException.class,\ ()\ -\/>}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00099}00099\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ Car.Builder()}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setPower(120)}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setModel(\textcolor{stringliteral}{"{}ModelName"{}})}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addValidator(validators)}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .build()}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00104}00104\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00105}00105\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00108}00108\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00109}00109\ \ \ \ \ @DisplayName(\textcolor{stringliteral}{"{}Должен\ выдавать\ исключение\ CarValidationException,\ когда\ год\ выходит\ за\ пределы\ допустимого\ диапазона."{}})}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00110}00110\ \ \ \ \ void\ failWhenProductionYearInvalid()\ \{}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00111}00111\ \ \ \ \ \ \ \ \ assertThrows(CarValidationException.class,\ ()\ -\/>}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ Car.Builder()}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setPower(120)}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setModel(\textcolor{stringliteral}{"{}ModelName"{}})}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setYear(1700)}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addValidator(validators)}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .build()}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00118}00118\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00119}00119\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00120}00120\ }
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00121}00121\ }
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00122}00122\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00123}00123\ \ \ \ \ @DisplayName(\textcolor{stringliteral}{"{}Должен\ выдавать\ исключение\ CarValidationException,\ когда\ мощность\ равна\ нулю"{}})}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00124}00124\ \ \ \ \ void\ failWhenHorsePowerIsZero()\ \{}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00125}00125\ \ \ \ \ \ \ \ \ assertThrows(CarValidationException.class,\ ()\ -\/>}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ Car.Builder()}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setPower(0)}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setModel(\textcolor{stringliteral}{"{}ModelName"{}})}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setYear(2020)}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addValidator(validators)}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .build()}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00132}00132\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00133}00133\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00134}00134\ }
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00135}00135\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00136}00136\ \ \ \ \ @DisplayName(\textcolor{stringliteral}{"{}Должен\ выдавать\ исключение\ CarValidationException,\ когда\ модель\ содержит\ только\ пробелы."{}})}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00137}00137\ \ \ \ \ void\ buildShouldFailWhenModelNameIsWhitespaces()\ \{}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00138}00138\ \ \ \ \ \ \ \ \ assertThrows(CarValidationException.class,\ ()\ -\/>}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ Car.Builder()}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setPower(120)}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00141}00141\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setModel(\textcolor{stringliteral}{"{}\ "{}})}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setYear(2020)}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addValidator(validators)}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .build()}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00145}00145\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00146}00146\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00147}00147\ }
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00148}00148\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00149}00149\ \ \ \ \ @DisplayName(\textcolor{stringliteral}{"{}Должен\ выдавать\ исключение\ CarValidationException,\ когда\ модель\ равна\ нулю."{}})}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00150}00150\ \ \ \ \ void\ shouldThrowWhenModelIsNull()\ \{}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00151}00151\ \ \ \ \ \ \ \ \ assertThrows(CarValidationException.class,\ ()\ -\/>}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ Car.Builder()}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setPower(120)}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setModel(\textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setYear(2020)}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addValidator(validators)}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .build()}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00158}00158\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00159}00159\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00160}00160\ }
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00161}00161\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00162}00162\ \ \ \ \ @DisplayName(\textcolor{stringliteral}{"{}Должен\ выдавать\ исключение\ CarValidationException,\ когда\ мощность\ отрицательная"{}})}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00163}00163\ \ \ \ \ void\ shouldThrowWhenPowerIsNegative()\ \{}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00164}00164\ \ \ \ \ \ \ \ \ assertThrows(CarValidationException.class,\ ()\ -\/>}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ Car.Builder()}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setPower(-\/50)}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setModel(\textcolor{stringliteral}{"{}ModelName"{}})}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setYear(2020)}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .addValidator(validators)}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .build()}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00171}00171\ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00172}00172\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00173}00173\ }
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00174}00174\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00175}00175\ \ \ \ \ @DisplayName(\textcolor{stringliteral}{"{}Следует\ реализовать\ естественный\ порядок\ по\ модели,\ затем\ по\ мощности,\ затем\ по\ году."{}})}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00176}00176\ \ \ \ \ void\ testCarNaturalOrdering()\ \{}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00177}00177\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Создание\ автомобилей\ для\ тестирования}}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00178}00178\ \ \ \ \ \ \ \ \ Car\ c1\ =\ \textcolor{keyword}{new}\ Car.Builder().setModel(\textcolor{stringliteral}{"{}A"{}}).setPower(90).setYear(1986).addValidator(validators).build();}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00179}00179\ \ \ \ \ \ \ \ \ Car\ c2\ =\ \textcolor{keyword}{new}\ Car.Builder().setModel(\textcolor{stringliteral}{"{}A"{}}).setPower(120).setYear(2010).addValidator(validators).build();}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00180}00180\ \ \ \ \ \ \ \ \ Car\ c3\ =\ \textcolor{keyword}{new}\ Car.Builder().setModel(\textcolor{stringliteral}{"{}B"{}}).setPower(100).setYear(2000).addValidator(validators).build();}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00181}00181\ \ \ \ \ \ \ \ \ Car\ c4\ =\ \textcolor{keyword}{new}\ Car.Builder().setModel(\textcolor{stringliteral}{"{}A"{}}).setPower(200).setYear(1995).addValidator(validators).build();}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00182}00182\ \ \ \ \ \ \ \ \ Car\ c5\ =\ \textcolor{keyword}{new}\ Car.Builder().setModel(\textcolor{stringliteral}{"{}A"{}}).setPower(110).setYear(2025).addValidator(validators).build();}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00183}00183\ }
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00184}00184\ \ \ \ \ \ \ \ \ List<Car>\ cars\ =\ \textcolor{keyword}{new}\ ArrayList<>(List.of(c1,\ c2,\ c3,\ c4,\ c5));\ \textcolor{comment}{//\ Список\ автомобилей}}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00185}00185\ \ \ \ \ \ \ \ \ cars.sort(\textcolor{keyword}{null});\ \textcolor{comment}{//\ Сортировка\ по\ умолчанию\ с\ использованием\ естественного\ порядка\ Car}}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00186}00186\ }
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00187}00187\ \ \ \ \ \ \ \ \ List<Car>\ expectedOrder\ =\ List.of(c1,\ c5,\ c2,\ c4,\ c3);\ \textcolor{comment}{//\ Ожидаемый\ порядок\ сортировки}}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00188}00188\ \ \ \ \ \ \ \ \ assertEquals(expectedOrder,\ cars);\ \textcolor{comment}{//\ Проверка\ на\ соответствие\ ожидаемому\ порядку}}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00189}00189\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00190}00190\ }
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00191}00191\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00192}00192\ \ \ \ \ @DisplayName(\textcolor{stringliteral}{"{}Должен\ возвращать\ false\ при\ сравнении\ с\ нулем"{}})}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00193}00193\ \ \ \ \ void\ shouldNotBeEqualToNull()\ \{}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00194}00194\ \ \ \ \ \ \ \ \ Car\ car\ =\ carBuilder.build();}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00195}00195\ \ \ \ \ \ \ \ \ assertFalse(car.equals(\textcolor{keyword}{null}));}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00196}00196\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00197}00197\ }
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00198}00198\ \ \ \ \ @Test}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00199}00199\ \ \ \ \ @DisplayName(\textcolor{stringliteral}{"{}Должен\ возвращать\ false\ при\ сравнении\ с\ другим\ классом"{}})}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00200}00200\ \ \ \ \ void\ shouldNotBeEqualToDifferentClass()\ \{}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00201}00201\ \ \ \ \ \ \ \ \ Car\ car\ =\ carBuilder.build();}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00202}00202\ \ \ \ \ \ \ \ \ Object\ obj\ =\ \textcolor{stringliteral}{"{}Some\ string"{}};}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00203}00203\ \ \ \ \ \ \ \ \ assertFalse(car.equals(obj));}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00204}00204\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CarTest_8java_source_l00205}00205\ \}}
+
+\end{DoxyCode}

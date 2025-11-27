@@ -1,0 +1,5 @@
+<map id="org.aston.app.model.CarYearComparator.compare" name="org.aston.app.model.CarYearComparator.compare">
+<area shape="rect" id="Node000001" title="Сравнивает два объекта Car по году выпуска." alt="" coords="5,5,196,45"/>
+<area shape="rect" id="Node000002" href="$classorg_1_1aston_1_1app_1_1model_1_1Car.html#aa6070e325aa87fb0fcef0a110937dce8" title="Возвращает год производства автомобиля." alt="" coords="244,13,456,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,23,230,23,230,28,196,28"/>
+</map>

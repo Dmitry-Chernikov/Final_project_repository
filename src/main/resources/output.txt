@@ -1,0 +1,134 @@
+Стратегия сортировки: SortByAllFilesComparable ===
+Время записи: 2025-11-26 23:53:24
+Car{horse power=350, model name='Alfa Romeo', production year=2015}
+Car{horse power=615, model name='Aston Martin', production year=2021}
+Car{horse power=120, model name='Audi', production year=2015}
+Car{horse power=315, model name='BMW', production year=2021}
+Car{horse power=125, model name='BYD', production year=2021}
+Car{horse power=350, model name='Bentley', production year=2025}
+Car{horse power=315, model name='Buick', production year=2015}
+Car{horse power=685, model name='Cadillac', production year=2025}
+Car{horse power=150, model name='Chery', production year=2020}
+Car{horse power=135, model name='Chevrolet', production year=2017}
+Car{horse power=150, model name='Citroën', production year=2015}
+Car{horse power=615, model name='Ferrari', production year=2020}
+Car{horse power=150, model name='Ford', production year=2015}
+Car{horse power=315, model name='Geely', production year=2026}
+Car{horse power=125, model name='Genesis', production year=2013}
+Car{horse power=150, model name='Honda', production year=2014}
+Car{horse power=100, model name='Hyundai', production year=2025}
+Car{horse power=375, model name='Jaguar', production year=2020}
+Car{horse power=120, model name='Kia', production year=2021}
+Car{horse power=750, model name='Lamborghini', production year=2025}
+Car{horse power=250, model name='Land Rover', production year=2014}
+Car{horse power=100, model name='Lexus', production year=2025}
+Car{horse power=415, model name='Maserati', production year=2018}
+Car{horse power=210, model name='Mazda', production year=2015}
+Car{horse power=750, model name='McLaren', production year=2022}
+Car{horse power=300, model name='Mercedes-Benz', production year=2024}
+Car{horse power=215, model name='Mitsubishi', production year=2010}
+Car{horse power=125, model name='Nio', production year=2025}
+Car{horse power=120, model name='Nissan', production year=2009}
+Car{horse power=121, model name='Peugeot', production year=2012}
+Car{horse power=415, model name='Porsche', production year=2025}
+Car{horse power=140, model name='Renault', production year=2011}
+Car{horse power=350, model name='Subaru', production year=2020}
+Car{horse power=215, model name='Tesla', production year=2020}
+Car{horse power=145, model name='Toyota', production year=2025}
+Car{horse power=110, model name='Volkswagen', production year=2012}
+Car{horse power=130, model name='XPeng', production year=2020}
+
+==================================================
+
+=== Стратегия сортировки: SortByAllFilesComparable ===
+Время записи: 2025-11-27 00:02:28
+Car{horse power=350, model name='Alfa Romeo', production year=2015}
+Car{horse power=615, model name='Aston Martin', production year=2021}
+Car{horse power=120, model name='Audi', production year=2015}
+Car{horse power=315, model name='BMW', production year=2021}
+Car{horse power=125, model name='BYD', production year=2021}
+Car{horse power=350, model name='Bentley', production year=2025}
+Car{horse power=315, model name='Buick', production year=2015}
+Car{horse power=685, model name='Cadillac', production year=2025}
+Car{horse power=150, model name='Chery', production year=2020}
+Car{horse power=135, model name='Chevrolet', production year=2017}
+Car{horse power=150, model name='Citroën', production year=2015}
+Car{horse power=615, model name='Ferrari', production year=2020}
+Car{horse power=150, model name='Ford', production year=2015}
+Car{horse power=315, model name='Geely', production year=2026}
+Car{horse power=125, model name='Genesis', production year=2013}
+Car{horse power=150, model name='Honda', production year=2014}
+Car{horse power=100, model name='Hyundai', production year=2025}
+Car{horse power=375, model name='Jaguar', production year=2020}
+Car{horse power=120, model name='Kia', production year=2021}
+Car{horse power=750, model name='Lamborghini', production year=2025}
+Car{horse power=250, model name='Land Rover', production year=2014}
+Car{horse power=100, model name='Lexus', production year=2025}
+Car{horse power=415, model name='Maserati', production year=2018}
+Car{horse power=210, model name='Mazda', production year=2015}
+Car{horse power=750, model name='McLaren', production year=2022}
+Car{horse power=300, model name='Mercedes-Benz', production year=2024}
+Car{horse power=215, model name='Mitsubishi', production year=2010}
+Car{horse power=125, model name='Nio', production year=2025}
+Car{horse power=120, model name='Nissan', production year=2009}
+Car{horse power=121, model name='Peugeot', production year=2012}
+Car{horse power=415, model name='Porsche', production year=2025}
+Car{horse power=140, model name='Renault', production year=2011}
+Car{horse power=350, model name='Subaru', production year=2020}
+Car{horse power=215, model name='Tesla', production year=2020}
+Car{horse power=145, model name='Toyota', production year=2025}
+Car{horse power=110, model name='Volkswagen', production year=2012}
+Car{horse power=130, model name='XPeng', production year=2020}
+
+==================================================
+
+=== Стратегия сортировки: SortByAllFilesComparable ===
+Время записи: 2025-11-27 00:04:03
+Car{horse power=350, model name='Alfa Romeo', production year=2015}
+Car{horse power=615, model name='Aston Martin', production year=2021}
+Car{horse power=120, model name='Audi', production year=2015}
+Car{horse power=315, model name='BMW', production year=2021}
+Car{horse power=125, model name='BYD', production year=2021}
+Car{horse power=350, model name='Bentley', production year=2025}
+Car{horse power=315, model name='Buick', production year=2015}
+Car{horse power=685, model name='Cadillac', production year=2025}
+Car{horse power=150, model name='Chery', production year=2020}
+Car{horse power=135, model name='Chevrolet', production year=2017}
+Car{horse power=150, model name='Citroën', production year=2015}
+Car{horse power=615, model name='Ferrari', production year=2020}
+Car{horse power=150, model name='Ford', production year=2015}
+Car{horse power=315, model name='Geely', production year=2026}
+Car{horse power=125, model name='Genesis', production year=2013}
+Car{horse power=150, model name='Honda', production year=2014}
+Car{horse power=100, model name='Hyundai', production year=2025}
+Car{horse power=375, model name='Jaguar', production year=2020}
+Car{horse power=120, model name='Kia', production year=2021}
+Car{horse power=750, model name='Lamborghini', production year=2025}
+Car{horse power=250, model name='Land Rover', production year=2014}
+Car{horse power=100, model name='Lexus', production year=2025}
+Car{horse power=415, model name='Maserati', production year=2018}
+Car{horse power=210, model name='Mazda', production year=2015}
+Car{horse power=750, model name='McLaren', production year=2022}
+Car{horse power=300, model name='Mercedes-Benz', production year=2024}
+Car{horse power=215, model name='Mitsubishi', production year=2010}
+Car{horse power=125, model name='Nio', production year=2025}
+Car{horse power=120, model name='Nissan', production year=2009}
+Car{horse power=121, model name='Peugeot', production year=2012}
+Car{horse power=415, model name='Porsche', production year=2025}
+Car{horse power=140, model name='Renault', production year=2011}
+Car{horse power=350, model name='Subaru', production year=2020}
+Car{horse power=215, model name='Tesla', production year=2020}
+Car{horse power=145, model name='Toyota', production year=2025}
+Car{horse power=110, model name='Volkswagen', production year=2012}
+Car{horse power=130, model name='XPeng', production year=2020}
+
+==================================================
+
+=== Стратегия сортировки: SortByAllFieldsComparator ===
+Время записи: 2025-11-27 14:15:46
+Car{horse power=200, model name='Audi', production year=2000}
+Car{horse power=100, model name='BMW', production year=1986}
+Car{horse power=50, model name='ford', production year=2010}
+
+==================================================
+

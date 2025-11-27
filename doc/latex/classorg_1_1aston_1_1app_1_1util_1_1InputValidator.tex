@@ -1,0 +1,126 @@
+\doxysection{Класс org.\+aston.\+app.\+util.\+Input\+Validator}
+\hypertarget{classorg_1_1aston_1_1app_1_1util_1_1InputValidator}{}\label{classorg_1_1aston_1_1app_1_1util_1_1InputValidator}\index{org.aston.app.util.InputValidator@{org.aston.app.util.InputValidator}}
+
+
+Утилитарный класс для валидации входных данных при создании объекта автомобиля (Car).  
+
+
+\doxysubsubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static boolean \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1util_1_1InputValidator_a8837165d18b9ab88306c199322754b6d}{is\+Valid\+Model}} (String model)
+\begin{DoxyCompactList}\small\item\em Проверяет, является ли переданная модель допустимой. \end{DoxyCompactList}\item 
+static boolean \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1util_1_1InputValidator_a83b04fda08796f4e0450ea04fe83c9bc}{is\+Valid\+Power}} (int power)
+\begin{DoxyCompactList}\small\item\em Проверяет, находится ли значение мощности в допустимом диапазоне. \end{DoxyCompactList}\item 
+static boolean \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1util_1_1InputValidator_a0385da64fedb225f9f95fe7f527b5d28}{is\+Valid\+Year}} (int year)
+\begin{DoxyCompactList}\small\item\em Проверяет, находится ли год выпуска в допустимом диапазоне. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Утилитарный класс для валидации входных данных при создании объекта автомобиля (Car). 
+
+Содержит статические методы для проверки корректности значений полей\+: модели, мощности и года выпуска. Используется при ручном вводе или чтении данных из файла перед созданием экземпляра Car. 
+
+См. определение в файле \mbox{\hyperlink{InputValidator_8java_source}{Input\+Validator.\+java}} строка \mbox{\hyperlink{InputValidator_8java_source_l00012}{12}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{classorg_1_1aston_1_1app_1_1util_1_1InputValidator_a8837165d18b9ab88306c199322754b6d}\label{classorg_1_1aston_1_1app_1_1util_1_1InputValidator_a8837165d18b9ab88306c199322754b6d} 
+\index{org.aston.app.util.InputValidator@{org.aston.app.util.InputValidator}!isValidModel@{isValidModel}}
+\index{isValidModel@{isValidModel}!org.aston.app.util.InputValidator@{org.aston.app.util.InputValidator}}
+\doxysubsubsection{\texorpdfstring{isValidModel()}{isValidModel()}}
+{\footnotesize\ttfamily static boolean org.\+aston.\+app.\+util.\+Input\+Validator.\+is\+Valid\+Model (\begin{DoxyParamCaption}\item[{String}]{model }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Проверяет, является ли переданная модель допустимой. 
+
+Модель считается валидной, если она присутствует в списке разрешённых моделей (указанном в классе Data\+Generator) без учёта регистра.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em model} & строка с названием модели автомобиля \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true, если модель существует в списке допустимых; иначе false 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{InputValidator_8java_source}{Input\+Validator.\+java}} строка \mbox{\hyperlink{InputValidator_8java_source_l00023}{23}}
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1aston_1_1app_1_1util_1_1InputValidator_a8837165d18b9ab88306c199322754b6d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classorg_1_1aston_1_1app_1_1util_1_1InputValidator_a83b04fda08796f4e0450ea04fe83c9bc}\label{classorg_1_1aston_1_1app_1_1util_1_1InputValidator_a83b04fda08796f4e0450ea04fe83c9bc} 
+\index{org.aston.app.util.InputValidator@{org.aston.app.util.InputValidator}!isValidPower@{isValidPower}}
+\index{isValidPower@{isValidPower}!org.aston.app.util.InputValidator@{org.aston.app.util.InputValidator}}
+\doxysubsubsection{\texorpdfstring{isValidPower()}{isValidPower()}}
+{\footnotesize\ttfamily static boolean org.\+aston.\+app.\+util.\+Input\+Validator.\+is\+Valid\+Power (\begin{DoxyParamCaption}\item[{int}]{power }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Проверяет, находится ли значение мощности в допустимом диапазоне. 
+
+Мощность (в лошадиных силах) должна быть положительной и не превышать разумный технический предел.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em power} & целочисленное значение мощности \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true, если мощность в диапазоне от 1 до 2000 включительно; иначе false 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{InputValidator_8java_source}{Input\+Validator.\+java}} строка \mbox{\hyperlink{InputValidator_8java_source_l00036}{36}}
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1aston_1_1app_1_1util_1_1InputValidator_a83b04fda08796f4e0450ea04fe83c9bc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classorg_1_1aston_1_1app_1_1util_1_1InputValidator_a0385da64fedb225f9f95fe7f527b5d28}\label{classorg_1_1aston_1_1app_1_1util_1_1InputValidator_a0385da64fedb225f9f95fe7f527b5d28} 
+\index{org.aston.app.util.InputValidator@{org.aston.app.util.InputValidator}!isValidYear@{isValidYear}}
+\index{isValidYear@{isValidYear}!org.aston.app.util.InputValidator@{org.aston.app.util.InputValidator}}
+\doxysubsubsection{\texorpdfstring{isValidYear()}{isValidYear()}}
+{\footnotesize\ttfamily static boolean org.\+aston.\+app.\+util.\+Input\+Validator.\+is\+Valid\+Year (\begin{DoxyParamCaption}\item[{int}]{year }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Проверяет, находится ли год выпуска в допустимом диапазоне. 
+
+Год должен быть не ранее первого выпуска автомобиля (1885) и не позже установленного предельного года (в данном случае — 2025).
+
+
+\begin{DoxyParams}{Аргументы}
+{\em year} & год выпуска автомобиля \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true, если год находится в диапазоне от 1885 до 2025 включительно; иначе false 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{InputValidator_8java_source}{Input\+Validator.\+java}} строка \mbox{\hyperlink{InputValidator_8java_source_l00049}{49}}
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1aston_1_1app_1_1util_1_1InputValidator_a0385da64fedb225f9f95fe7f527b5d28_icgraph}
+\end{center}
+\end{figure}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/org/aston/app/util/\mbox{\hyperlink{InputValidator_8java}{Input\+Validator.\+java}}\end{DoxyCompactItemize}

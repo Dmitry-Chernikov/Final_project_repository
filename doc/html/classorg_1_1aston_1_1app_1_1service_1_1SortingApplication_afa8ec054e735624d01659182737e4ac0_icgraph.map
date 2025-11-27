@@ -1,0 +1,5 @@
+<map id="org.aston.app.service.SortingApplication.openHtmlFile" name="org.aston.app.service.SortingApplication.openHtmlFile">
+<area shape="rect" id="Node000001" title="Открывает HTML&#45;файл в браузере по умолчанию." alt="" coords="248,5,443,45"/>
+<area shape="rect" id="Node000002" href="$classorg_1_1aston_1_1app_1_1service_1_1SortingApplication.html#af8566b3cfbe6c04a1cbb1cfbc9344e55" title="Основной метод, запускающий цикл приложения." alt="" coords="5,5,200,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="234,28,200,28,200,23,234,23"/>
+</map>

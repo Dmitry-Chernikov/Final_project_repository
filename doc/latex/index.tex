@@ -1,0 +1,63 @@
+\chapter{Проект\+: Система сортировки автомобилей}
+\hypertarget{index}{}\label{index}\index{Проект: Система сортировки автомобилей@{Проект: Система сортировки автомобилей}}
+\label{index_md_README}%
+\Hypertarget{index_md_README}%
+ \hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{Введение}{Введение}}\label{index_autotoc_md1}
+Данный проект реализует консольное приложение для сортировки коллекций объектов типа {\ttfamily Car} (Автомобиль) по различным критериям. Приложение разработано на языке Java с соблюдением принципов ООП, чистоты кода и конвенций языка.\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{Основное задание}{Основное задание}}\label{index_autotoc_md2}
+Реализовано приложение, позволяющее\+:
+
+
+\begin{DoxyItemize}
+\item Выбирать способ заполнения массива автомобилей\+: вручную, из файла или случайной генерацией.
+\item Задавать количество элементов.
+\item Сортировать массив по трём полям\+: модель, мощность, год выпуска.
+\item Использовать паттерн "{}Стратегия"{} для выбора алгоритма сортировки.
+\item Применять паттерн "{}Строитель (\+Builder)"{} при создании объектов {\ttfamily Car}.
+\item Выполнять валидацию всех входных данных (включая данные из файла).
+\item Работать в цикле до явного выхода пользователя.
+\end{DoxyItemize}\hypertarget{index_autotoc_md3}{}\doxysection{\texorpdfstring{Дополнительные задания}{Дополнительные задания}}\label{index_autotoc_md3}
+
+\begin{DoxyEnumerate}
+\item Реализована сортировка\+: чётные значения поля "{}мощность"{} — в натуральном порядке, нечётные — на своих местах.
+\item Добавлена функция записи отсортированных данных в файл в режиме добавления.
+\item Заполнение коллекций осуществляется с использованием Java Stream API. ~\newline
+ {\itshape Кастомная коллекция {\ttfamily Custom\+Car\+Collection} реализована на основе массива.}
+\item Реализован многопоточный подсчёт вхождений заданного значения мощности.
+\end{DoxyEnumerate}\hypertarget{index_autotoc_md4}{}\doxysection{\texorpdfstring{Архитектура}{Архитектура}}\label{index_autotoc_md4}
+
+\begin{DoxyItemize}
+\item {\bfseries{Паттерны}}\+: Строитель (Builder), Стратегия (Strategy), Валидатор (Chain of Responsibility)
+\item {\bfseries{Валидация}}\+: отдельные классы-\/валидаторы для каждого поля
+\item {\bfseries{Сортировка}}\+: реализована вручную (без {\ttfamily Arrays.\+sort}), на основе алгоритма быстрой сортировки
+\item {\bfseries{Тестирование}}\+: ручные тесты в отдельных классах (без использования JUnit)
+\end{DoxyItemize}\hypertarget{index_autotoc_md5}{}\doxysection{\texorpdfstring{Основные классы}{Основные классы}}\label{index_autotoc_md5}
+
+\begin{DoxyItemize}
+\item {\ttfamily Car} — сущность автомобиля с полями\+: модель, мощность, год выпуска
+\item {\ttfamily Car.\+Builder} — паттерн Builder с валидацией
+\item {\ttfamily Sort\+Strategy} — интерфейс стратегии сортировки
+\item {\ttfamily Sort\+By\+Model}, {\ttfamily Sort\+By\+Power}, {\ttfamily Sort\+By\+Year} — реализации стратегий
+\item {\ttfamily Custom\+Car\+Collection} — кастомная коллекция на основе массива
+\item {\ttfamily Data\+Generator} — генерация данных (ручная, файл, случайная)
+\item {\ttfamily File\+Writer\+Util} — запись в файл в режиме добавления
+\item {\ttfamily Sorting\+Application} — основной цикл приложения
+\end{DoxyItemize}\hypertarget{index_autotoc_md6}{}\doxysection{\texorpdfstring{Команда}{Команда}}\label{index_autotoc_md6}
+Проект разрабатывался в команде, с использованием Git. Каждый участник работал в своей ветке, все ветки впоследствии были смерджены в {\ttfamily main}.\hypertarget{index_autotoc_md7}{}\doxysection{\texorpdfstring{Авторы}{Авторы}}\label{index_autotoc_md7}
+\tabulinesep=1mm
+\begin{longtabu}spread 0pt [c]{*{2}{|X[-1]}|}
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Участник   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Контакты    }\\\cline{1-2}
+\endfirsthead
+\hline
+\endfoot
+\hline
+\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Участник   }&\PBS\centering \cellcolor{\tableheadbgcolor}\textbf{ Контакты    }\\\cline{1-2}
+\endhead
+Черников Дмитрий   &\href{https://t.me/dZvCLssWZ2n}{\texttt{ Telegram}}    \\\cline{1-2}
+Иван Феофанов   &\href{https://t.me/duracheck}{\texttt{ Telegram}}    \\\cline{1-2}
+Лучкин Дмитрий   &\href{https://t.me/LuchkinDS}{\texttt{ Telegram}}    \\\cline{1-2}
+Наталия Абызова   &\href{https://t.me/AbizovaNatalia}{\texttt{ Telegram}}    \\\cline{1-2}
+Максим Кустков   &\href{https://t.me/kumaser33}{\texttt{ Telegram}}   \\\cline{1-2}
+\end{longtabu}
+\hypertarget{index_autotoc_md8}{}\doxysection{\texorpdfstring{Заключение}{Заключение}}\label{index_autotoc_md8}
+Приложение полностью соответствует поставленным требованиям, реализует все основные и дополнительные функции, имеет читаемую архитектуру и поддерживает расширение. 

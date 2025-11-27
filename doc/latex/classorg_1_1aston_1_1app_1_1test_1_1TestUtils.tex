@@ -1,0 +1,154 @@
+\doxysection{Класс org.\+aston.\+app.\+test.\+Test\+Utils}
+\hypertarget{classorg_1_1aston_1_1app_1_1test_1_1TestUtils}{}\label{classorg_1_1aston_1_1app_1_1test_1_1TestUtils}\index{org.aston.app.test.TestUtils@{org.aston.app.test.TestUtils}}
+
+
+Класс Test\+Utils предоставляет простые утилиты для выполнения базовых проверок в тестах.  
+
+
+\doxysubsubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1test_1_1TestUtils_a4f3233c392eb29a2ffc39bb2ab199cca}{assert\+True}} (String message, boolean condition)
+\begin{DoxyCompactList}\small\item\em Проверяет, что условие истинно. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1test_1_1TestUtils_aef7a02484ad19ae37eac955f01ca60da}{assert\+Equals}} (String message, Object expected, Object actual)
+\begin{DoxyCompactList}\small\item\em Проверяет, что ожидаемый объект равен фактическому. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1test_1_1TestUtils_a210519034bc6a55199b1ce918cff90f0}{assert\+Equals}} (String message, int expected, int actual)
+\begin{DoxyCompactList}\small\item\em Проверяет, что ожидаемое целое число равно фактическому. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1test_1_1TestUtils_a67072fbb6babc103c12f16a023f9ee95}{assert\+False}} (String message, boolean condition)
+\begin{DoxyCompactList}\small\item\em Проверяет, что условие ложно. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс Test\+Utils предоставляет простые утилиты для выполнения базовых проверок в тестах. 
+
+Содержит методы для проверки условий, равенства значений и логических выражений. Результаты проверок выводятся в консоль\+: "{}\+OK"{} — если проверка пройдена, "{}\+FAIL"{} — если нет. 
+
+Используется как замена стандартным библиотекам тестирования (например, JUnit), поскольку в задании указано, что можно обойтись без них. 
+
+См. определение в файле \mbox{\hyperlink{TestUtils_8java_source}{Test\+Utils.\+java}} строка \mbox{\hyperlink{TestUtils_8java_source_l00012}{12}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{classorg_1_1aston_1_1app_1_1test_1_1TestUtils_a210519034bc6a55199b1ce918cff90f0}\label{classorg_1_1aston_1_1app_1_1test_1_1TestUtils_a210519034bc6a55199b1ce918cff90f0} 
+\index{org.aston.app.test.TestUtils@{org.aston.app.test.TestUtils}!assertEquals@{assertEquals}}
+\index{assertEquals@{assertEquals}!org.aston.app.test.TestUtils@{org.aston.app.test.TestUtils}}
+\doxysubsubsection{\texorpdfstring{assertEquals()}{assertEquals()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily static void org.\+aston.\+app.\+test.\+Test\+Utils.\+assert\+Equals (\begin{DoxyParamCaption}\item[{String}]{message,  }\item[{int}]{expected,  }\item[{int}]{actual }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Проверяет, что ожидаемое целое число равно фактическому. 
+
+Так как int — примитив, используется оператор ==. Выводит сообщение с подробностями при несовпадении.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em message} & сообщение, поясняющее суть проверки \\
+\hline
+{\em expected} & ожидаемое значение \\
+\hline
+{\em actual} & фактическое значение \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{TestUtils_8java_source}{Test\+Utils.\+java}} строка \mbox{\hyperlink{TestUtils_8java_source_l00054}{54}}
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1aston_1_1app_1_1test_1_1TestUtils_a210519034bc6a55199b1ce918cff90f0_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classorg_1_1aston_1_1app_1_1test_1_1TestUtils_aef7a02484ad19ae37eac955f01ca60da}\label{classorg_1_1aston_1_1app_1_1test_1_1TestUtils_aef7a02484ad19ae37eac955f01ca60da} 
+\index{org.aston.app.test.TestUtils@{org.aston.app.test.TestUtils}!assertEquals@{assertEquals}}
+\index{assertEquals@{assertEquals}!org.aston.app.test.TestUtils@{org.aston.app.test.TestUtils}}
+\doxysubsubsection{\texorpdfstring{assertEquals()}{assertEquals()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily static void org.\+aston.\+app.\+test.\+Test\+Utils.\+assert\+Equals (\begin{DoxyParamCaption}\item[{String}]{message,  }\item[{Object}]{expected,  }\item[{Object}]{actual }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Проверяет, что ожидаемый объект равен фактическому. 
+
+Использует переопределённый метод equals для сравнения объектов. Выводит сообщение с подробностями (ожидаемое и фактическое значение) при несовпадении.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em message} & сообщение, поясняющее суть проверки \\
+\hline
+{\em expected} & ожидаемое значение \\
+\hline
+{\em actual} & фактическое значение \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{TestUtils_8java_source}{Test\+Utils.\+java}} строка \mbox{\hyperlink{TestUtils_8java_source_l00040}{40}}
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1aston_1_1app_1_1test_1_1TestUtils_aef7a02484ad19ae37eac955f01ca60da_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classorg_1_1aston_1_1app_1_1test_1_1TestUtils_a67072fbb6babc103c12f16a023f9ee95}\label{classorg_1_1aston_1_1app_1_1test_1_1TestUtils_a67072fbb6babc103c12f16a023f9ee95} 
+\index{org.aston.app.test.TestUtils@{org.aston.app.test.TestUtils}!assertFalse@{assertFalse}}
+\index{assertFalse@{assertFalse}!org.aston.app.test.TestUtils@{org.aston.app.test.TestUtils}}
+\doxysubsubsection{\texorpdfstring{assertFalse()}{assertFalse()}}
+{\footnotesize\ttfamily static void org.\+aston.\+app.\+test.\+Test\+Utils.\+assert\+False (\begin{DoxyParamCaption}\item[{String}]{message,  }\item[{boolean}]{condition }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Проверяет, что условие ложно. 
+
+Если условие истинно, выводит сообщение об ошибке в System.\+err. Если ложно — выводит успешное сообщение в System.\+out.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em message} & сообщение, поясняющее суть проверки \\
+\hline
+{\em condition} & проверяемое условие \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{TestUtils_8java_source}{Test\+Utils.\+java}} строка \mbox{\hyperlink{TestUtils_8java_source_l00067}{67}}
+
+\Hypertarget{classorg_1_1aston_1_1app_1_1test_1_1TestUtils_a4f3233c392eb29a2ffc39bb2ab199cca}\label{classorg_1_1aston_1_1app_1_1test_1_1TestUtils_a4f3233c392eb29a2ffc39bb2ab199cca} 
+\index{org.aston.app.test.TestUtils@{org.aston.app.test.TestUtils}!assertTrue@{assertTrue}}
+\index{assertTrue@{assertTrue}!org.aston.app.test.TestUtils@{org.aston.app.test.TestUtils}}
+\doxysubsubsection{\texorpdfstring{assertTrue()}{assertTrue()}}
+{\footnotesize\ttfamily static void org.\+aston.\+app.\+test.\+Test\+Utils.\+assert\+True (\begin{DoxyParamCaption}\item[{String}]{message,  }\item[{boolean}]{condition }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Проверяет, что условие истинно. 
+
+Если условие ложно, выводит сообщение об ошибке в System.\+err. Если истинно — выводит успешное сообщение в System.\+out.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em message} & сообщение, поясняющее суть проверки \\
+\hline
+{\em condition} & проверяемое условие \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{TestUtils_8java_source}{Test\+Utils.\+java}} строка \mbox{\hyperlink{TestUtils_8java_source_l00022}{22}}
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1aston_1_1app_1_1test_1_1TestUtils_a4f3233c392eb29a2ffc39bb2ab199cca_icgraph}
+\end{center}
+\end{figure}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/org/aston/app/test/\mbox{\hyperlink{TestUtils_8java}{Test\+Utils.\+java}}\end{DoxyCompactItemize}

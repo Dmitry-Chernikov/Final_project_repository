@@ -1,0 +1,64 @@
+\doxysection{Интерфейс org.\+aston.\+app.\+validator.\+Car\+Validator}
+\hypertarget{interfaceorg_1_1aston_1_1app_1_1validator_1_1CarValidator}{}\label{interfaceorg_1_1aston_1_1app_1_1validator_1_1CarValidator}\index{org.aston.app.validator.CarValidator@{org.aston.app.validator.CarValidator}}
+
+
+Интерфейс Car\+Validator определяет контракт для валидации объектов класса Car.  
+
+
+
+
+Граф наследования\+:org.\+aston.\+app.\+validator.\+Car\+Validator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfaceorg_1_1aston_1_1app_1_1validator_1_1CarValidator__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1validator_1_1CarValidator_aaa43a930db37f5e56997ff13b7fd5f6c}{validate}} (Car car)
+\begin{DoxyCompactList}\small\item\em Выполняет валидацию переданного объекта автомобиля. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Интерфейс Car\+Validator определяет контракт для валидации объектов класса Car. 
+
+Каждый класс, реализующий этот интерфейс, отвечает за проверку одного из полей автомобиля (например, модель, мощность, год выпуска) на соответствие заданным правилам. 
+
+Реализации данного интерфейса используются в цепочке валидаторов для комплексной проверки целостности объекта Car перед его использованием. 
+
+См. определение в файле \mbox{\hyperlink{CarValidator_8java_source}{Car\+Validator.\+java}} строка \mbox{\hyperlink{CarValidator_8java_source_l00015}{15}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{interfaceorg_1_1aston_1_1app_1_1validator_1_1CarValidator_aaa43a930db37f5e56997ff13b7fd5f6c}\label{interfaceorg_1_1aston_1_1app_1_1validator_1_1CarValidator_aaa43a930db37f5e56997ff13b7fd5f6c} 
+\index{org.aston.app.validator.CarValidator@{org.aston.app.validator.CarValidator}!validate@{validate}}
+\index{validate@{validate}!org.aston.app.validator.CarValidator@{org.aston.app.validator.CarValidator}}
+\doxysubsubsection{\texorpdfstring{validate()}{validate()}}
+{\footnotesize\ttfamily void org.\+aston.\+app.\+validator.\+Car\+Validator.\+validate (\begin{DoxyParamCaption}\item[{Car}]{car }\end{DoxyParamCaption})}
+
+
+
+Выполняет валидацию переданного объекта автомобиля. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em car} & объект Car, который необходимо проверить \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em Car\+Validation\+Exception} & если значение поля не прошло проверку \\
+\hline
+\end{DoxyExceptions}
+
+
+Замещается в \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1validator_1_1ModelValidator_a83924a15e65590b74eec557f74f3cd27}{org.\+aston.\+app.\+validator.\+Model\+Validator}}, \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1validator_1_1PowerValidator_aa1b60cd704a5aa5abcd76a8307430938}{org.\+aston.\+app.\+validator.\+Power\+Validator}} и \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1validator_1_1YearValidator_a7f4b08b4c475c0dd4ed4492976d72db4}{org.\+aston.\+app.\+validator.\+Year\+Validator}}.
+
+
+
+Объявления и описания членов интерфейса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/org/aston/app/validator/\mbox{\hyperlink{CarValidator_8java}{Car\+Validator.\+java}}\end{DoxyCompactItemize}

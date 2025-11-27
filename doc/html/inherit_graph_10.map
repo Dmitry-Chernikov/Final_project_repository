@@ -1,0 +1,15 @@
+<map id="Иерархия классов. Графический вид." name="Иерархия классов. Графический вид.">
+<area shape="rect" id="Node000000" href="$interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy.html" title=" " alt="" coords="5,165,185,205"/>
+<area shape="rect" id="Node000001" href="$classorg_1_1aston_1_1app_1_1strategy_1_1SortByAllFieldsComparator.html" title="Класс SortByAllFieldsComparator реализует интерфейс SortStrategy и предназначен для сортировки массив..." alt="" coords="235,5,415,45"/>
+<area shape="poly" id="edge10_Node000000_Node000001" title=" " alt="" coords="120,153,169,104,199,78,232,55,256,43,258,48,235,60,203,82,173,107,124,157"/>
+<area shape="rect" id="Node000002" href="$classorg_1_1aston_1_1app_1_1strategy_1_1SortByAllFilesComparable.html" title="Класс SortByAllFilesComparable реализует интерфейс SortStrategy и предназначен для сортировки массива..." alt="" coords="235,69,415,109"/>
+<area shape="poly" id="edge11_Node000000_Node000002" title=" " alt="" coords="148,157,232,119,263,107,265,112,234,124,150,162"/>
+<area shape="rect" id="Node000003" href="$classorg_1_1aston_1_1app_1_1strategy_1_1SortByModel.html" title="Класс SortByModel реализует интерфейс SortStrategy и предназначен для сортировки массива объектов Car..." alt="" coords="235,133,415,173"/>
+<area shape="poly" id="edge12_Node000000_Node000003" title=" " alt="" coords="199,168,234,163,235,168,199,174"/>
+<area shape="rect" id="Node000004" href="$classorg_1_1aston_1_1app_1_1strategy_1_1SortByPower.html" title="Класс SortByPower реализует интерфейс SortStrategy и предназначен для сортировки массива объектов Car..." alt="" coords="235,197,415,237"/>
+<area shape="poly" id="edge13_Node000000_Node000004" title=" " alt="" coords="199,197,235,202,234,207,199,202"/>
+<area shape="rect" id="Node000005" href="$classorg_1_1aston_1_1app_1_1strategy_1_1SortByYear.html" title="Класс SortByYear реализует интерфейс SortStrategy и предназначен для сортировки массива объектов Car ..." alt="" coords="235,261,415,301"/>
+<area shape="poly" id="edge14_Node000000_Node000005" title=" " alt="" coords="150,209,234,247,265,259,263,264,232,252,148,214"/>
+<area shape="rect" id="Node000006" href="$classorg_1_1aston_1_1app_1_1strategy_1_1SortEvenPowerNaturalOddKeep.html" title="Дополнительное задание 1: сортировка по полю power." alt="" coords="233,325,416,365"/>
+<area shape="poly" id="edge15_Node000000_Node000006" title=" " alt="" coords="124,214,173,263,203,289,235,311,258,323,256,328,232,316,199,293,169,267,120,217"/>
+</map>

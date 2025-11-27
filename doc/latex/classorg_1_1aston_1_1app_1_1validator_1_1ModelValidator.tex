@@ -1,0 +1,75 @@
+\doxysection{Класс org.\+aston.\+app.\+validator.\+Model\+Validator}
+\hypertarget{classorg_1_1aston_1_1app_1_1validator_1_1ModelValidator}{}\label{classorg_1_1aston_1_1app_1_1validator_1_1ModelValidator}\index{org.aston.app.validator.ModelValidator@{org.aston.app.validator.ModelValidator}}
+
+
+Класс Model\+Validator реализует интерфейс Car\+Validator и предназначен для валидации поля модели автомобиля (model) в объекте Car.  
+
+
+
+
+Граф наследования\+:org.\+aston.\+app.\+validator.\+Model\+Validator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classorg_1_1aston_1_1app_1_1validator_1_1ModelValidator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса org.\+aston.\+app.\+validator.\+Model\+Validator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classorg_1_1aston_1_1app_1_1validator_1_1ModelValidator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1validator_1_1ModelValidator_a83924a15e65590b74eec557f74f3cd27}{validate}} (Car car)
+\begin{DoxyCompactList}\small\item\em Выполняет валидацию модели автомобиля. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс Model\+Validator реализует интерфейс Car\+Validator и предназначен для валидации поля модели автомобиля (model) в объекте Car. 
+
+Проверяет, что модель не является null и не состоит только из пробельных символов. Пустая или неуказанная модель считается недопустимой. 
+
+См. определение в файле \mbox{\hyperlink{ModelValidator_8java_source}{Model\+Validator.\+java}} строка \mbox{\hyperlink{ModelValidator_8java_source_l00013}{13}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{classorg_1_1aston_1_1app_1_1validator_1_1ModelValidator_a83924a15e65590b74eec557f74f3cd27}\label{classorg_1_1aston_1_1app_1_1validator_1_1ModelValidator_a83924a15e65590b74eec557f74f3cd27} 
+\index{org.aston.app.validator.ModelValidator@{org.aston.app.validator.ModelValidator}!validate@{validate}}
+\index{validate@{validate}!org.aston.app.validator.ModelValidator@{org.aston.app.validator.ModelValidator}}
+\doxysubsubsection{\texorpdfstring{validate()}{validate()}}
+{\footnotesize\ttfamily void org.\+aston.\+app.\+validator.\+Model\+Validator.\+validate (\begin{DoxyParamCaption}\item[{Car}]{car }\end{DoxyParamCaption})}
+
+
+
+Выполняет валидацию модели автомобиля. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em car} & объект автомобиля, поле model которого необходимо проверить \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em Car\+Validation\+Exception} & если модель равна null или пустая (после удаления пробелов) \\
+\hline
+\end{DoxyExceptions}
+
+
+Замещает \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1validator_1_1CarValidator_aaa43a930db37f5e56997ff13b7fd5f6c}{org.\+aston.\+app.\+validator.\+Car\+Validator}}.
+
+
+
+См. определение в файле \mbox{\hyperlink{ModelValidator_8java_source}{Model\+Validator.\+java}} строка \mbox{\hyperlink{ModelValidator_8java_source_l00022}{22}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/org/aston/app/validator/\mbox{\hyperlink{ModelValidator_8java}{Model\+Validator.\+java}}\end{DoxyCompactItemize}
