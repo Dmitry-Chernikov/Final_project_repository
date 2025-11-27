@@ -36,6 +36,11 @@ public class SortingApplication {
     private final Scanner scanner;
 
     /**
+     * Количество автомобилей для генерации случайным образом или ввода вручную.
+     */
+    private int count;
+
+    /**
      * Конструктор класса.
      * Инициализирует сканер для чтения ввода.
      */
@@ -81,10 +86,22 @@ public class SortingApplication {
                 System.out.println("Выход из программы");
                 break;
             }
+
+            if ("6".equals(choice)) {
+                openHtmlFile(Paths.get("doc", "html").resolve("index.html").toString());
+                continue;
+            }
+
+            if (!"1".equals(choice) && !"2".equals(choice) && !"3".equals(choice) && !"4".equals(choice) && !"5".equals(choice)) {
+                System.out.println("Неверный выбор. Попробуйте ещё раз.");
+                continue;
+            }
+
             if ("4".equals(choice)) {
                 CustomTestRunner.run();
                 continue;
             }
+
             if ("5".equals(choice)) {
                 StringBuilder authors = new StringBuilder();
                 authors.append("\nАвторы:\n")
@@ -97,27 +114,19 @@ public class SortingApplication {
                 System.out.print(authors);
                 continue;
             }
-            if ("6".equals(choice)) {
-                openHtmlFile(Paths.get("doc", "html").resolve("index.html").toString());
-                continue;
-            }
 
-            if (!"1".equals(choice) && !"2".equals(choice) && !"3".equals(choice)) {
-                System.out.println("Неверный выбор. Попробуйте ещё раз.");
-                continue;
-            }
-
-            System.out.print("Введите количество автомобилей: ");
-            int count;
-            try{
-                count = Integer.parseInt(scanner.nextLine().trim());
-                if (count <= 0) {
-                    System.out.println("Количество должно быть больше 0.");
+            if ("1".equals(choice) || "3".equals(choice)) {
+                System.out.print("Введите количество автомобилей: ");
+                try {
+                    count = Integer.parseInt(scanner.nextLine().trim());
+                    if (count <= 0) {
+                        System.out.println("Количество должно быть больше 0.");
+                        continue;
+                    }
+                } catch (NumberFormatException e) {
+                    System.out.println("Введите корректное число.");
                     continue;
                 }
-            } catch (NumberFormatException e) {
-                System.out.println("Введите корректное число.");
-                continue;
             }
 
             Car[] cars = null;
