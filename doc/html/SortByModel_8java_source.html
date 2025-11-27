@@ -1,0 +1,151 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Система сортировки автомобилей: Исходный файл src/main/java/org/aston/app/strategy/SortByModel.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="LogoAston.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Система сортировки автомобилей<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">Проект реализует консольное приложение для сортировки коллекций объектов типа Автомобиль.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('SortByModel_8java_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">SortByModel.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="SortByModel_8java.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>org.aston.app.strategy;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> org.aston.app.model.Car;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classorg_1_1aston_1_1app_1_1strategy_1_1SortByModel.html">   12</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classorg_1_1aston_1_1app_1_1strategy_1_1SortByModel.html">SortByModel</a> <span class="keyword">implements</span> <a class="code hl_interface" href="interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy.html">SortStrategy</a>&lt;Car&gt; {</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    @Override</div>
+<div class="foldopen" id="foldopen00023" data-start="{" data-end="}">
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="classorg_1_1aston_1_1app_1_1strategy_1_1SortByModel.html#a938e6b02ab0467202b5f20899c964c25">   23</a></span>    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classorg_1_1aston_1_1app_1_1strategy_1_1SortByModel.html#a938e6b02ab0467202b5f20899c964c25">sort</a>(Car[] cars) {</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        <a class="code hl_function" href="interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy.html#a989dd029620ab0917ea7bb8ff2de5911">quickSort</a>(cars, 0, cars.length - 1);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    }</div>
+</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    @Override</div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="classorg_1_1aston_1_1app_1_1strategy_1_1SortByModel.html#adb0df9b73a0cd8b0c5f68d6518946844">   39</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classorg_1_1aston_1_1app_1_1strategy_1_1SortByModel.html#adb0df9b73a0cd8b0c5f68d6518946844">partition</a>(Car[] cars, <span class="keywordtype">int</span> low, <span class="keywordtype">int</span> high) {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        String pivot = cars[high].getModel(); <span class="comment">// Опорный элемент — последний</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        <span class="keywordtype">int</span> i = low - 1; <span class="comment">// Индекс меньшего элемента</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = low; j &lt; high; j++) {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keywordflow">if</span> (cars[j].getModel().compareTo(pivot) &lt;= 0) { <span class="comment">// Если текущий элемент меньше или равен опорному</span></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                i++;</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                <a class="code hl_function" href="interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy.html#ab388e9cd0834b25ceea010dc533855dc">swap</a>(cars, i, j); <span class="comment">// Меняем местами элементы</span></div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            }</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        }</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        <a class="code hl_function" href="interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy.html#ab388e9cd0834b25ceea010dc533855dc">swap</a>(cars, i + 1, high); <span class="comment">// Меняем местами опорный элемент с элементом на позиции i+1</span></div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        <span class="keywordflow">return</span> i + 1;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    }</div>
+</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}</div>
+</div>
+<div class="ttc" id="aclassorg_1_1aston_1_1app_1_1strategy_1_1SortByModel_html"><div class="ttname"><a href="classorg_1_1aston_1_1app_1_1strategy_1_1SortByModel.html">org.aston.app.strategy.SortByModel</a></div><div class="ttdoc">Класс SortByModel реализует интерфейс SortStrategy и предназначен для сортировки массива объектов Car...</div><div class="ttdef"><b>Definition</b> <a href="SortByModel_8java_source.html#l00012">SortByModel.java:12</a></div></div>
+<div class="ttc" id="aclassorg_1_1aston_1_1app_1_1strategy_1_1SortByModel_html_a938e6b02ab0467202b5f20899c964c25"><div class="ttname"><a href="classorg_1_1aston_1_1app_1_1strategy_1_1SortByModel.html#a938e6b02ab0467202b5f20899c964c25">org.aston.app.strategy.SortByModel.sort</a></div><div class="ttdeci">void sort(Car[] cars)</div><div class="ttdoc">Выполняет сортировку массива автомобилей по модели.</div><div class="ttdef"><b>Definition</b> <a href="SortByModel_8java_source.html#l00023">SortByModel.java:23</a></div></div>
+<div class="ttc" id="aclassorg_1_1aston_1_1app_1_1strategy_1_1SortByModel_html_adb0df9b73a0cd8b0c5f68d6518946844"><div class="ttname"><a href="classorg_1_1aston_1_1app_1_1strategy_1_1SortByModel.html#adb0df9b73a0cd8b0c5f68d6518946844">org.aston.app.strategy.SortByModel.partition</a></div><div class="ttdeci">int partition(Car[] cars, int low, int high)</div><div class="ttdoc">Выполняет разделение подмассива cars[low..high] на две части относительно опорного элемента.</div><div class="ttdef"><b>Definition</b> <a href="SortByModel_8java_source.html#l00039">SortByModel.java:39</a></div></div>
+<div class="ttc" id="ainterfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_html"><div class="ttname"><a href="interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy.html">org.aston.app.strategy.SortStrategy</a></div><div class="ttdoc">Интерфейс SortStrategy определяет контракт для алгоритмов сортировки объектов.</div><div class="ttdef"><b>Definition</b> <a href="SortStrategy_8java_source.html#l00011">SortStrategy.java:11</a></div></div>
+<div class="ttc" id="ainterfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_html_a989dd029620ab0917ea7bb8ff2de5911"><div class="ttname"><a href="interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy.html#a989dd029620ab0917ea7bb8ff2de5911">org.aston.app.strategy.SortStrategy&lt; Car &gt;::quickSort</a></div><div class="ttdeci">default void quickSort(T[] cars, int low, int high)</div><div class="ttdoc">Рекурсивная реализация алгоритма быстрой сортировки.</div><div class="ttdef"><b>Definition</b> <a href="SortStrategy_8java_source.html#l00030">SortStrategy.java:30</a></div></div>
+<div class="ttc" id="ainterfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_html_ab388e9cd0834b25ceea010dc533855dc"><div class="ttname"><a href="interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy.html#ab388e9cd0834b25ceea010dc533855dc">org.aston.app.strategy.SortStrategy&lt; Car &gt;::swap</a></div><div class="ttdeci">default void swap(T[] elements, int i, int j)</div><div class="ttdoc">Меняет местами два элемента в массиве.</div><div class="ttdef"><b>Definition</b> <a href="SortStrategy_8java_source.html#l00057">SortStrategy.java:57</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a class="el" href="dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a class="el" href="dir_daf7592b8ade76cad5a1e82d805df54b.html">org</a></li><li class="navelem"><a class="el" href="dir_6731ac4a8bdd4a654cf310ace42bc18f.html">aston</a></li><li class="navelem"><a class="el" href="dir_f0350216b77b7c6a6b05f842e3435737.html">app</a></li><li class="navelem"><a class="el" href="dir_9a0ff123085fb6789b338c8878d05b98.html">strategy</a></li><li class="navelem"><a class="el" href="SortByModel_8java.html">SortByModel.java</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

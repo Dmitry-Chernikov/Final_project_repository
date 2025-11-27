@@ -1,0 +1,40 @@
+\doxysection{Get\+Powerful\+Car.\+java}
+\hypertarget{GetPowerfulCar_8java_source}{}\label{GetPowerfulCar_8java_source}\index{src/main/java/org/aston/app/random/GetPowerfulCar.java@{src/main/java/org/aston/app/random/GetPowerfulCar.java}}
+\mbox{\hyperlink{GetPowerfulCar_8java}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00001}00001\ \textcolor{keyword}{package\ }org.aston.app.random;}
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00003}00003\ \textcolor{keyword}{import}\ org.aston.app.model.Car;}
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00012}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1random_1_1GetPowerfulCar}{00012}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1random_1_1GetPowerfulCar}{GetPowerfulCar}}\ \textcolor{keyword}{implements}\ \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1random_1_1RandomGeneration}{RandomGeneration}}\ \{}
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00017}00017\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ MIN\_POWER\ =\ 150;}
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00022}00022\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ MAX\_POWER\ =\ 300;}
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00026}00026\ \ \ \ \ \textcolor{keyword}{private}\ String\ model;}
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00030}00030\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ power;}
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00034}00034\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ year;}
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00044}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1random_1_1GetPowerfulCar_a3f2c5376515d6e95406e2d6d7525633a}{00044}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1random_1_1GetPowerfulCar_a3f2c5376515d6e95406e2d6d7525633a}{GetPowerfulCar}}()\ \{}
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ this.model\ =\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1random_1_1DataGeneration}{DataGeneration}}.randomModel(\textcolor{keyword}{new}\ PowerfulCarData());}
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ this.year\ =\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1random_1_1DataGeneration}{DataGeneration}}.randomYear();}
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ this.power\ =\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1random_1_1DataGeneration}{DataGeneration}}.randomPower(MIN\_POWER,\ MAX\_POWER);}
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00058}00058\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00059}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1random_1_1GetPowerfulCar_a931f99ee9efbea333c3fe2fe413fa3e7}{00059}}\ \ \ \ \ \textcolor{keyword}{public}\ Car\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1random_1_1GetPowerfulCar_a931f99ee9efbea333c3fe2fe413fa3e7}{randomCar}}()\ \{}
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Car.Builder().setModel(model).setPower(power).setYear(year).build();}
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00061}00061\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00069}00069\ \ \ \ \ \textcolor{keyword}{class\ }PowerfulCarData\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1random_1_1GetDataCar}{GetDataCar}}\ \{}
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00074}00074\ \ \ \ \ \ \ \ \ PowerfulCarData()\ \{}
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ AUDI\ =\ \textcolor{keyword}{new}\ String[]\{\textcolor{stringliteral}{"{}\ A5"{}},\ \textcolor{stringliteral}{"{}\ Q7"{}},\ \textcolor{stringliteral}{"{}\ Q5"{}},\ \textcolor{stringliteral}{"{}\ A8"{}},\ \textcolor{stringliteral}{"{}\ A7"{}}\};}
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ TOYOTA\ =\ \textcolor{keyword}{new}\ String[]\{\textcolor{stringliteral}{"{}\ Camry"{}},\ \textcolor{stringliteral}{"{}\ Highlander"{}},\ \textcolor{stringliteral}{"{}\ RAV4"{}},\ \textcolor{stringliteral}{"{}\ Land\ Cruiser"{}}\};}
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ FORD\ =\ \textcolor{keyword}{new}\ String[]\{\textcolor{stringliteral}{"{}\ KUGA"{}},\ \textcolor{stringliteral}{"{}\ ECOBOOST"{}},\ \textcolor{stringliteral}{"{}\ FORD\ EXPLORER\ VI"{}}\};}
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ BMW\ =\ \textcolor{keyword}{new}\ String[]\{\textcolor{stringliteral}{"{}X3\ G01"{}},\ \textcolor{stringliteral}{"{}\ 4"{}},\ \textcolor{stringliteral}{"{}\ X5\ G05"{}},\ \textcolor{stringliteral}{"{}\ 7"{}}\};}
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00079}00079\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00080}00080\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00081}00081\ \}}
+\DoxyCodeLine{\Hypertarget{GetPowerfulCar_8java_source_l00082}00082\ }
+
+\end{DoxyCode}

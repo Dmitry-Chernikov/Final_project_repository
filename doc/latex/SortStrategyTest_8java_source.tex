@@ -1,0 +1,54 @@
+\doxysection{Sort\+Strategy\+Test.\+java}
+\hypertarget{SortStrategyTest_8java_source}{}\label{SortStrategyTest_8java_source}\index{src/main/java/org/aston/app/test/SortStrategyTest.java@{src/main/java/org/aston/app/test/SortStrategyTest.java}}
+\mbox{\hyperlink{SortStrategyTest_8java}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00001}00001\ \textcolor{keyword}{package\ }org.aston.app.test;}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00003}00003\ \textcolor{keyword}{import}\ org.aston.app.model.Car;}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00004}00004\ \textcolor{keyword}{import}\ org.aston.app.strategy.SortByPower;}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00005}00005\ \textcolor{keyword}{import}\ org.aston.app.strategy.SortEvenPowerNaturalOddKeep;}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00007}00007\ \textcolor{keyword}{import}\ \textcolor{keyword}{static}\ org.aston.app.test.TestUtils.assertTrue;}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00016}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1test_1_1SortStrategyTest}{00016}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1test_1_1SortStrategyTest}{SortStrategyTest}}\ \{}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00027}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1test_1_1SortStrategyTest_aa5d7f40c520c8c1f1474b14b2e40b359}{00027}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1test_1_1SortStrategyTest_aa5d7f40c520c8c1f1474b14b2e40b359}{runTests}}()\ \{}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00028}00028\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Запуск\ тестов\ SortStrategy..."{}});}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Тест\ 1:\ Сортировка\ по\ мощности\ (возрастание)}}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00031}00031\ \ \ \ \ \ \ \ \ Car[]\ cars\ =\ \{}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ Car.Builder().setModel(\textcolor{stringliteral}{"{}A"{}}).setPower(500).setYear(2000).build(),}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ Car.Builder().setModel(\textcolor{stringliteral}{"{}B"{}}).setPower(300).setYear(2001).build(),}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00034}00034\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ Car.Builder().setModel(\textcolor{stringliteral}{"{}C"{}}).setPower(400).setYear(2002).build()}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ SortByPower().sort(cars);}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00039}00039\ \ \ \ \ \ \ \ \ assertTrue(\textcolor{stringliteral}{"{}Мощность[0]\ должна\ быть\ 300"{}},\ cars[0].getPower()\ ==\ 300);}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ assertTrue(\textcolor{stringliteral}{"{}Мощность[1]\ должна\ быть\ 400"{}},\ cars[1].getPower()\ ==\ 400);}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ assertTrue(\textcolor{stringliteral}{"{}Мощность[2]\ должна\ быть\ 500"{}},\ cars[2].getPower()\ ==\ 500);}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00042}00042\ }
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}SortByPowerTest\ пройден\ успешно."{}});}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Тест\ 2:\ Сортировка\ только\ чётных\ значений\ power,\ нечётные\ —\ на\ месте}}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ Car[]\ mixedCars\ =\ \{}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ Car.Builder().setModel(\textcolor{stringliteral}{"{}A"{}}).setPower(301).setYear(2000).build(),\ \textcolor{comment}{//\ нечётное\ —\ не\ двигаем}}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ Car.Builder().setModel(\textcolor{stringliteral}{"{}B"{}}).setPower(300).setYear(2001).build(),\ \textcolor{comment}{//\ чётное\ —\ будет\ отсортировано}}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ Car.Builder().setModel(\textcolor{stringliteral}{"{}C"{}}).setPower(299).setYear(2002).build(),\ \textcolor{comment}{//\ нечётное}}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ Car.Builder().setModel(\textcolor{stringliteral}{"{}D"{}}).setPower(200).setYear(2003).build()\ \ \textcolor{comment}{//\ чётное\ —\ будет\ перемещено}}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00052}00052\ }
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}\ SortEvenPowerNaturalOddKeep().sort(mixedCars);}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Позиции\ нечётных\ должны\ остаться\ прежними}}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ assertTrue(\textcolor{stringliteral}{"{}Car\ A\ должен\ остаться\ первым"{}},\ mixedCars[0].getPower()\ ==\ 301);}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00057}00057\ \ \ \ \ \ \ \ \ assertTrue(\textcolor{stringliteral}{"{}Car\ C\ должен\ остаться\ третьим"{}},\ mixedCars[2].getPower()\ ==\ 299);}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00059}00059\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Чётные\ должны\ быть\ отсортированы:\ 200,\ 300}}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00060}00060\ \ \ \ \ \ \ \ \ assertTrue(\textcolor{stringliteral}{"{}Ожидается\ 200"{}},\ mixedCars[1].getPower()\ ==\ 200);}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00061}00061\ \ \ \ \ \ \ \ \ assertTrue(\textcolor{stringliteral}{"{}Ожидается\ 300"{}},\ mixedCars[3].getPower()\ ==\ 300);}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00063}00063\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}SortEvenPowerNaturalOddKeepTest\ пройден\ успешно.\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00064}00064\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SortStrategyTest_8java_source_l00065}00065\ \}}
+
+\end{DoxyCode}

@@ -1,0 +1,150 @@
+\doxysection{Шаблон интерфейса org.\+aston.\+app.\+strategy.\+Sort\+Strategy\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>}}
+\hypertarget{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy}{}\label{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy}\index{org.aston.app.strategy.SortStrategy$<$ T $>$@{org.aston.app.strategy.SortStrategy$<$ T $>$}}
+
+
+Интерфейс Sort\+Strategy определяет контракт для алгоритмов сортировки объектов.  
+
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_a68d0d9041d04b3bb952278ea951b7892}{sort}} (T\mbox{[}$\,$\mbox{]} cars)
+\begin{DoxyCompactList}\small\item\em Выполняет сортировку переданного массива объектов. \end{DoxyCompactList}\item 
+default void \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_a989dd029620ab0917ea7bb8ff2de5911}{quick\+Sort}} (T\mbox{[}$\,$\mbox{]} cars, int low, int high)
+\begin{DoxyCompactList}\small\item\em Рекурсивная реализация алгоритма быстрой сортировки. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_afb7493d6f143eda66cebd81e1d842dbf}{partition}} (T\mbox{[}$\,$\mbox{]} cars, int low, int high)
+\begin{DoxyCompactList}\small\item\em Выполняет разделение подмассива на две части относительно опорного элемента. \end{DoxyCompactList}\item 
+default void \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_ab388e9cd0834b25ceea010dc533855dc}{swap}} (T\mbox{[}$\,$\mbox{]} elements, int i, int j)
+\begin{DoxyCompactList}\small\item\em Меняет местами два элемента в массиве. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Интерфейс Sort\+Strategy определяет контракт для алгоритмов сортировки объектов. 
+
+Предоставляет обобщённый метод сортировки и стандартные вспомогательные методы, такие как быстрая сортировка, разделение массива и обмен элементами.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em $<$\+T$>$} & тип сортируемых объектов \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{SortStrategy_8java_source}{Sort\+Strategy.\+java}} строка \mbox{\hyperlink{SortStrategy_8java_source_l00011}{11}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_afb7493d6f143eda66cebd81e1d842dbf}\label{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_afb7493d6f143eda66cebd81e1d842dbf} 
+\index{org.aston.app.strategy.SortStrategy$<$ T $>$@{org.aston.app.strategy.SortStrategy$<$ T $>$}!partition@{partition}}
+\index{partition@{partition}!org.aston.app.strategy.SortStrategy$<$ T $>$@{org.aston.app.strategy.SortStrategy$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{partition()}{partition()}}
+{\footnotesize\ttfamily int \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy}{org.\+aston.\+app.\+strategy.\+Sort\+Strategy}}$<$ T $>$.partition (\begin{DoxyParamCaption}\item[{T\mbox{[}$\,$\mbox{]}}]{cars,  }\item[{int}]{low,  }\item[{int}]{high }\end{DoxyParamCaption})}
+
+
+
+Выполняет разделение подмассива на две части относительно опорного элемента. 
+
+Элементы, меньшие или равные опорному, помещаются слева, остальные — справа.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em cars} & массив объектов \\
+\hline
+{\em low} & начальный индекс подмассива \\
+\hline
+{\em high} & конечный индекс подмассива \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+индекс опорного элемента после разделения 
+\end{DoxyReturn}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_afb7493d6f143eda66cebd81e1d842dbf_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_a989dd029620ab0917ea7bb8ff2de5911}\label{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_a989dd029620ab0917ea7bb8ff2de5911} 
+\index{org.aston.app.strategy.SortStrategy$<$ T $>$@{org.aston.app.strategy.SortStrategy$<$ T $>$}!quickSort@{quickSort}}
+\index{quickSort@{quickSort}!org.aston.app.strategy.SortStrategy$<$ T $>$@{org.aston.app.strategy.SortStrategy$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{quickSort()}{quickSort()}}
+{\footnotesize\ttfamily default void \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy}{org.\+aston.\+app.\+strategy.\+Sort\+Strategy}}$<$ T $>$.quick\+Sort (\begin{DoxyParamCaption}\item[{T\mbox{[}$\,$\mbox{]}}]{cars,  }\item[{int}]{low,  }\item[{int}]{high }\end{DoxyParamCaption})}
+
+
+
+Рекурсивная реализация алгоритма быстрой сортировки. 
+
+Разделяет массив на подмассивы относительно опорного элемента и рекурсивно сортирует левую и правую части.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em cars} & массив объектов для сортировки \\
+\hline
+{\em low} & начальный индекс подмассива \\
+\hline
+{\em high} & конечный индекс подмассива \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{SortStrategy_8java_source}{Sort\+Strategy.\+java}} строка \mbox{\hyperlink{SortStrategy_8java_source_l00030}{30}}
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_a989dd029620ab0917ea7bb8ff2de5911_cgraph}
+\end{center}
+\end{figure}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_a989dd029620ab0917ea7bb8ff2de5911_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_a68d0d9041d04b3bb952278ea951b7892}\label{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_a68d0d9041d04b3bb952278ea951b7892} 
+\index{org.aston.app.strategy.SortStrategy$<$ T $>$@{org.aston.app.strategy.SortStrategy$<$ T $>$}!sort@{sort}}
+\index{sort@{sort}!org.aston.app.strategy.SortStrategy$<$ T $>$@{org.aston.app.strategy.SortStrategy$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily void \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy}{org.\+aston.\+app.\+strategy.\+Sort\+Strategy}}$<$ T $>$.sort (\begin{DoxyParamCaption}\item[{T\mbox{[}$\,$\mbox{]}}]{cars }\end{DoxyParamCaption})}
+
+
+
+Выполняет сортировку переданного массива объектов. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em cars} & массив объектов, который необходимо отсортировать \\
+\hline
+\end{DoxyParams}
+\Hypertarget{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_ab388e9cd0834b25ceea010dc533855dc}\label{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_ab388e9cd0834b25ceea010dc533855dc} 
+\index{org.aston.app.strategy.SortStrategy$<$ T $>$@{org.aston.app.strategy.SortStrategy$<$ T $>$}!swap@{swap}}
+\index{swap@{swap}!org.aston.app.strategy.SortStrategy$<$ T $>$@{org.aston.app.strategy.SortStrategy$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily default void \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy}{org.\+aston.\+app.\+strategy.\+Sort\+Strategy}}$<$ T $>$.swap (\begin{DoxyParamCaption}\item[{T\mbox{[}$\,$\mbox{]}}]{elements,  }\item[{int}]{i,  }\item[{int}]{j }\end{DoxyParamCaption})}
+
+
+
+Меняет местами два элемента в массиве. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em elements} & массив, в котором выполняется обмен \\
+\hline
+{\em i} & индекс первого элемента \\
+\hline
+{\em j} & индекс второго элемента \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{SortStrategy_8java_source}{Sort\+Strategy.\+java}} строка \mbox{\hyperlink{SortStrategy_8java_source_l00057}{57}}
+
+
+
+Объявления и описания членов интерфейса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/org/aston/app/strategy/\mbox{\hyperlink{SortStrategy_8java}{Sort\+Strategy.\+java}}\end{DoxyCompactItemize}

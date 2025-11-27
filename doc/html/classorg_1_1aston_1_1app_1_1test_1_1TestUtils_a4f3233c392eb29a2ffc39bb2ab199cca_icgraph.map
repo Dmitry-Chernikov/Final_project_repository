@@ -1,0 +1,7 @@
+<map id="org.aston.app.test.TestUtils.assertTrue" name="org.aston.app.test.TestUtils.assertTrue">
+<area shape="rect" id="Node000001" title="Проверяет, что условие истинно." alt="" coords="276,45,524,70"/>
+<area shape="rect" id="Node000002" href="$classorg_1_1aston_1_1app_1_1test_1_1TestUtils.html#a210519034bc6a55199b1ce918cff90f0" title="Проверяет, что ожидаемое целое число равно фактическому." alt="" coords="5,5,228,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="274,46,228,41,229,35,274,40"/>
+<area shape="rect" id="Node000003" href="$classorg_1_1aston_1_1app_1_1test_1_1TestUtils.html#aef7a02484ad19ae37eac955f01ca60da" title="Проверяет, что ожидаемый объект равен фактическому." alt="" coords="5,69,228,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="274,74,229,79,228,74,274,69"/>
+</map>

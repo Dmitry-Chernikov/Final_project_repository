@@ -1,0 +1,39 @@
+\doxysection{Sort\+By\+All\+Fields\+Comparator.\+java}
+\hypertarget{SortByAllFieldsComparator_8java_source}{}\label{SortByAllFieldsComparator_8java_source}\index{src/main/java/org/aston/app/strategy/SortByAllFieldsComparator.java@{src/main/java/org/aston/app/strategy/SortByAllFieldsComparator.java}}
+\mbox{\hyperlink{SortByAllFieldsComparator_8java}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{SortByAllFieldsComparator_8java_source_l00001}\mbox{\hyperlink{namespaceorg_1_1aston_1_1app_1_1strategy}{00001}}\ \textcolor{keyword}{package\ }org.aston.app.strategy;}
+\DoxyCodeLine{\Hypertarget{SortByAllFieldsComparator_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{SortByAllFieldsComparator_8java_source_l00003}00003\ \textcolor{keyword}{import}\ org.aston.app.model.Car;}
+\DoxyCodeLine{\Hypertarget{SortByAllFieldsComparator_8java_source_l00004}00004\ \textcolor{keyword}{import}\ org.aston.app.model.CarModelComparator;}
+\DoxyCodeLine{\Hypertarget{SortByAllFieldsComparator_8java_source_l00005}00005\ \textcolor{keyword}{import}\ org.aston.app.model.CarPowerComparator;}
+\DoxyCodeLine{\Hypertarget{SortByAllFieldsComparator_8java_source_l00006}00006\ \textcolor{keyword}{import}\ org.aston.app.model.CarYearComparator;}
+\DoxyCodeLine{\Hypertarget{SortByAllFieldsComparator_8java_source_l00007}00007\ }
+\DoxyCodeLine{\Hypertarget{SortByAllFieldsComparator_8java_source_l00008}00008\ \textcolor{keyword}{import}\ java.util.Comparator;}
+\DoxyCodeLine{\Hypertarget{SortByAllFieldsComparator_8java_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{SortByAllFieldsComparator_8java_source_l00017}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1strategy_1_1SortByAllFieldsComparator}{00017}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1strategy_1_1SortByAllFieldsComparator}{SortByAllFieldsComparator}}\ \textcolor{keyword}{implements}\ \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy}{SortStrategy}}<Car>\ \{}
+\DoxyCodeLine{\Hypertarget{SortByAllFieldsComparator_8java_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{SortByAllFieldsComparator_8java_source_l00023}00023\ \ \ \ \ \textcolor{keyword}{private}\ Comparator<Car>\ totalComparator\ =\ \textcolor{keyword}{new}\ CarModelComparator().thenComparing(\textcolor{keyword}{new}\ CarPowerComparator()).thenComparing(\textcolor{keyword}{new}\ CarYearComparator());}
+\DoxyCodeLine{\Hypertarget{SortByAllFieldsComparator_8java_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{SortByAllFieldsComparator_8java_source_l00033}00033\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{SortByAllFieldsComparator_8java_source_l00034}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1strategy_1_1SortByAllFieldsComparator_a0ec84fdead0eca7b5af783f36daabf26}{00034}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1strategy_1_1SortByAllFieldsComparator_a0ec84fdead0eca7b5af783f36daabf26}{sort}}(Car[]\ cars)\ \{}
+\DoxyCodeLine{\Hypertarget{SortByAllFieldsComparator_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_a989dd029620ab0917ea7bb8ff2de5911}{quickSort}}(cars,\ 0,\ cars.length\ -\/\ 1);}
+\DoxyCodeLine{\Hypertarget{SortByAllFieldsComparator_8java_source_l00036}00036\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SortByAllFieldsComparator_8java_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{SortByAllFieldsComparator_8java_source_l00049}00049\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{SortByAllFieldsComparator_8java_source_l00050}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1strategy_1_1SortByAllFieldsComparator_a82c7769c598d73a37012144cfd263a8c}{00050}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1strategy_1_1SortByAllFieldsComparator_a82c7769c598d73a37012144cfd263a8c}{partition}}(Car[]\ cars,\ \textcolor{keywordtype}{int}\ low,\ \textcolor{keywordtype}{int}\ high)\ \{}
+\DoxyCodeLine{\Hypertarget{SortByAllFieldsComparator_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ Car\ pivot\ =\ cars[high];\ \textcolor{comment}{//\ Опорный\ элемент\ —\ последний}}
+\DoxyCodeLine{\Hypertarget{SortByAllFieldsComparator_8java_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ low\ -\/\ 1;\ \textcolor{comment}{//\ Индекс\ меньшего\ элемента}}
+\DoxyCodeLine{\Hypertarget{SortByAllFieldsComparator_8java_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{SortByAllFieldsComparator_8java_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ low;\ j\ <\ high;\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{SortByAllFieldsComparator_8java_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (totalComparator.compare(cars[j],\ pivot)\ \ <=\ 0)\ \{\ \textcolor{comment}{//\ Если\ текущий\ элемент\ меньше\ или\ равен\ опорному}}
+\DoxyCodeLine{\Hypertarget{SortByAllFieldsComparator_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{\Hypertarget{SortByAllFieldsComparator_8java_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_ab388e9cd0834b25ceea010dc533855dc}{swap}}(cars,\ i,\ j);\ \textcolor{comment}{//\ Меняем\ местами\ элементы}}
+\DoxyCodeLine{\Hypertarget{SortByAllFieldsComparator_8java_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SortByAllFieldsComparator_8java_source_l00059}00059\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SortByAllFieldsComparator_8java_source_l00060}00060\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_ab388e9cd0834b25ceea010dc533855dc}{swap}}(cars,\ i\ +\ 1,\ high);\ \textcolor{comment}{//\ Меняем\ местами\ опорный\ элемент\ с\ элементом\ на\ позиции\ i+1}}
+\DoxyCodeLine{\Hypertarget{SortByAllFieldsComparator_8java_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ i\ +\ 1;}
+\DoxyCodeLine{\Hypertarget{SortByAllFieldsComparator_8java_source_l00062}00062\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SortByAllFieldsComparator_8java_source_l00063}00063\ \}}
+
+\end{DoxyCode}

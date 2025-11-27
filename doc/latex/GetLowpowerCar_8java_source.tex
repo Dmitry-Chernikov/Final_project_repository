@@ -1,0 +1,39 @@
+\doxysection{Get\+Lowpower\+Car.\+java}
+\hypertarget{GetLowpowerCar_8java_source}{}\label{GetLowpowerCar_8java_source}\index{src/main/java/org/aston/app/random/GetLowpowerCar.java@{src/main/java/org/aston/app/random/GetLowpowerCar.java}}
+\mbox{\hyperlink{GetLowpowerCar_8java}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{GetLowpowerCar_8java_source_l00001}00001\ \textcolor{keyword}{package\ }org.aston.app.random;}
+\DoxyCodeLine{\Hypertarget{GetLowpowerCar_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{GetLowpowerCar_8java_source_l00003}00003\ \textcolor{keyword}{import}\ org.aston.app.model.Car;}
+\DoxyCodeLine{\Hypertarget{GetLowpowerCar_8java_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{GetLowpowerCar_8java_source_l00012}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1random_1_1GetLowpowerCar}{00012}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1random_1_1GetLowpowerCar}{GetLowpowerCar}}\ \textcolor{keyword}{implements}\ \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1random_1_1RandomGeneration}{RandomGeneration}}\ \{}
+\DoxyCodeLine{\Hypertarget{GetLowpowerCar_8java_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{GetLowpowerCar_8java_source_l00017}00017\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ MIN\_POWER\ =\ 87;}
+\DoxyCodeLine{\Hypertarget{GetLowpowerCar_8java_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{GetLowpowerCar_8java_source_l00022}00022\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ MAX\_POWER\ =\ 110;}
+\DoxyCodeLine{\Hypertarget{GetLowpowerCar_8java_source_l00026}00026\ \ \ \ \ \textcolor{keyword}{private}\ String\ model;}
+\DoxyCodeLine{\Hypertarget{GetLowpowerCar_8java_source_l00030}00030\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ power;}
+\DoxyCodeLine{\Hypertarget{GetLowpowerCar_8java_source_l00034}00034\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ year;}
+\DoxyCodeLine{\Hypertarget{GetLowpowerCar_8java_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{GetLowpowerCar_8java_source_l00044}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1random_1_1GetLowpowerCar_a0eadd4f5f779f9c5497fc1ee3abe3ed5}{00044}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1random_1_1GetLowpowerCar_a0eadd4f5f779f9c5497fc1ee3abe3ed5}{GetLowpowerCar}}()\ \{}
+\DoxyCodeLine{\Hypertarget{GetLowpowerCar_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ this.model\ =\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1random_1_1DataGeneration}{DataGeneration}}.randomModel(\textcolor{keyword}{new}\ LowPowerCarData());}
+\DoxyCodeLine{\Hypertarget{GetLowpowerCar_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ this.year\ =\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1random_1_1DataGeneration}{DataGeneration}}.randomYear();}
+\DoxyCodeLine{\Hypertarget{GetLowpowerCar_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ this.power\ =\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1random_1_1DataGeneration}{DataGeneration}}.randomPower(MIN\_POWER,\ MAX\_POWER);}
+\DoxyCodeLine{\Hypertarget{GetLowpowerCar_8java_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GetLowpowerCar_8java_source_l00049}00049\ }
+\DoxyCodeLine{\Hypertarget{GetLowpowerCar_8java_source_l00058}00058\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{GetLowpowerCar_8java_source_l00059}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1random_1_1GetLowpowerCar_a911843e1f95c9378f7aaf6db2edaedfd}{00059}}\ \ \ \ \ \textcolor{keyword}{public}\ Car\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1random_1_1GetLowpowerCar_a911843e1f95c9378f7aaf6db2edaedfd}{randomCar}}()\ \{}
+\DoxyCodeLine{\Hypertarget{GetLowpowerCar_8java_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Car.Builder().setModel(model).setPower(power).setYear(year).build();}
+\DoxyCodeLine{\Hypertarget{GetLowpowerCar_8java_source_l00061}00061\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GetLowpowerCar_8java_source_l00062}00062\ }
+\DoxyCodeLine{\Hypertarget{GetLowpowerCar_8java_source_l00069}00069\ \ \ \ \ \textcolor{keyword}{class\ }LowPowerCarData\ \textcolor{keyword}{extends}\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1random_1_1GetDataCar}{GetDataCar}}\ \{}
+\DoxyCodeLine{\Hypertarget{GetLowpowerCar_8java_source_l00074}00074\ \ \ \ \ \ \ \ \ LowPowerCarData()\ \{}
+\DoxyCodeLine{\Hypertarget{GetLowpowerCar_8java_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ AUDI\ =\ \textcolor{keyword}{new}\ String[]\{\textcolor{stringliteral}{"{}\ A3"{}},\ \textcolor{stringliteral}{"{}\ 100"{}},\ \textcolor{stringliteral}{"{}\ A4"{}}\};}
+\DoxyCodeLine{\Hypertarget{GetLowpowerCar_8java_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ TOYOTA\ =\ \textcolor{keyword}{new}\ String[]\{\textcolor{stringliteral}{"{}\ Corolla"{}},\ \textcolor{stringliteral}{"{}\ Probox"{}}\};}
+\DoxyCodeLine{\Hypertarget{GetLowpowerCar_8java_source_l00077}00077\ \ \ \ \ \ \ \ \ \ \ \ \ FORD\ =\ \textcolor{keyword}{new}\ String[]\{\textcolor{stringliteral}{"{}\ FUSION"{}},\ \textcolor{stringliteral}{"{}\ FIESTA"{}},\ \textcolor{stringliteral}{"{}\ FOCUS\ POWERSHIFT"{}},\ \textcolor{stringliteral}{"{}\ C-\/MAX\ 1.6\ TDCI"{}}\};}
+\DoxyCodeLine{\Hypertarget{GetLowpowerCar_8java_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ BMW\ =\ \textcolor{keyword}{new}\ String[]\{\textcolor{stringliteral}{"{}\ 1"{}}\};}
+\DoxyCodeLine{\Hypertarget{GetLowpowerCar_8java_source_l00079}00079\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GetLowpowerCar_8java_source_l00080}00080\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{GetLowpowerCar_8java_source_l00081}00081\ \}}
+
+\end{DoxyCode}

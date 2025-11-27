@@ -1,0 +1,267 @@
+\doxysection{Класс org.\+aston.\+app.\+model.\+Car}
+\hypertarget{classorg_1_1aston_1_1app_1_1model_1_1Car}{}\label{classorg_1_1aston_1_1app_1_1model_1_1Car}\index{org.aston.app.model.Car@{org.aston.app.model.Car}}
+
+
+Класс, представляющий автомобиль.  
+
+
+
+
+Граф наследования\+:org.\+aston.\+app.\+model.\+Car\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{classorg_1_1aston_1_1app_1_1model_1_1Car__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса org.\+aston.\+app.\+model.\+Car\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=203pt]{classorg_1_1aston_1_1app_1_1model_1_1Car__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Builder}
+\begin{DoxyCompactList}\small\item\em Строитель (Builder) для создания объектов Car. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car_a07fae1bbf7a33d23ce7bffdaed045456}{Car}} (Builder builder)
+\begin{DoxyCompactList}\small\item\em Конструктор, принимающий экземпляр билдера. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car_a9f48ea4386e398bd039fca94794c1806}{get\+Model}} ()
+\begin{DoxyCompactList}\small\item\em Возвращает модель автомобиля. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car_ac245d52e987ee844fb9231abf5899556}{get\+Power}} ()
+\begin{DoxyCompactList}\small\item\em Возвращает мощность двигателя. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car_aa6070e325aa87fb0fcef0a110937dce8}{get\+Year}} ()
+\begin{DoxyCompactList}\small\item\em Возвращает год производства автомобиля. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car_a4ae9da0937ebb03eb111b991b0b58044}{equals}} (Object o)
+\begin{DoxyCompactList}\small\item\em Проверяет, равен ли текущий объект другому объекту. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car_a65a5589da7a3e53365003947c82c25af}{hash\+Code}} ()
+\begin{DoxyCompactList}\small\item\em Возвращает хеш-\/код объекта на основе его полей. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car_aa57a0bdb746a66a5c5190fad32b93820}{to\+String}} ()
+\begin{DoxyCompactList}\small\item\em Возвращает строковое представление объекта Car. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car_a5f71c918d71aaec79de010eaa9fe26bd}{compare\+To}} (\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car}{Car}} other)  throws Null\+Pointer\+Exception 
+\begin{DoxyCompactList}\small\item\em Сравнивает этот объект Car с другим объектом Car для определения порядка. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс, представляющий автомобиль. 
+
+Реализует интерфейс Comparable для возможности сортировки автомобилей. 
+
+См. определение в файле \mbox{\hyperlink{Car_8java_source}{Car.\+java}} строка \mbox{\hyperlink{Car_8java_source_l00015}{15}}
+
+
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classorg_1_1aston_1_1app_1_1model_1_1Car_a07fae1bbf7a33d23ce7bffdaed045456}\label{classorg_1_1aston_1_1app_1_1model_1_1Car_a07fae1bbf7a33d23ce7bffdaed045456} 
+\index{org.aston.app.model.Car@{org.aston.app.model.Car}!Car@{Car}}
+\index{Car@{Car}!org.aston.app.model.Car@{org.aston.app.model.Car}}
+\doxysubsubsection{\texorpdfstring{Car()}{Car()}}
+{\footnotesize\ttfamily org.\+aston.\+app.\+model.\+Car.\+Car (\begin{DoxyParamCaption}\item[{Builder}]{builder }\end{DoxyParamCaption})}
+
+
+
+Конструктор, принимающий экземпляр билдера. 
+
+Инициализирует объект Car с помощью данных из билдера.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em builder} & экземпляр Builder, содержащий данные для инициализации \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{Car_8java_source}{Car.\+java}} строка \mbox{\hyperlink{Car_8java_source_l00051}{51}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{classorg_1_1aston_1_1app_1_1model_1_1Car_a5f71c918d71aaec79de010eaa9fe26bd}\label{classorg_1_1aston_1_1app_1_1model_1_1Car_a5f71c918d71aaec79de010eaa9fe26bd} 
+\index{org.aston.app.model.Car@{org.aston.app.model.Car}!compareTo@{compareTo}}
+\index{compareTo@{compareTo}!org.aston.app.model.Car@{org.aston.app.model.Car}}
+\doxysubsubsection{\texorpdfstring{compareTo()}{compareTo()}}
+{\footnotesize\ttfamily int org.\+aston.\+app.\+model.\+Car.\+compare\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car}{Car}}}]{other }\end{DoxyParamCaption}) throws Null\+Pointer\+Exception}
+
+
+
+Сравнивает этот объект Car с другим объектом Car для определения порядка. 
+
+Сначала сравнивается модель (лексикографически), затем мощность (по возрастанию), затем год выпуска (по возрастанию).
+
+
+\begin{DoxyParams}{Аргументы}
+{\em other} & объект Car, с которым производится сравнение \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+отрицательное число, если этот объект меньше переданного; положительное число, если этот объект больше переданного; ноль, если объекты равны по всем полям 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em Null\+Pointer\+Exception} & если переданный объект равен null \\
+\hline
+\end{DoxyExceptions}
+
+
+См. определение в файле \mbox{\hyperlink{Car_8java_source}{Car.\+java}} строка \mbox{\hyperlink{Car_8java_source_l00224}{224}}
+
+\Hypertarget{classorg_1_1aston_1_1app_1_1model_1_1Car_a4ae9da0937ebb03eb111b991b0b58044}\label{classorg_1_1aston_1_1app_1_1model_1_1Car_a4ae9da0937ebb03eb111b991b0b58044} 
+\index{org.aston.app.model.Car@{org.aston.app.model.Car}!equals@{equals}}
+\index{equals@{equals}!org.aston.app.model.Car@{org.aston.app.model.Car}}
+\doxysubsubsection{\texorpdfstring{equals()}{equals()}}
+{\footnotesize\ttfamily boolean org.\+aston.\+app.\+model.\+Car.\+equals (\begin{DoxyParamCaption}\item[{Object}]{o }\end{DoxyParamCaption})}
+
+
+
+Проверяет, равен ли текущий объект другому объекту. 
+
+Два автомобиля считаются равными, если у них совпадают модель, мощность и год производства.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em o} & Объект для сравнения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+true, если объекты равны, иначе false 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{Car_8java_source}{Car.\+java}} строка \mbox{\hyperlink{Car_8java_source_l00175}{175}}
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classorg_1_1aston_1_1app_1_1model_1_1Car_a4ae9da0937ebb03eb111b991b0b58044_cgraph}
+\end{center}
+\end{figure}
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=235pt]{classorg_1_1aston_1_1app_1_1model_1_1Car_a4ae9da0937ebb03eb111b991b0b58044_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classorg_1_1aston_1_1app_1_1model_1_1Car_a9f48ea4386e398bd039fca94794c1806}\label{classorg_1_1aston_1_1app_1_1model_1_1Car_a9f48ea4386e398bd039fca94794c1806} 
+\index{org.aston.app.model.Car@{org.aston.app.model.Car}!getModel@{getModel}}
+\index{getModel@{getModel}!org.aston.app.model.Car@{org.aston.app.model.Car}}
+\doxysubsubsection{\texorpdfstring{getModel()}{getModel()}}
+{\footnotesize\ttfamily String org.\+aston.\+app.\+model.\+Car.\+get\+Model (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Возвращает модель автомобиля. 
+
+\begin{DoxyReturn}{Возвращает}
+Модель автомобиля 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{Car_8java_source}{Car.\+java}} строка \mbox{\hyperlink{Car_8java_source_l00060}{60}}
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1aston_1_1app_1_1model_1_1Car_a9f48ea4386e398bd039fca94794c1806_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classorg_1_1aston_1_1app_1_1model_1_1Car_ac245d52e987ee844fb9231abf5899556}\label{classorg_1_1aston_1_1app_1_1model_1_1Car_ac245d52e987ee844fb9231abf5899556} 
+\index{org.aston.app.model.Car@{org.aston.app.model.Car}!getPower@{getPower}}
+\index{getPower@{getPower}!org.aston.app.model.Car@{org.aston.app.model.Car}}
+\doxysubsubsection{\texorpdfstring{getPower()}{getPower()}}
+{\footnotesize\ttfamily int org.\+aston.\+app.\+model.\+Car.\+get\+Power (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Возвращает мощность двигателя. 
+
+\begin{DoxyReturn}{Возвращает}
+Мощность в лошадиных силах 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{Car_8java_source}{Car.\+java}} строка \mbox{\hyperlink{Car_8java_source_l00069}{69}}
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1aston_1_1app_1_1model_1_1Car_ac245d52e987ee844fb9231abf5899556_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classorg_1_1aston_1_1app_1_1model_1_1Car_aa6070e325aa87fb0fcef0a110937dce8}\label{classorg_1_1aston_1_1app_1_1model_1_1Car_aa6070e325aa87fb0fcef0a110937dce8} 
+\index{org.aston.app.model.Car@{org.aston.app.model.Car}!getYear@{getYear}}
+\index{getYear@{getYear}!org.aston.app.model.Car@{org.aston.app.model.Car}}
+\doxysubsubsection{\texorpdfstring{getYear()}{getYear()}}
+{\footnotesize\ttfamily int org.\+aston.\+app.\+model.\+Car.\+get\+Year (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Возвращает год производства автомобиля. 
+
+\begin{DoxyReturn}{Возвращает}
+Год производства 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{Car_8java_source}{Car.\+java}} строка \mbox{\hyperlink{Car_8java_source_l00078}{78}}
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1aston_1_1app_1_1model_1_1Car_aa6070e325aa87fb0fcef0a110937dce8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classorg_1_1aston_1_1app_1_1model_1_1Car_a65a5589da7a3e53365003947c82c25af}\label{classorg_1_1aston_1_1app_1_1model_1_1Car_a65a5589da7a3e53365003947c82c25af} 
+\index{org.aston.app.model.Car@{org.aston.app.model.Car}!hashCode@{hashCode}}
+\index{hashCode@{hashCode}!org.aston.app.model.Car@{org.aston.app.model.Car}}
+\doxysubsubsection{\texorpdfstring{hashCode()}{hashCode()}}
+{\footnotesize\ttfamily int org.\+aston.\+app.\+model.\+Car.\+hash\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Возвращает хеш-\/код объекта на основе его полей. 
+
+Используется для эффективной работы хэш-\/таблиц.
+
+\begin{DoxyReturn}{Возвращает}
+Хеш-\/код автомобиля 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{Car_8java_source}{Car.\+java}} строка \mbox{\hyperlink{Car_8java_source_l00192}{192}}
+
+\Hypertarget{classorg_1_1aston_1_1app_1_1model_1_1Car_aa57a0bdb746a66a5c5190fad32b93820}\label{classorg_1_1aston_1_1app_1_1model_1_1Car_aa57a0bdb746a66a5c5190fad32b93820} 
+\index{org.aston.app.model.Car@{org.aston.app.model.Car}!toString@{toString}}
+\index{toString@{toString}!org.aston.app.model.Car@{org.aston.app.model.Car}}
+\doxysubsubsection{\texorpdfstring{toString()}{toString()}}
+{\footnotesize\ttfamily String org.\+aston.\+app.\+model.\+Car.\+to\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Возвращает строковое представление объекта Car. 
+
+Предназначено для отладки и логирования.
+
+\begin{DoxyReturn}{Возвращает}
+Строковое описание автомобиля 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{Car_8java_source}{Car.\+java}} строка \mbox{\hyperlink{Car_8java_source_l00203}{203}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/org/aston/app/model/\mbox{\hyperlink{Car_8java}{Car.\+java}}\end{DoxyCompactItemize}

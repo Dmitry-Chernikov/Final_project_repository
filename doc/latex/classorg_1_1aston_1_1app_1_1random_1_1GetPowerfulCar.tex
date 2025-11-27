@@ -1,0 +1,101 @@
+\doxysection{Класс org.\+aston.\+app.\+random.\+Get\+Powerful\+Car}
+\hypertarget{classorg_1_1aston_1_1app_1_1random_1_1GetPowerfulCar}{}\label{classorg_1_1aston_1_1app_1_1random_1_1GetPowerfulCar}\index{org.aston.app.random.GetPowerfulCar@{org.aston.app.random.GetPowerfulCar}}
+
+
+Класс Get\+Powerful\+Car реализует интерфейс Random\+Generation и предназначен для создания объектов Car с высокой мощностью двигателя (в диапазоне от 150 до 300 л.  
+
+
+
+
+Граф наследования\+:org.\+aston.\+app.\+random.\+Get\+Powerful\+Car\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{classorg_1_1aston_1_1app_1_1random_1_1GetPowerfulCar__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса org.\+aston.\+app.\+random.\+Get\+Powerful\+Car\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=230pt]{classorg_1_1aston_1_1app_1_1random_1_1GetPowerfulCar__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Классы}
+\begin{DoxyCompactItemize}
+\item 
+class {\bfseries Powerful\+Car\+Data}
+\begin{DoxyCompactList}\small\item\em Внутренний вложенный класс, расширяющий Get\+Data\+Car и инициализирующий массивы модификаций для автомобилей с высокой мощностью. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1random_1_1GetPowerfulCar_a3f2c5376515d6e95406e2d6d7525633a}{Get\+Powerful\+Car}} ()
+\begin{DoxyCompactList}\small\item\em Конструктор класса Get\+Powerful\+Car. \end{DoxyCompactList}\item 
+Car \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1random_1_1GetPowerfulCar_a931f99ee9efbea333c3fe2fe413fa3e7}{random\+Car}} ()
+\begin{DoxyCompactList}\small\item\em Реализация метода интерфейса Random\+Generation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс Get\+Powerful\+Car реализует интерфейс Random\+Generation и предназначен для создания объектов Car с высокой мощностью двигателя (в диапазоне от 150 до 300 л. 
+
+с.). 
+
+Использует внутренние данные о моделях автомобилей с ограниченным набором модификаций и генерирует случайные значения в заданных пределах. 
+
+См. определение в файле \mbox{\hyperlink{GetPowerfulCar_8java_source}{Get\+Powerful\+Car.\+java}} строка \mbox{\hyperlink{GetPowerfulCar_8java_source_l00012}{12}}
+
+
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classorg_1_1aston_1_1app_1_1random_1_1GetPowerfulCar_a3f2c5376515d6e95406e2d6d7525633a}\label{classorg_1_1aston_1_1app_1_1random_1_1GetPowerfulCar_a3f2c5376515d6e95406e2d6d7525633a} 
+\index{org.aston.app.random.GetPowerfulCar@{org.aston.app.random.GetPowerfulCar}!GetPowerfulCar@{GetPowerfulCar}}
+\index{GetPowerfulCar@{GetPowerfulCar}!org.aston.app.random.GetPowerfulCar@{org.aston.app.random.GetPowerfulCar}}
+\doxysubsubsection{\texorpdfstring{GetPowerfulCar()}{GetPowerfulCar()}}
+{\footnotesize\ttfamily org.\+aston.\+app.\+random.\+Get\+Powerful\+Car.\+Get\+Powerful\+Car (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Конструктор класса Get\+Powerful\+Car. 
+
+Инициализирует поля объекта\+:
+\begin{DoxyItemize}
+\item модель — случайным образом выбирается на основе Powerful\+Car\+Data;
+\item год — случайный в диапазоне от 1990 до 2024;
+\item мощность — случайная в диапазоне от MIN\+\_\+\+POWER до MAX\+\_\+\+POWER. 
+\end{DoxyItemize}
+
+См. определение в файле \mbox{\hyperlink{GetPowerfulCar_8java_source}{Get\+Powerful\+Car.\+java}} строка \mbox{\hyperlink{GetPowerfulCar_8java_source_l00044}{44}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{classorg_1_1aston_1_1app_1_1random_1_1GetPowerfulCar_a931f99ee9efbea333c3fe2fe413fa3e7}\label{classorg_1_1aston_1_1app_1_1random_1_1GetPowerfulCar_a931f99ee9efbea333c3fe2fe413fa3e7} 
+\index{org.aston.app.random.GetPowerfulCar@{org.aston.app.random.GetPowerfulCar}!randomCar@{randomCar}}
+\index{randomCar@{randomCar}!org.aston.app.random.GetPowerfulCar@{org.aston.app.random.GetPowerfulCar}}
+\doxysubsubsection{\texorpdfstring{randomCar()}{randomCar()}}
+{\footnotesize\ttfamily Car org.\+aston.\+app.\+random.\+Get\+Powerful\+Car.\+random\+Car (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Реализация метода интерфейса Random\+Generation. 
+
+Создаёт и возвращает новый объект Car с использованием ранее сгенерированных значений модели, мощности и года выпуска.
+
+\begin{DoxyReturn}{Возвращает}
+объект Car, построенный с помощью Builder 
+\end{DoxyReturn}
+
+
+Замещает \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1random_1_1RandomGeneration_ac6de31191302f3e8c9a88cc47a8a5c4a}{org.\+aston.\+app.\+random.\+Random\+Generation}}.
+
+
+
+См. определение в файле \mbox{\hyperlink{GetPowerfulCar_8java_source}{Get\+Powerful\+Car.\+java}} строка \mbox{\hyperlink{GetPowerfulCar_8java_source_l00059}{59}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/org/aston/app/random/\mbox{\hyperlink{GetPowerfulCar_8java}{Get\+Powerful\+Car.\+java}}\end{DoxyCompactItemize}

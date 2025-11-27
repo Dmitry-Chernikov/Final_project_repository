@@ -1,0 +1,164 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Система сортировки автомобилей: Исходный файл src/main/java/org/aston/app/random/DataGeneration.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="LogoAston.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Система сортировки автомобилей<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">Проект реализует консольное приложение для сортировки коллекций объектов типа Автомобиль.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('DataGeneration_8java_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">DataGeneration.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="DataGeneration_8java.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="keyword">package </span>org.aston.app.random;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> java.util.Random;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classorg_1_1aston_1_1app_1_1random_1_1DataGeneration.html">   11</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classorg_1_1aston_1_1app_1_1random_1_1DataGeneration.html">DataGeneration</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">static</span> Random meaning = <span class="keyword">new</span> Random();</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">static</span> String randomModel(<a class="code hl_class" href="classorg_1_1aston_1_1app_1_1random_1_1GetDataCar.html">GetDataCar</a> getDataCar) {</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>        <span class="keywordtype">int</span> countElements = <a class="code hl_class" href="enumorg_1_1aston_1_1app_1_1random_1_1CarModels.html">CarModels</a>.values().length;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>        <span class="keywordtype">int</span> numder = meaning.nextInt(countElements);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        String modelName = <a class="code hl_class" href="enumorg_1_1aston_1_1app_1_1random_1_1CarModels.html">CarModels</a>.<a class="code hl_function" href="enumorg_1_1aston_1_1app_1_1random_1_1CarModels.html#a136e7a902acd3b4a2cbc7e41fbd2757a">models</a>(numder);</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordflow">if</span> (numder == 0) {</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>            <span class="keywordtype">int</span> random = meaning.nextInt(getDataCar.AUDI.length);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>            modelName = modelName + getDataCar.AUDI[random];</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>        }</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>        <span class="keywordflow">if</span> (numder == 1) {</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>            <span class="keywordtype">int</span> random = meaning.nextInt(getDataCar.TOYOTA.length);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>            modelName = modelName + getDataCar.TOYOTA[random];</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        }</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        <span class="keywordflow">if</span> (numder == 2) {</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>            <span class="keywordtype">int</span> random = meaning.nextInt(getDataCar.FORD.length);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>            modelName = modelName + getDataCar.FORD[random];</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>        }</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        <span class="keywordflow">if</span> (numder == 3) {</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="keywordtype">int</span> random = meaning.nextInt(getDataCar.BMW.length);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>            modelName = modelName + getDataCar.BMW[random];</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span> </div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        <span class="keywordflow">return</span> modelName;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    }</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keyword">static</span> <span class="keywordtype">int</span> randomPower(<span class="keywordtype">int</span> minPower, <span class="keywordtype">int</span> maxPower) {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordflow">return</span> meaning.nextInt(maxPower - minPower) + maxPower;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    <span class="keyword">static</span> <span class="keywordtype">int</span> randomYear() {</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>        <span class="keywordflow">return</span> 1990 + meaning.nextInt(35);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    }</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>}</div>
+</div>
+<div class="ttc" id="aclassorg_1_1aston_1_1app_1_1random_1_1DataGeneration_html"><div class="ttname"><a href="classorg_1_1aston_1_1app_1_1random_1_1DataGeneration.html">org.aston.app.random.DataGeneration</a></div><div class="ttdoc">Утилитарный класс для генерации случайных данных об автомобилях.</div><div class="ttdef"><b>Definition</b> <a href="DataGeneration_8java_source.html#l00011">DataGeneration.java:11</a></div></div>
+<div class="ttc" id="aclassorg_1_1aston_1_1app_1_1random_1_1GetDataCar_html"><div class="ttname"><a href="classorg_1_1aston_1_1app_1_1random_1_1GetDataCar.html">org.aston.app.random.GetDataCar</a></div><div class="ttdoc">Абстрактный класс GetDataCar служит контейнером для хранения массивов модификаций автомобилей различн...</div><div class="ttdef"><b>Definition</b> <a href="GetDataCar_8java_source.html#l00011">GetDataCar.java:11</a></div></div>
+<div class="ttc" id="aenumorg_1_1aston_1_1app_1_1random_1_1CarModels_html"><div class="ttname"><a href="enumorg_1_1aston_1_1app_1_1random_1_1CarModels.html">org.aston.app.random.CarModels</a></div><div class="ttdoc">Перечисление CarModels содержит список поддерживаемых моделей автомобилей.</div><div class="ttdef"><b>Definition</b> <a href="CarModels_8java_source.html#l00007">CarModels.java:7</a></div></div>
+<div class="ttc" id="aenumorg_1_1aston_1_1app_1_1random_1_1CarModels_html_a136e7a902acd3b4a2cbc7e41fbd2757a"><div class="ttname"><a href="enumorg_1_1aston_1_1app_1_1random_1_1CarModels.html#a136e7a902acd3b4a2cbc7e41fbd2757a">org.aston.app.random.CarModels.models</a></div><div class="ttdeci">static String models(int number)</div><div class="ttdoc">Возвращает строковое представление модели автомобиля по её индексу.</div><div class="ttdef"><b>Definition</b> <a href="CarModels_8java_source.html#l00037">CarModels.java:37</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a class="el" href="dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a class="el" href="dir_daf7592b8ade76cad5a1e82d805df54b.html">org</a></li><li class="navelem"><a class="el" href="dir_6731ac4a8bdd4a654cf310ace42bc18f.html">aston</a></li><li class="navelem"><a class="el" href="dir_f0350216b77b7c6a6b05f842e3435737.html">app</a></li><li class="navelem"><a class="el" href="dir_893bd72381737e33b10bf8c78a8ce1b5.html">random</a></li><li class="navelem"><a class="el" href="DataGeneration_8java.html">DataGeneration.java</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>

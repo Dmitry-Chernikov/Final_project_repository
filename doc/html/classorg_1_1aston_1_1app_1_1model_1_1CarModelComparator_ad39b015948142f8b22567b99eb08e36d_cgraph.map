@@ -1,0 +1,5 @@
+<map id="org.aston.app.model.CarModelComparator.compare" name="org.aston.app.model.CarModelComparator.compare">
+<area shape="rect" id="Node000001" title="Сравнивает два объекта Car по названию модели." alt="" coords="5,5,204,45"/>
+<area shape="rect" id="Node000002" href="$classorg_1_1aston_1_1app_1_1model_1_1Car.html#a9f48ea4386e398bd039fca94794c1806" title="Возвращает модель автомобиля." alt="" coords="252,5,439,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,23,238,23,238,28,204,28"/>
+</map>

@@ -1,0 +1,55 @@
+\doxysection{File\+Writer\+Util.\+java}
+\hypertarget{FileWriterUtil_8java_source}{}\label{FileWriterUtil_8java_source}\index{src/main/java/org/aston/app/util/FileWriterUtil.java@{src/main/java/org/aston/app/util/FileWriterUtil.java}}
+\mbox{\hyperlink{FileWriterUtil_8java}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00001}00001\ \textcolor{keyword}{package\ }org.aston.app.util;}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00003}00003\ \textcolor{keyword}{import}\ org.aston.app.model.Car;}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00005}00005\ \textcolor{keyword}{import}\ java.io.IOException;}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00006}00006\ \textcolor{keyword}{import}\ java.nio.file.Files;}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00007}00007\ \textcolor{keyword}{import}\ java.nio.file.Path;}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00008}00008\ \textcolor{keyword}{import}\ java.nio.file.Paths;}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00009}00009\ \textcolor{keyword}{import}\ java.nio.file.StandardOpenOption;}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00010}00010\ \textcolor{keyword}{import}\ java.time.LocalDateTime;}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00011}00011\ \textcolor{keyword}{import}\ java.time.format.DateTimeFormatter;}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00012}00012\ \textcolor{keyword}{import}\ java.util.ArrayList;}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00013}00013\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00023}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1util_1_1FileWriterUtil}{00023}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1util_1_1FileWriterUtil}{FileWriterUtil}}\ \{}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00029}00029\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ DateTimeFormatter\ FORMATTER\ =\ DateTimeFormatter.ofPattern(\textcolor{stringliteral}{"{}yyyy-\/MM-\/dd\ HH:mm:ss"{}});}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00044}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1util_1_1FileWriterUtil_a0526044a1d3b56900104ff6499d115f5}{00044}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1util_1_1FileWriterUtil_a0526044a1d3b56900104ff6499d115f5}{appendToFile}}(String\ fileName,\ Car[]\ cars,\ String\ nameStrategySort)\ \{}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ List<String>\ lines\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ lines.add(\textcolor{stringliteral}{"{}===\ Стратегия\ сортировки:\ "{}}\ +\ nameStrategySort\ +\ \textcolor{stringliteral}{"{}\ ==="{}});}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ lines.add(\textcolor{stringliteral}{"{}Время\ записи:\ "{}}\ +\ LocalDateTime.now().format(FORMATTER));}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (Car\ car\ :\ cars)\ \{}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lines.add(car.toString());}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ lines.add(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ lines.add(\textcolor{stringliteral}{"{}="{}}.repeat(50));}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ lines.add(\textcolor{stringliteral}{"{}"{}});}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ Path\ filePath\ =\ Paths.get(\textcolor{stringliteral}{"{}src"{}},\ \textcolor{stringliteral}{"{}main"{}},\ \textcolor{stringliteral}{"{}resources"{}}).resolve(fileName);}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00060}00060\ }
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ Files.write(filePath,\ lines,}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ StandardOpenOption.CREATE,}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ StandardOpenOption.APPEND);}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00064}00064\ }
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}✓\ Данные\ записаны\ в\ файл:\ "{}}\ +\ fileName);}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}✓\ Стратегия:\ "{}}\ +\ nameStrategySort);}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}✓\ Записано\ автомобилей:\ "{}}\ +\ cars.length);}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00069}00069\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (IOException\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ System.err.println(\textcolor{stringliteral}{"{}✗\ Ошибка\ при\ записи\ в\ файл:\ "{}}\ +\ e.getMessage());}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00071}00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00072}00072\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{FileWriterUtil_8java_source_l00073}00073\ \}}
+
+\end{DoxyCode}

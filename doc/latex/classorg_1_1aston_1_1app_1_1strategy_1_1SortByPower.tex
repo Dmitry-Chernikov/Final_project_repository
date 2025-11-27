@@ -1,0 +1,123 @@
+\doxysection{Класс org.\+aston.\+app.\+strategy.\+Sort\+By\+Power}
+\hypertarget{classorg_1_1aston_1_1app_1_1strategy_1_1SortByPower}{}\label{classorg_1_1aston_1_1app_1_1strategy_1_1SortByPower}\index{org.aston.app.strategy.SortByPower@{org.aston.app.strategy.SortByPower}}
+
+
+Класс Sort\+By\+Power реализует интерфейс Sort\+Strategy и предназначен для сортировки массива объектов Car по мощности двигателя в порядке возрастания.  
+
+
+
+
+Граф наследования\+:org.\+aston.\+app.\+strategy.\+Sort\+By\+Power\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{classorg_1_1aston_1_1app_1_1strategy_1_1SortByPower__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса org.\+aston.\+app.\+strategy.\+Sort\+By\+Power\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=215pt]{classorg_1_1aston_1_1app_1_1strategy_1_1SortByPower__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1strategy_1_1SortByPower_a1e767a72cc5ad78d1d4cd4bcd279034d}{sort}} (Car\mbox{[}$\,$\mbox{]} cars)
+\begin{DoxyCompactList}\small\item\em Выполняет сортировку массива автомобилей по мощности. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1strategy_1_1SortByPower_ac3c5808c9cc210a4cdf45523af4e116a}{partition}} (Car\mbox{[}$\,$\mbox{]} cars, int low, int high)
+\begin{DoxyCompactList}\small\item\em Выполняет разделение подмассива cars\mbox{[}low..high\mbox{]} на две части относительно опорного элемента. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Открытые члены унаследованные от \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy}{org.\+aston.\+app.\+strategy.\+Sort\+Strategy$<$ Car $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_a68d0d9041d04b3bb952278ea951b7892}{sort}} (T\mbox{[}$\,$\mbox{]} cars)
+\begin{DoxyCompactList}\small\item\em Выполняет сортировку переданного массива объектов. \end{DoxyCompactList}\item 
+default void \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_a989dd029620ab0917ea7bb8ff2de5911}{quick\+Sort}} (T\mbox{[}$\,$\mbox{]} cars, int low, int high)
+\begin{DoxyCompactList}\small\item\em Рекурсивная реализация алгоритма быстрой сортировки. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_afb7493d6f143eda66cebd81e1d842dbf}{partition}} (T\mbox{[}$\,$\mbox{]} cars, int low, int high)
+\begin{DoxyCompactList}\small\item\em Выполняет разделение подмассива на две части относительно опорного элемента. \end{DoxyCompactList}\item 
+default void \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_ab388e9cd0834b25ceea010dc533855dc}{swap}} (T\mbox{[}$\,$\mbox{]} elements, int i, int j)
+\begin{DoxyCompactList}\small\item\em Меняет местами два элемента в массиве. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс Sort\+By\+Power реализует интерфейс Sort\+Strategy и предназначен для сортировки массива объектов Car по мощности двигателя в порядке возрастания. 
+
+Использует алгоритм быстрой сортировки (quicksort), реализованный в родительском интерфейсе. 
+
+См. определение в файле \mbox{\hyperlink{SortByPower_8java_source}{Sort\+By\+Power.\+java}} строка \mbox{\hyperlink{SortByPower_8java_source_l00011}{11}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{classorg_1_1aston_1_1app_1_1strategy_1_1SortByPower_ac3c5808c9cc210a4cdf45523af4e116a}\label{classorg_1_1aston_1_1app_1_1strategy_1_1SortByPower_ac3c5808c9cc210a4cdf45523af4e116a} 
+\index{org.aston.app.strategy.SortByPower@{org.aston.app.strategy.SortByPower}!partition@{partition}}
+\index{partition@{partition}!org.aston.app.strategy.SortByPower@{org.aston.app.strategy.SortByPower}}
+\doxysubsubsection{\texorpdfstring{partition()}{partition()}}
+{\footnotesize\ttfamily int org.\+aston.\+app.\+strategy.\+Sort\+By\+Power.\+partition (\begin{DoxyParamCaption}\item[{Car\mbox{[}$\,$\mbox{]}}]{cars,  }\item[{int}]{low,  }\item[{int}]{high }\end{DoxyParamCaption})}
+
+
+
+Выполняет разделение подмассива cars\mbox{[}low..high\mbox{]} на две части относительно опорного элемента. 
+
+В качестве опорного выбирается последний элемент подмассива (по индексу high). Все элементы, мощность которых меньше или равна опорному, перемещаются в левую часть.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em cars} & массив объектов Car, подлежащий разделению \\
+\hline
+{\em low} & начальный индекс подмассива \\
+\hline
+{\em high} & конечный индекс подмассива \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+индекс опорного элемента после завершения разделения 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{SortByPower_8java_source}{Sort\+By\+Power.\+java}} строка \mbox{\hyperlink{SortByPower_8java_source_l00038}{38}}
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1aston_1_1app_1_1strategy_1_1SortByPower_ac3c5808c9cc210a4cdf45523af4e116a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classorg_1_1aston_1_1app_1_1strategy_1_1SortByPower_a1e767a72cc5ad78d1d4cd4bcd279034d}\label{classorg_1_1aston_1_1app_1_1strategy_1_1SortByPower_a1e767a72cc5ad78d1d4cd4bcd279034d} 
+\index{org.aston.app.strategy.SortByPower@{org.aston.app.strategy.SortByPower}!sort@{sort}}
+\index{sort@{sort}!org.aston.app.strategy.SortByPower@{org.aston.app.strategy.SortByPower}}
+\doxysubsubsection{\texorpdfstring{sort()}{sort()}}
+{\footnotesize\ttfamily void org.\+aston.\+app.\+strategy.\+Sort\+By\+Power.\+sort (\begin{DoxyParamCaption}\item[{Car\mbox{[}$\,$\mbox{]}}]{cars }\end{DoxyParamCaption})}
+
+
+
+Выполняет сортировку массива автомобилей по мощности. 
+
+Использует алгоритм быстрой сортировки, начиная с первого (0) и последнего (length -\/ 1) индексов массива.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em cars} & массив объектов Car, который необходимо отсортировать по мощности \\
+\hline
+\end{DoxyParams}
+
+
+См. определение в файле \mbox{\hyperlink{SortByPower_8java_source}{Sort\+By\+Power.\+java}} строка \mbox{\hyperlink{SortByPower_8java_source_l00022}{22}}
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1aston_1_1app_1_1strategy_1_1SortByPower_a1e767a72cc5ad78d1d4cd4bcd279034d_cgraph}
+\end{center}
+\end{figure}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/org/aston/app/strategy/\mbox{\hyperlink{SortByPower_8java}{Sort\+By\+Power.\+java}}\end{DoxyCompactItemize}

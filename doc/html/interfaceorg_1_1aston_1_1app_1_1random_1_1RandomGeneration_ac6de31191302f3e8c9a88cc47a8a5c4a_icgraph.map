@@ -1,0 +1,5 @@
+<map id="org.aston.app.random.RandomGeneration.randomCar" name="org.aston.app.random.RandomGeneration.randomCar">
+<area shape="rect" id="Node000001" title="Создаёт и возвращает новый объект Car со случайно сгенерированными полями." alt="" coords="268,5,468,45"/>
+<area shape="rect" id="Node000002" href="$classorg_1_1aston_1_1app_1_1random_1_1GenerationCar.html#a6c95e15d9387270bdd6f705f242a66a3" title="Создаёт и возвращает новый объект Car со случайно сгенерированными полями." alt="" coords="5,5,220,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="254,28,220,28,220,23,254,23"/>
+</map>

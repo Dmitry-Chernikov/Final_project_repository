@@ -1,0 +1,5 @@
+<map id="org.aston.app.exception.CarValidationException" name="org.aston.app.exception.CarValidationException">
+<area shape="rect" id="Node000001" title="Исключение, выбрасываемое при неудачной валидации объекта Car." alt="" coords="5,79,169,119"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="23,5,151,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,44,90,79,85,79,85,44"/>
+</map>

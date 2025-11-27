@@ -1,0 +1,30 @@
+\doxysection{Car\+Builder\+Test.\+java}
+\hypertarget{CarBuilderTest_8java_source}{}\label{CarBuilderTest_8java_source}\index{src/main/java/org/aston/app/test/CarBuilderTest.java@{src/main/java/org/aston/app/test/CarBuilderTest.java}}
+\mbox{\hyperlink{CarBuilderTest_8java}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{CarBuilderTest_8java_source_l00001}\mbox{\hyperlink{namespaceorg_1_1aston_1_1app_1_1test}{00001}}\ \textcolor{keyword}{package\ }org.aston.app.test;}
+\DoxyCodeLine{\Hypertarget{CarBuilderTest_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{CarBuilderTest_8java_source_l00003}00003\ \textcolor{keyword}{import}\ org.aston.app.model.Car;}
+\DoxyCodeLine{\Hypertarget{CarBuilderTest_8java_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{CarBuilderTest_8java_source_l00005}00005\ \textcolor{keyword}{import}\ \textcolor{keyword}{static}\ org.aston.app.test.TestUtils.assertTrue;}
+\DoxyCodeLine{\Hypertarget{CarBuilderTest_8java_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{CarBuilderTest_8java_source_l00014}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1test_1_1CarBuilderTest}{00014}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1test_1_1CarBuilderTest}{CarBuilderTest}}\ \{}
+\DoxyCodeLine{\Hypertarget{CarBuilderTest_8java_source_l00024}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1test_1_1CarBuilderTest_a69a32c3c4c8f9d0d28750ab6476f0dda}{00024}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1test_1_1CarBuilderTest_a69a32c3c4c8f9d0d28750ab6476f0dda}{runTests}}()\ \{}
+\DoxyCodeLine{\Hypertarget{CarBuilderTest_8java_source_l00025}00025\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Запуск\ тестов\ CarBuilder..."{}});}
+\DoxyCodeLine{\Hypertarget{CarBuilderTest_8java_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{CarBuilderTest_8java_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Тест\ 1:\ Создание\ объекта\ через\ Builder}}
+\DoxyCodeLine{\Hypertarget{CarBuilderTest_8java_source_l00028}00028\ \ \ \ \ \ \ \ \ Car\ car\ =\ \textcolor{keyword}{new}\ Car.Builder()}
+\DoxyCodeLine{\Hypertarget{CarBuilderTest_8java_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setModel(\textcolor{stringliteral}{"{}BMW"{}})}
+\DoxyCodeLine{\Hypertarget{CarBuilderTest_8java_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setPower(300)}
+\DoxyCodeLine{\Hypertarget{CarBuilderTest_8java_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .setYear(2020)}
+\DoxyCodeLine{\Hypertarget{CarBuilderTest_8java_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .build();}
+\DoxyCodeLine{\Hypertarget{CarBuilderTest_8java_source_l00033}00033\ }
+\DoxyCodeLine{\Hypertarget{CarBuilderTest_8java_source_l00034}00034\ \ \ \ \ \ \ \ \ assertTrue(\textcolor{stringliteral}{"{}Модель\ должна\ быть\ BMW"{}},\ car.getModel().equals(\textcolor{stringliteral}{"{}BMW"{}}));}
+\DoxyCodeLine{\Hypertarget{CarBuilderTest_8java_source_l00035}00035\ \ \ \ \ \ \ \ \ assertTrue(\textcolor{stringliteral}{"{}Мощность\ должна\ быть\ 300"{}},\ car.getPower()\ ==\ 300);}
+\DoxyCodeLine{\Hypertarget{CarBuilderTest_8java_source_l00036}00036\ \ \ \ \ \ \ \ \ assertTrue(\textcolor{stringliteral}{"{}Год\ должен\ быть\ 2020"{}},\ car.getYear()\ ==\ 2020);}
+\DoxyCodeLine{\Hypertarget{CarBuilderTest_8java_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{CarBuilderTest_8java_source_l00038}00038\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}CarBuilderTest\ пройден\ успешно.\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{CarBuilderTest_8java_source_l00039}00039\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{CarBuilderTest_8java_source_l00040}00040\ \}}
+
+\end{DoxyCode}

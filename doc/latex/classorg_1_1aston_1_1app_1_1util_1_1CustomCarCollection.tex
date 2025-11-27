@@ -1,0 +1,261 @@
+\doxysection{Класс org.\+aston.\+app.\+util.\+Custom\+Car\+Collection}
+\hypertarget{classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection}{}\label{classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection}\index{org.aston.app.util.CustomCarCollection@{org.aston.app.util.CustomCarCollection}}
+
+
+Кастомная реализация коллекции автомобилей на основе массива.  
+
+
+
+
+Граф наследования\+:org.\+aston.\+app.\+util.\+Custom\+Car\+Collection\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса org.\+aston.\+app.\+util.\+Custom\+Car\+Collection\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=209pt]{classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_ac22179193b668105ebd3d3dddfe8c86c}{Custom\+Car\+Collection}} ()
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_abffb5db44bbf11d4ba8a5a23c9474473}{Custom\+Car\+Collection}} (int initial\+Capacity)
+\begin{DoxyCompactList}\small\item\em Конструктор с указанием начальной ёмкости. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_a9ff8d4e4f5fd2afceffc845bc676fb4d}{add}} (Car value)
+\begin{DoxyCompactList}\small\item\em Добавляет указанный автомобиль в конец коллекции. \end{DoxyCompactList}\item 
+Car \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_a1a25238eaeef6fe0a8e4f87b59d71ffc}{get}} (int index)
+\begin{DoxyCompactList}\small\item\em Возвращает автомобиль по указанному индексу. \end{DoxyCompactList}\item 
+Car \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_a2086656b8e0c8c2e372ff8214f8a6677}{remove}} (int index)
+\begin{DoxyCompactList}\small\item\em Удаляет автомобиль по указанному индексу. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_a4c5f0c0b2d3217f7d046135b8365b0a1}{add\+All}} (Collection$<$? extends Car $>$ other)
+\begin{DoxyCompactList}\small\item\em Добавляет все автомобили из указанной коллекции в текущую. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_aa6c7d07833328bd841dcb3466e70ada3}{size}} ()
+\begin{DoxyCompactList}\small\item\em Возвращает текущее количество элементов в коллекции. \end{DoxyCompactList}\item 
+Car\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_aaa2b0eaadd5efd640260def8bbf17ad8}{to\+Array}} ()
+\begin{DoxyCompactList}\small\item\em Возвращает массив, содержащий все элементы коллекции. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Кастомная реализация коллекции автомобилей на основе массива. 
+
+Дополнительное задание 3\texorpdfstring{$\ast$}{*}\+: кастомная коллекция на основе массива 
+
+Класс расширяет {\ttfamily \doxylink{}{Abstract\+List}}, предоставляя базовую функциональность списка и реализуя методы добавления, удаления, получения элементов и другие стандартные операции. 
+
+Внутреннее хранилище автоматически расширяется при необходимости. 
+
+См. определение в файле \mbox{\hyperlink{CustomCarCollection_8java_source}{Custom\+Car\+Collection.\+java}} строка \mbox{\hyperlink{CustomCarCollection_8java_source_l00018}{18}}
+
+
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_ac22179193b668105ebd3d3dddfe8c86c}\label{classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_ac22179193b668105ebd3d3dddfe8c86c} 
+\index{org.aston.app.util.CustomCarCollection@{org.aston.app.util.CustomCarCollection}!CustomCarCollection@{CustomCarCollection}}
+\index{CustomCarCollection@{CustomCarCollection}!org.aston.app.util.CustomCarCollection@{org.aston.app.util.CustomCarCollection}}
+\doxysubsubsection{\texorpdfstring{CustomCarCollection()}{CustomCarCollection()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily org.\+aston.\+app.\+util.\+Custom\+Car\+Collection.\+Custom\+Car\+Collection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Конструктор по умолчанию. 
+
+Создаёт внутренний массив ёмкостью по умолчанию (10 элементов). 
+
+См. определение в файле \mbox{\hyperlink{CustomCarCollection_8java_source}{Custom\+Car\+Collection.\+java}} строка \mbox{\hyperlink{CustomCarCollection_8java_source_l00040}{40}}
+
+\Hypertarget{classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_abffb5db44bbf11d4ba8a5a23c9474473}\label{classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_abffb5db44bbf11d4ba8a5a23c9474473} 
+\index{org.aston.app.util.CustomCarCollection@{org.aston.app.util.CustomCarCollection}!CustomCarCollection@{CustomCarCollection}}
+\index{CustomCarCollection@{CustomCarCollection}!org.aston.app.util.CustomCarCollection@{org.aston.app.util.CustomCarCollection}}
+\doxysubsubsection{\texorpdfstring{CustomCarCollection()}{CustomCarCollection()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily org.\+aston.\+app.\+util.\+Custom\+Car\+Collection.\+Custom\+Car\+Collection (\begin{DoxyParamCaption}\item[{int}]{initial\+Capacity }\end{DoxyParamCaption})}
+
+
+
+Конструктор с указанием начальной ёмкости. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em initial\+Capacity} & начальная ёмкость внутреннего массива \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em Illegal\+Argument\+Exception} & если указанная ёмкость меньше или равна нулю \\
+\hline
+\end{DoxyExceptions}
+
+
+См. определение в файле \mbox{\hyperlink{CustomCarCollection_8java_source}{Custom\+Car\+Collection.\+java}} строка \mbox{\hyperlink{CustomCarCollection_8java_source_l00050}{50}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_a9ff8d4e4f5fd2afceffc845bc676fb4d}\label{classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_a9ff8d4e4f5fd2afceffc845bc676fb4d} 
+\index{org.aston.app.util.CustomCarCollection@{org.aston.app.util.CustomCarCollection}!add@{add}}
+\index{add@{add}!org.aston.app.util.CustomCarCollection@{org.aston.app.util.CustomCarCollection}}
+\doxysubsubsection{\texorpdfstring{add()}{add()}}
+{\footnotesize\ttfamily boolean org.\+aston.\+app.\+util.\+Custom\+Car\+Collection.\+add (\begin{DoxyParamCaption}\item[{Car}]{value }\end{DoxyParamCaption})}
+
+
+
+Добавляет указанный автомобиль в конец коллекции. 
+
+Если текущий массив заполнен, происходит автоматическое расширение.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em value} & объект Car, который необходимо добавить \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+всегда возвращает true (в соответствии с контрактом Collection) 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{CustomCarCollection_8java_source}{Custom\+Car\+Collection.\+java}} строка \mbox{\hyperlink{CustomCarCollection_8java_source_l00065}{65}}
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_a9ff8d4e4f5fd2afceffc845bc676fb4d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_a4c5f0c0b2d3217f7d046135b8365b0a1}\label{classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_a4c5f0c0b2d3217f7d046135b8365b0a1} 
+\index{org.aston.app.util.CustomCarCollection@{org.aston.app.util.CustomCarCollection}!addAll@{addAll}}
+\index{addAll@{addAll}!org.aston.app.util.CustomCarCollection@{org.aston.app.util.CustomCarCollection}}
+\doxysubsubsection{\texorpdfstring{addAll()}{addAll()}}
+{\footnotesize\ttfamily boolean org.\+aston.\+app.\+util.\+Custom\+Car\+Collection.\+add\+All (\begin{DoxyParamCaption}\item[{Collection$<$? extends Car $>$}]{other }\end{DoxyParamCaption})}
+
+
+
+Добавляет все автомобили из указанной коллекции в текущую. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em other} & коллекция, элементы которой нужно добавить \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+всегда возвращает true, если коллекция была изменена 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em Null\+Pointer\+Exception} & если переданная коллекция равна null \\
+\hline
+\end{DoxyExceptions}
+
+
+См. определение в файле \mbox{\hyperlink{CustomCarCollection_8java_source}{Custom\+Car\+Collection.\+java}} строка \mbox{\hyperlink{CustomCarCollection_8java_source_l00105}{105}}
+
+\Hypertarget{classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_a1a25238eaeef6fe0a8e4f87b59d71ffc}\label{classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_a1a25238eaeef6fe0a8e4f87b59d71ffc} 
+\index{org.aston.app.util.CustomCarCollection@{org.aston.app.util.CustomCarCollection}!get@{get}}
+\index{get@{get}!org.aston.app.util.CustomCarCollection@{org.aston.app.util.CustomCarCollection}}
+\doxysubsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily Car org.\+aston.\+app.\+util.\+Custom\+Car\+Collection.\+get (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Возвращает автомобиль по указанному индексу. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em index} & позиция элемента в коллекции (от 0 до size -\/ 1) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+объект Car, находящийся по указанному индексу 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em Index\+Out\+Of\+Bounds\+Exception} & если индекс выходит за допустимые границы \\
+\hline
+\end{DoxyExceptions}
+
+
+См. определение в файле \mbox{\hyperlink{CustomCarCollection_8java_source}{Custom\+Car\+Collection.\+java}} строка \mbox{\hyperlink{CustomCarCollection_8java_source_l00078}{78}}
+
+\Hypertarget{classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_a2086656b8e0c8c2e372ff8214f8a6677}\label{classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_a2086656b8e0c8c2e372ff8214f8a6677} 
+\index{org.aston.app.util.CustomCarCollection@{org.aston.app.util.CustomCarCollection}!remove@{remove}}
+\index{remove@{remove}!org.aston.app.util.CustomCarCollection@{org.aston.app.util.CustomCarCollection}}
+\doxysubsubsection{\texorpdfstring{remove()}{remove()}}
+{\footnotesize\ttfamily Car org.\+aston.\+app.\+util.\+Custom\+Car\+Collection.\+remove (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Удаляет автомобиль по указанному индексу. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em index} & позиция элемента, который необходимо удалить \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+удалённый объект Car 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em Index\+Out\+Of\+Bounds\+Exception} & если индекс выходит за допустимые границы \\
+\hline
+\end{DoxyExceptions}
+
+
+См. определение в файле \mbox{\hyperlink{CustomCarCollection_8java_source}{Custom\+Car\+Collection.\+java}} строка \mbox{\hyperlink{CustomCarCollection_8java_source_l00090}{90}}
+
+\Hypertarget{classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_aa6c7d07833328bd841dcb3466e70ada3}\label{classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_aa6c7d07833328bd841dcb3466e70ada3} 
+\index{org.aston.app.util.CustomCarCollection@{org.aston.app.util.CustomCarCollection}!size@{size}}
+\index{size@{size}!org.aston.app.util.CustomCarCollection@{org.aston.app.util.CustomCarCollection}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily int org.\+aston.\+app.\+util.\+Custom\+Car\+Collection.\+size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Возвращает текущее количество элементов в коллекции. 
+
+\begin{DoxyReturn}{Возвращает}
+количество автомобилей в коллекции 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{CustomCarCollection_8java_source}{Custom\+Car\+Collection.\+java}} строка \mbox{\hyperlink{CustomCarCollection_8java_source_l00118}{118}}
+
+\Hypertarget{classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_aaa2b0eaadd5efd640260def8bbf17ad8}\label{classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_aaa2b0eaadd5efd640260def8bbf17ad8} 
+\index{org.aston.app.util.CustomCarCollection@{org.aston.app.util.CustomCarCollection}!toArray@{toArray}}
+\index{toArray@{toArray}!org.aston.app.util.CustomCarCollection@{org.aston.app.util.CustomCarCollection}}
+\doxysubsubsection{\texorpdfstring{toArray()}{toArray()}}
+{\footnotesize\ttfamily Car\mbox{[}$\,$\mbox{]} org.\+aston.\+app.\+util.\+Custom\+Car\+Collection.\+to\+Array (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Возвращает массив, содержащий все элементы коллекции. 
+
+Возвращает внутренний массив целиком (включая null-\/элементы после size). Для корректного копирования следует использовать {\ttfamily \doxylink{}{Arrays\#copy\+Of(\+Object\mbox{[}$\,$\mbox{]}, int)}}.
+
+\begin{DoxyReturn}{Возвращает}
+внутренний массив значений 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{CustomCarCollection_8java_source}{Custom\+Car\+Collection.\+java}} строка \mbox{\hyperlink{CustomCarCollection_8java_source_l00164}{164}}
+
+Граф вызова функции\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1aston_1_1app_1_1util_1_1CustomCarCollection_aaa2b0eaadd5efd640260def8bbf17ad8_icgraph}
+\end{center}
+\end{figure}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/org/aston/app/util/\mbox{\hyperlink{CustomCarCollection_8java}{Custom\+Car\+Collection.\+java}}\end{DoxyCompactItemize}

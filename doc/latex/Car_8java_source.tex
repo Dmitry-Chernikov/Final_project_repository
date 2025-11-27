@@ -1,0 +1,126 @@
+\doxysection{Car.\+java}
+\hypertarget{Car_8java_source}{}\label{Car_8java_source}\index{src/main/java/org/aston/app/model/Car.java@{src/main/java/org/aston/app/model/Car.java}}
+\mbox{\hyperlink{Car_8java}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00001}\mbox{\hyperlink{namespaceorg_1_1aston_1_1app_1_1model}{00001}}\ \textcolor{keyword}{package\ }org.aston.app.model;}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00003}00003\ \textcolor{keyword}{import}\ org.aston.app.exception.CarValidationException;}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00004}00004\ \textcolor{keyword}{import}\ org.aston.app.validator.CarValidator;}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00005}00005\ }
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00006}00006\ \textcolor{keyword}{import}\ java.util.ArrayList;}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00007}00007\ \textcolor{keyword}{import}\ java.util.List;}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00008}00008\ \textcolor{keyword}{import}\ java.util.Objects;}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00015}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car}{00015}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car}{Car}}\ \textcolor{keyword}{implements}\ Comparable<Car>\ \{}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00019}00019\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{final}\ String\ model;}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00024}00024\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ power;}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00029}00029\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ year;}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00039}00039\ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car}{Car}}(\textcolor{keyword}{final}\ String\ model,\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ power,\ \textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ year)\ \{}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ this.model\ =\ model;}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ this.power\ =\ power;}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ this.year\ =\ year;}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00043}00043\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00051}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car_a07fae1bbf7a33d23ce7bffdaed045456}{00051}}\ \ \ \ \ \textcolor{keyword}{public}\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car_a07fae1bbf7a33d23ce7bffdaed045456}{Car}}(Builder\ builder)\{}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{this}(builder.model,\ builder.power,\ builder.year);}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00053}00053\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00054}00054\ }
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00060}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car_a9f48ea4386e398bd039fca94794c1806}{00060}}\ \ \ \ \ \textcolor{keyword}{public}\ String\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car_a9f48ea4386e398bd039fca94794c1806}{getModel}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ model;}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00062}00062\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00069}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car_ac245d52e987ee844fb9231abf5899556}{00069}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car_ac245d52e987ee844fb9231abf5899556}{getPower}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ power;}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00071}00071\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00078}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car_aa6070e325aa87fb0fcef0a110937dce8}{00078}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car_aa6070e325aa87fb0fcef0a110937dce8}{getYear}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00079}00079\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ year;}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00080}00080\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00086}00086\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keyword}{class\ }Builder\ \{}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00090}00090\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ power;}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00091}00091\ }
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00095}00095\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ String\ model;}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00096}00096\ }
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00100}00100\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ year;}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00101}00101\ }
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00102}00102\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ List<CarValidator>\ validators\ =\ \textcolor{keyword}{new}\ ArrayList<>();}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00109}00109\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Builder\ setPower(\textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ power)\ \{}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ this.power\ =\ power;}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00112}00112\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00120}00120\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Builder\ setModel(\textcolor{keyword}{final}\ String\ model)\ \{}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ this.model\ =\ model;}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00123}00123\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00124}00124\ }
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00131}00131\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Builder\ setYear(\textcolor{keyword}{final}\ \textcolor{keywordtype}{int}\ year)\ \{}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ this.year\ =\ year;}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00134}00134\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00135}00135\ }
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00142}00142\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Car\ build()\ \{}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ var\ car\ =\ \textcolor{keyword}{new}\ Car(model,\ power,\ year);}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ validate(car);}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ car;}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00146}00146\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00147}00147\ }
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00155}00155\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ validate(Car\ car)\ \{}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!validators.isEmpty())\ \{}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ validators.forEach(validator\ -\/>\ validator.validate(car));}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00159}00159\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00160}00160\ }
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00161}00161\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Builder\ addValidator(List<CarValidator>\ validators)\ \{}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ this.validators.addAll(validators);}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00164}00164\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00165}00165\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00166}00166\ }
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00174}00174\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00175}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car_a4ae9da0937ebb03eb111b991b0b58044}{00175}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{boolean}\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car_a4ae9da0937ebb03eb111b991b0b58044}{equals}}(Object\ o)\ \{}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00176}00176\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\textcolor{keyword}{this}\ ==\ o)\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00177}00177\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (o\ ==\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00178}00178\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!(o\ instanceof\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car}{Car}}))\ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00179}00179\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car}{Car}}\ car\ =\ (\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car}{Car}})\ o;}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00180}00180\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ power\ ==\ car.power\ \&\&}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00181}00181\ \ \ \ \ \ \ \ \ \ \ \ \ year\ ==\ car.year\ \&\&}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ model.\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car_a4ae9da0937ebb03eb111b991b0b58044}{equals}}(car.model);}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00183}00183\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00191}00191\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00192}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car_a65a5589da7a3e53365003947c82c25af}{00192}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car_a65a5589da7a3e53365003947c82c25af}{hashCode}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00193}00193\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Objects.hash(power,\ model,\ year);}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00194}00194\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00195}00195\ }
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00202}00202\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00203}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car_aa57a0bdb746a66a5c5190fad32b93820}{00203}}\ \ \ \ \ \textcolor{keyword}{public}\ String\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car_aa57a0bdb746a66a5c5190fad32b93820}{toString}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00204}00204\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{stringliteral}{"{}Car\{"{}}\ +}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00205}00205\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}horse\ power="{}}\ +\ power\ +}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{},\ model\ name='"{}}\ +\ model\ +\ \textcolor{charliteral}{'\(\backslash\)''}\ +}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00207}00207\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{},\ production\ year="{}}\ +\ year\ +}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00208}00208\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{charliteral}{'\}'};}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00209}00209\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00210}00210\ }
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00211}00211\ }
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00223}00223\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00224}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car_a5f71c918d71aaec79de010eaa9fe26bd}{00224}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car_a5f71c918d71aaec79de010eaa9fe26bd}{compareTo}}(\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1model_1_1Car}{Car}}\ other)\ \textcolor{keywordflow}{throws}\ NullPointerException\ \{}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00225}00225\ }
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00226}00226\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (other\ ==\ \textcolor{keyword}{null})\ \textcolor{keywordflow}{throw}\ \textcolor{keyword}{new}\ NullPointerException(\textcolor{stringliteral}{"{}Cannot\ compare\ to\ null"{}});}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00227}00227\ }
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00228}00228\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ compare\ =\ this.model.compareTo(other.model);}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00229}00229\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (compare\ !=\ 0)\ \textcolor{keywordflow}{return}\ compare;}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00230}00230\ }
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00231}00231\ \ \ \ \ \ \ \ \ compare\ =\ Integer.compare(this.power,\ other.power);}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00232}00232\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (compare\ !=\ 0)\ \textcolor{keywordflow}{return}\ compare;}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00233}00233\ }
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00234}00234\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Integer.compare(this.year,\ other.year);}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00235}00235\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Car_8java_source_l00236}00236\ \}}
+
+\end{DoxyCode}

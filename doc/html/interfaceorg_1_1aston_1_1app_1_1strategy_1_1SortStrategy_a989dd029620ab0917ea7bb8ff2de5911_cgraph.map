@@ -1,0 +1,6 @@
+<map id="org.aston.app.strategy.SortStrategy.quickSort" name="org.aston.app.strategy.SortStrategy.quickSort">
+<area shape="rect" id="Node000001" title="Рекурсивная реализация алгоритма быстрой сортировки." alt="" coords="5,29,185,69"/>
+<area shape="poly" id="edge2_Node000001_Node000001" title=" " alt="" coords="53,30,50,20,57,10,72,5,95,3,122,6,136,13,134,18,120,11,95,8,74,10,60,15,56,21,58,28"/>
+<area shape="rect" id="Node000002" href="$interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy.html#afb7493d6f143eda66cebd81e1d842dbf" title="Выполняет разделение подмассива на две части относительно опорного элемента." alt="" coords="233,29,413,69"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="186,47,220,47,220,52,186,52"/>
+</map>

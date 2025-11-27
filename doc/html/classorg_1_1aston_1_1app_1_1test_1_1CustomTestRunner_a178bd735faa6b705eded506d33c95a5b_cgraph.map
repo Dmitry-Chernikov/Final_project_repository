@@ -1,0 +1,9 @@
+<map id="org.aston.app.test.CustomTestRunner.run" name="org.aston.app.test.CustomTestRunner.run">
+<area shape="rect" id="Node000001" title="Запускает все тесты приложения." alt="" coords="5,69,181,109"/>
+<area shape="rect" id="Node000002" href="$classorg_1_1aston_1_1app_1_1test_1_1CarBuilderTest.html#a69a32c3c4c8f9d0d28750ab6476f0dda" title="Запускает тесты, связанные с построением объекта Car с помощью Builder." alt="" coords="241,5,432,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="169,67,246,46,248,51,171,72"/>
+<area shape="rect" id="Node000003" href="$classorg_1_1aston_1_1app_1_1test_1_1DataGeneratorTest.html#a1d6c7edb58690e80d4ca3ee50c2787fb" title="Запускает все тесты, связанные с классом DataGenerator." alt="" coords="229,69,444,109"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="182,87,216,87,216,92,182,92"/>
+<area shape="rect" id="Node000004" href="$classorg_1_1aston_1_1app_1_1test_1_1SortStrategyTest.html#aa5d7f40c520c8c1f1474b14b2e40b359" title="Запускает все тесты, связанные с реализациями SortStrategy." alt="" coords="235,133,439,173"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="171,107,248,127,246,132,169,112"/>
+</map>

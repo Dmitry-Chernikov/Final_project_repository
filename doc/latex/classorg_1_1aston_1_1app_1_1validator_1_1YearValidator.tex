@@ -1,0 +1,75 @@
+\doxysection{Класс org.\+aston.\+app.\+validator.\+Year\+Validator}
+\hypertarget{classorg_1_1aston_1_1app_1_1validator_1_1YearValidator}{}\label{classorg_1_1aston_1_1app_1_1validator_1_1YearValidator}\index{org.aston.app.validator.YearValidator@{org.aston.app.validator.YearValidator}}
+
+
+Класс Year\+Validator реализует интерфейс Car\+Validator и предназначен для валидации поля года выпуска автомобиля (year) в объекте Car.  
+
+
+
+
+Граф наследования\+:org.\+aston.\+app.\+validator.\+Year\+Validator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classorg_1_1aston_1_1app_1_1validator_1_1YearValidator__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Граф связей класса org.\+aston.\+app.\+validator.\+Year\+Validator\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=198pt]{classorg_1_1aston_1_1app_1_1validator_1_1YearValidator__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1validator_1_1YearValidator_a7f4b08b4c475c0dd4ed4492976d72db4}{validate}} (Car car)
+\begin{DoxyCompactList}\small\item\em Выполняет валидацию года выпуска автомобиля. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс Year\+Validator реализует интерфейс Car\+Validator и предназначен для валидации поля года выпуска автомобиля (year) в объекте Car. 
+
+Проверяет, что год не равен нулю и находится в допустимом диапазоне — от минимального значения (1885, год первого автомобиля) до следующего года после текущего. Это позволяет принимать автомобили будущего года (например, при предзаказе). 
+
+См. определение в файле \mbox{\hyperlink{YearValidator_8java_source}{Year\+Validator.\+java}} строка \mbox{\hyperlink{YearValidator_8java_source_l00016}{16}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{classorg_1_1aston_1_1app_1_1validator_1_1YearValidator_a7f4b08b4c475c0dd4ed4492976d72db4}\label{classorg_1_1aston_1_1app_1_1validator_1_1YearValidator_a7f4b08b4c475c0dd4ed4492976d72db4} 
+\index{org.aston.app.validator.YearValidator@{org.aston.app.validator.YearValidator}!validate@{validate}}
+\index{validate@{validate}!org.aston.app.validator.YearValidator@{org.aston.app.validator.YearValidator}}
+\doxysubsubsection{\texorpdfstring{validate()}{validate()}}
+{\footnotesize\ttfamily void org.\+aston.\+app.\+validator.\+Year\+Validator.\+validate (\begin{DoxyParamCaption}\item[{Car}]{car }\end{DoxyParamCaption})}
+
+
+
+Выполняет валидацию года выпуска автомобиля. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em car} & объект автомобиля, поле year которого необходимо проверить \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em Car\+Validation\+Exception} & если год равен 0 или выходит за допустимые границы \\
+\hline
+\end{DoxyExceptions}
+
+
+Замещает \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1validator_1_1CarValidator_aaa43a930db37f5e56997ff13b7fd5f6c}{org.\+aston.\+app.\+validator.\+Car\+Validator}}.
+
+
+
+См. определение в файле \mbox{\hyperlink{YearValidator_8java_source}{Year\+Validator.\+java}} строка \mbox{\hyperlink{YearValidator_8java_source_l00037}{37}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/org/aston/app/validator/\mbox{\hyperlink{YearValidator_8java}{Year\+Validator.\+java}}\end{DoxyCompactItemize}

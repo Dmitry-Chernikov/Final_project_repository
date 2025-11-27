@@ -1,0 +1,141 @@
+\doxysection{Класс org.\+aston.\+app.\+util.\+Data\+Generator}
+\hypertarget{classorg_1_1aston_1_1app_1_1util_1_1DataGenerator}{}\label{classorg_1_1aston_1_1app_1_1util_1_1DataGenerator}\index{org.aston.app.util.DataGenerator@{org.aston.app.util.DataGenerator}}
+
+
+Утилитарный класс для генерации и загрузки данных об автомобилях.  
+
+
+\doxysubsubsection*{Открытые статические члены}
+\begin{DoxyCompactItemize}
+\item 
+static Car\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1util_1_1DataGenerator_aa603a0d61637888e4a1179d5893086f7}{generate\+Random}} (int count)
+\begin{DoxyCompactList}\small\item\em Генерирует указанное количество случайных объектов Car с использованием стратегий генерации для разных типов автомобилей\+: низкой, средней и высокой мощности, а также спортивных автомобилей. \end{DoxyCompactList}\item 
+static Car\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1util_1_1DataGenerator_a360c754b238d73da7e720928c64bb910}{from\+Files}} (String file\+Name)  throws IOException 
+\begin{DoxyCompactList}\small\item\em Загружает данные об автомобилях из текстового файла. \end{DoxyCompactList}\item 
+static Car\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1util_1_1DataGenerator_a9d96efa73740772f49709a075af25f46}{input\+Manually}} (Scanner scanner, int count)
+\begin{DoxyCompactList}\small\item\em Запрашивает у пользователя данные для создания автомобилей через консоль. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Статические открытые данные}
+\begin{DoxyCompactItemize}
+\item 
+static final String\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1util_1_1DataGenerator_a262665c03d7fb7bc34a704de738d4806}{MODELS}} = \{"{}Toyota"{}, "{}BMW"{}, "{}Audi"{}, "{}Ford"{}, "{}Tesla"{}, "{}Honda"{}, "{}Mercedes"{}\}
+\begin{DoxyCompactList}\small\item\em Массив допустимых моделей автомобилей, используемых при случайной генерации и валидации ввода. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Утилитарный класс для генерации и загрузки данных об автомобилях. 
+
+Предоставляет методы для создания массива объектов {\ttfamily \doxylink{}{Car}} тремя способами\+: случайной генерацией, чтением из файла и ручным вводом через консоль. 
+
+См. определение в файле \mbox{\hyperlink{DataGenerator_8java_source}{Data\+Generator.\+java}} строка \mbox{\hyperlink{DataGenerator_8java_source_l00028}{28}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{classorg_1_1aston_1_1app_1_1util_1_1DataGenerator_a360c754b238d73da7e720928c64bb910}\label{classorg_1_1aston_1_1app_1_1util_1_1DataGenerator_a360c754b238d73da7e720928c64bb910} 
+\index{org.aston.app.util.DataGenerator@{org.aston.app.util.DataGenerator}!fromFiles@{fromFiles}}
+\index{fromFiles@{fromFiles}!org.aston.app.util.DataGenerator@{org.aston.app.util.DataGenerator}}
+\doxysubsubsection{\texorpdfstring{fromFiles()}{fromFiles()}}
+{\footnotesize\ttfamily static Car\mbox{[}$\,$\mbox{]} org.\+aston.\+app.\+util.\+Data\+Generator.\+from\+Files (\begin{DoxyParamCaption}\item[{String}]{file\+Name }\end{DoxyParamCaption}) throws IOException\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Загружает данные об автомобилях из текстового файла. 
+
+Каждая строка файла должна содержать три значения, разделённые запятыми\+: модель, мощность и год выпуска. Файл читается построчно с использованием {\ttfamily \doxylink{}{Files\#lines}}.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em file\+Name} & имя файла, из которого нужно загрузить данные, файл находиться в проекте /src/main/resources/ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+массив объектов Car, созданных на основе данных из файла 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Исключения}
+{\em IOException} & если произошла ошибка при чтении файла \\
+\hline
+{\em Illegal\+Argument\+Exception} & если строка в файле имеет некорректный формат \\
+\hline
+\end{DoxyExceptions}
+
+
+См. определение в файле \mbox{\hyperlink{DataGenerator_8java_source}{Data\+Generator.\+java}} строка \mbox{\hyperlink{DataGenerator_8java_source_l00097}{97}}
+
+\Hypertarget{classorg_1_1aston_1_1app_1_1util_1_1DataGenerator_aa603a0d61637888e4a1179d5893086f7}\label{classorg_1_1aston_1_1app_1_1util_1_1DataGenerator_aa603a0d61637888e4a1179d5893086f7} 
+\index{org.aston.app.util.DataGenerator@{org.aston.app.util.DataGenerator}!generateRandom@{generateRandom}}
+\index{generateRandom@{generateRandom}!org.aston.app.util.DataGenerator@{org.aston.app.util.DataGenerator}}
+\doxysubsubsection{\texorpdfstring{generateRandom()}{generateRandom()}}
+{\footnotesize\ttfamily static Car\mbox{[}$\,$\mbox{]} org.\+aston.\+app.\+util.\+Data\+Generator.\+generate\+Random (\begin{DoxyParamCaption}\item[{int}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Генерирует указанное количество случайных объектов Car с использованием стратегий генерации для разных типов автомобилей\+: низкой, средней и высокой мощности, а также спортивных автомобилей. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em count} & количество объектов Car для генерации \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+массив из {\ttfamily count} случайно сгенерированных объектов Car 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{DataGenerator_8java_source}{Data\+Generator.\+java}} строка \mbox{\hyperlink{DataGenerator_8java_source_l00057}{57}}
+
+\Hypertarget{classorg_1_1aston_1_1app_1_1util_1_1DataGenerator_a9d96efa73740772f49709a075af25f46}\label{classorg_1_1aston_1_1app_1_1util_1_1DataGenerator_a9d96efa73740772f49709a075af25f46} 
+\index{org.aston.app.util.DataGenerator@{org.aston.app.util.DataGenerator}!inputManually@{inputManually}}
+\index{inputManually@{inputManually}!org.aston.app.util.DataGenerator@{org.aston.app.util.DataGenerator}}
+\doxysubsubsection{\texorpdfstring{inputManually()}{inputManually()}}
+{\footnotesize\ttfamily static Car\mbox{[}$\,$\mbox{]} org.\+aston.\+app.\+util.\+Data\+Generator.\+input\+Manually (\begin{DoxyParamCaption}\item[{Scanner}]{scanner,  }\item[{int}]{count }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Запрашивает у пользователя данные для создания автомобилей через консоль. 
+
+Для каждого автомобиля пользователь вводит модель (из списка допустимых), мощность (в л.\+с.) и год выпуска. Ввод проверяется на корректность с помощью {\ttfamily \doxylink{}{Input\+Validator}}.
+
+
+\begin{DoxyParams}{Аргументы}
+{\em scanner} & объект Scanner для чтения ввода пользователя \\
+\hline
+{\em count} & количество автомобилей, которые необходимо ввести \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Возвращает}
+массив объектов Car, созданных на основе пользовательского ввода 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{DataGenerator_8java_source}{Data\+Generator.\+java}} строка \mbox{\hyperlink{DataGenerator_8java_source_l00129}{129}}
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1aston_1_1app_1_1util_1_1DataGenerator_a9d96efa73740772f49709a075af25f46_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Данные класса}
+\Hypertarget{classorg_1_1aston_1_1app_1_1util_1_1DataGenerator_a262665c03d7fb7bc34a704de738d4806}\label{classorg_1_1aston_1_1app_1_1util_1_1DataGenerator_a262665c03d7fb7bc34a704de738d4806} 
+\index{org.aston.app.util.DataGenerator@{org.aston.app.util.DataGenerator}!MODELS@{MODELS}}
+\index{MODELS@{MODELS}!org.aston.app.util.DataGenerator@{org.aston.app.util.DataGenerator}}
+\doxysubsubsection{\texorpdfstring{MODELS}{MODELS}}
+{\footnotesize\ttfamily final String \mbox{[}$\,$\mbox{]} org.\+aston.\+app.\+util.\+Data\+Generator.\+MODELS = \{"{}Toyota"{}, "{}BMW"{}, "{}Audi"{}, "{}Ford"{}, "{}Tesla"{}, "{}Honda"{}, "{}Mercedes"{}\}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Массив допустимых моделей автомобилей, используемых при случайной генерации и валидации ввода. 
+
+
+
+См. определение в файле \mbox{\hyperlink{DataGenerator_8java_source}{Data\+Generator.\+java}} строка \mbox{\hyperlink{DataGenerator_8java_source_l00038}{38}}
+
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/org/aston/app/util/\mbox{\hyperlink{DataGenerator_8java}{Data\+Generator.\+java}}\end{DoxyCompactItemize}

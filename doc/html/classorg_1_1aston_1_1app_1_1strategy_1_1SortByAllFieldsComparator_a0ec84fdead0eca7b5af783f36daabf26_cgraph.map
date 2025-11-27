@@ -1,0 +1,5 @@
+<map id="org.aston.app.strategy.SortByAllFieldsComparator.sort" name="org.aston.app.strategy.SortByAllFieldsComparator.sort">
+<area shape="rect" id="Node000001" title="Выполняет сортировку массива автомобилей по всем полям с использованием композиции компараторов." alt="" coords="5,5,188,45"/>
+<area shape="rect" id="Node000002" href="$interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy.html#a989dd029620ab0917ea7bb8ff2de5911" title="Рекурсивная реализация алгоритма быстрой сортировки." alt="" coords="236,5,416,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="188,23,222,23,222,28,188,28"/>
+</map>

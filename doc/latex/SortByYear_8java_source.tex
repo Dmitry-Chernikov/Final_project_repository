@@ -1,0 +1,33 @@
+\doxysection{Sort\+By\+Year.\+java}
+\hypertarget{SortByYear_8java_source}{}\label{SortByYear_8java_source}\index{src/main/java/org/aston/app/strategy/SortByYear.java@{src/main/java/org/aston/app/strategy/SortByYear.java}}
+\mbox{\hyperlink{SortByYear_8java}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{SortByYear_8java_source_l00001}00001\ \textcolor{keyword}{package\ }org.aston.app.strategy;}
+\DoxyCodeLine{\Hypertarget{SortByYear_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{SortByYear_8java_source_l00003}00003\ \textcolor{keyword}{import}\ org.aston.app.model.Car;}
+\DoxyCodeLine{\Hypertarget{SortByYear_8java_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{SortByYear_8java_source_l00012}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1strategy_1_1SortByYear}{00012}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1strategy_1_1SortByYear}{SortByYear}}\ \textcolor{keyword}{implements}\ \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy}{SortStrategy}}<Car>\ \{}
+\DoxyCodeLine{\Hypertarget{SortByYear_8java_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{SortByYear_8java_source_l00022}00022\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{SortByYear_8java_source_l00023}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1strategy_1_1SortByYear_a9348d5531bfc95da7e092c592a28bd6c}{00023}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1strategy_1_1SortByYear_a9348d5531bfc95da7e092c592a28bd6c}{sort}}(Car[]\ cars)\ \{}
+\DoxyCodeLine{\Hypertarget{SortByYear_8java_source_l00024}00024\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_a989dd029620ab0917ea7bb8ff2de5911}{quickSort}}(cars,\ 0,\ cars.length\ -\/\ 1);}
+\DoxyCodeLine{\Hypertarget{SortByYear_8java_source_l00025}00025\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SortByYear_8java_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{SortByYear_8java_source_l00040}00040\ \ \ \ \ @Override}
+\DoxyCodeLine{\Hypertarget{SortByYear_8java_source_l00041}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1strategy_1_1SortByYear_a3235c07202a5845465b4fe438765ca48}{00041}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1strategy_1_1SortByYear_a3235c07202a5845465b4fe438765ca48}{partition}}(Car[]\ cars,\ \textcolor{keywordtype}{int}\ low,\ \textcolor{keywordtype}{int}\ high)\ \{}
+\DoxyCodeLine{\Hypertarget{SortByYear_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ Integer\ pivot\ =\ cars[high].getYear();\ \textcolor{comment}{//\ Опорный\ элемент\ —\ последний}}
+\DoxyCodeLine{\Hypertarget{SortByYear_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ i\ =\ low\ -\/\ 1;\ \textcolor{comment}{//\ Индекс\ меньшего\ элемента}}
+\DoxyCodeLine{\Hypertarget{SortByYear_8java_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{SortByYear_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ j\ =\ low;\ j\ <\ high;\ j++)\ \{}
+\DoxyCodeLine{\Hypertarget{SortByYear_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ОШИБКА:\ сравнивается\ мощность\ (power),\ а\ не\ год\ (year)}}
+\DoxyCodeLine{\Hypertarget{SortByYear_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (((Integer)\ cars[j].getPower()).compareTo(pivot)\ <=\ 0)\ \{\ \textcolor{comment}{//\ Если\ текущий\ элемент\ меньше\ или\ равен\ опорному}}
+\DoxyCodeLine{\Hypertarget{SortByYear_8java_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ i++;}
+\DoxyCodeLine{\Hypertarget{SortByYear_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_ab388e9cd0834b25ceea010dc533855dc}{swap}}(cars,\ i,\ j);\ \textcolor{comment}{//\ Меняем\ местами\ элементы}}
+\DoxyCodeLine{\Hypertarget{SortByYear_8java_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SortByYear_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SortByYear_8java_source_l00052}00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1strategy_1_1SortStrategy_ab388e9cd0834b25ceea010dc533855dc}{swap}}(cars,\ i\ +\ 1,\ high);\ \textcolor{comment}{//\ Меняем\ местами\ опорный\ элемент\ с\ элементом\ на\ позиции\ i+1}}
+\DoxyCodeLine{\Hypertarget{SortByYear_8java_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ i\ +\ 1;}
+\DoxyCodeLine{\Hypertarget{SortByYear_8java_source_l00054}00054\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{SortByYear_8java_source_l00055}00055\ \}}
+
+\end{DoxyCode}

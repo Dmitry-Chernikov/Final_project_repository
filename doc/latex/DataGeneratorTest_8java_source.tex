@@ -1,0 +1,54 @@
+\doxysection{Data\+Generator\+Test.\+java}
+\hypertarget{DataGeneratorTest_8java_source}{}\label{DataGeneratorTest_8java_source}\index{src/main/java/org/aston/app/test/DataGeneratorTest.java@{src/main/java/org/aston/app/test/DataGeneratorTest.java}}
+\mbox{\hyperlink{DataGeneratorTest_8java}{См. документацию.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00001}00001\ \textcolor{keyword}{package\ }org.aston.app.test;}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00002}00002\ }
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00003}00003\ \textcolor{keyword}{import}\ org.aston.app.model.Car;}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00004}00004\ \textcolor{keyword}{import}\ org.aston.app.util.DataGenerator;}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00005}00005\ \textcolor{keyword}{import}\ org.aston.app.util.InputValidator;}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00007}00007\ \textcolor{keyword}{import}\ java.io.IOException;}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00008}00008\ \textcolor{keyword}{import}\ java.nio.file.Files;}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00009}00009\ \textcolor{keyword}{import}\ java.nio.file.Paths;}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00010}00010\ \textcolor{keyword}{import}\ java.nio.file.StandardOpenOption;}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00012}00012\ \textcolor{keyword}{import}\ \textcolor{keyword}{static}\ org.aston.app.test.TestUtils.assertEquals;}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00013}00013\ \textcolor{keyword}{import}\ \textcolor{keyword}{static}\ org.aston.app.test.TestUtils.assertFalse;}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00014}00014\ \textcolor{keyword}{import}\ \textcolor{keyword}{static}\ org.aston.app.test.TestUtils.assertTrue;}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00022}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1test_1_1DataGeneratorTest}{00022}}\ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1test_1_1DataGeneratorTest}{DataGeneratorTest}}\ \{}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00026}00026\ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keyword}{final}\ String\ TEST\_FILE\ =\ \textcolor{stringliteral}{"{}test\_data.txt"{}};}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00037}\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1test_1_1DataGeneratorTest_a1d6c7edb58690e80d4ca3ee50c2787fb}{00037}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1test_1_1DataGeneratorTest_a1d6c7edb58690e80d4ca3ee50c2787fb}{runTests}}()\ \{}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00038}00038\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Запуск\ тестов\ DataGenerator..."{}});}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Подготовка:\ создание\ тестового\ файла}}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00041}00041\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ String\ content\ =\ \textcolor{stringliteral}{"{}Toyota,150,2010\(\backslash\)nHonda,180,2015\(\backslash\)nBMW,300,2020"{}};}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ Files.write(Paths.get(\textcolor{stringliteral}{"{}src"{}},\ \textcolor{stringliteral}{"{}main"{}},\ \textcolor{stringliteral}{"{}resources"{}}).resolve(TEST\_FILE),\ content.getBytes(),\ StandardOpenOption.CREATE,\ StandardOpenOption.TRUNCATE\_EXISTING);}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00044}00044\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (IOException\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Ошибка\ создания\ тестового\ файла:\ "{}}\ +\ e.getMessage());}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00047}00047\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Тест\ 1:\ Чтение\ из\ файла}}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00050}00050\ \ \ \ \ \ \ \ \textcolor{keywordflow}{try}\ \{}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ Car[]\ cars\ =\ DataGenerator.fromFiles(TEST\_FILE);}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ assertEquals(\textcolor{stringliteral}{"{}Должно\ быть\ 3\ автомобиля"{}},\ 3,\ cars.length);}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ assertTrue(\textcolor{stringliteral}{"{}Первый\ —\ Toyota"{}},\ cars[0].getModel().equals(\textcolor{stringliteral}{"{}Toyota"{}}));}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ assertTrue(\textcolor{stringliteral}{"{}Последний\ —\ BMW"{}},\ cars[2].getModel().equals(\textcolor{stringliteral}{"{}BMW"{}}));}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}DataGenerator.fromFileTest\ пройден\ успешно."{}});}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00056}00056\ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{catch}\ (Exception\ e)\ \{}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}Тест\ fromFile\ провален:\ "{}}\ +\ e.getMessage());}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00058}00058\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Тест\ 2:\ Валидация\ данных}}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00061}00061\ \ \ \ \ \ \ \ \ assertTrue(\textcolor{stringliteral}{"{}Мощность\ 150\ —\ валидна"{}},\ InputValidator.isValidPower(150));}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00062}00062\ \ \ \ \ \ \ \ \ assertFalse(\textcolor{stringliteral}{"{}Мощность\ -\/10\ —\ невалидна"{}},\ InputValidator.isValidPower(-\/10));}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00063}00063\ \ \ \ \ \ \ \ \ assertTrue(\textcolor{stringliteral}{"{}Год\ 2020\ —\ валиден"{}},\ InputValidator.isValidYear(2020));}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00064}00064\ \ \ \ \ \ \ \ \ System.out.println(\textcolor{stringliteral}{"{}DataGeneratorTest\ пройден\ успешно.\(\backslash\)n"{}});}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00065}00065\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{DataGeneratorTest_8java_source_l00066}00066\ \}}
+
+\end{DoxyCode}

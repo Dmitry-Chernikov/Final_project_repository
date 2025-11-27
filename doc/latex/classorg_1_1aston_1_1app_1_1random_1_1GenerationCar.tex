@@ -1,0 +1,84 @@
+\doxysection{Класс org.\+aston.\+app.\+random.\+Generation\+Car}
+\hypertarget{classorg_1_1aston_1_1app_1_1random_1_1GenerationCar}{}\label{classorg_1_1aston_1_1app_1_1random_1_1GenerationCar}\index{org.aston.app.random.GenerationCar@{org.aston.app.random.GenerationCar}}
+
+
+Класс Generation\+Car предназначен для генерации объектов автомобилей с использованием стратегии случайной генерации.  
+
+
+\doxysubsubsection*{Открытые члены}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classorg_1_1aston_1_1app_1_1random_1_1GenerationCar_a1c880d4a5700614f937172fcb9bc7ecb}{Generation\+Car}} (\mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1random_1_1RandomGeneration}{Random\+Generation}} random)
+\begin{DoxyCompactList}\small\item\em Конструктор класса Generation\+Car. \end{DoxyCompactList}\item 
+Car \mbox{\hyperlink{classorg_1_1aston_1_1app_1_1random_1_1GenerationCar_a6c95e15d9387270bdd6f705f242a66a3}{generation\+Random\+Car}} ()
+\begin{DoxyCompactList}\small\item\em Создаёт и возвращает новый объект Car со случайно сгенерированными полями. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Подробное описание}
+Класс Generation\+Car предназначен для генерации объектов автомобилей с использованием стратегии случайной генерации. 
+
+Инкапсулирует логику создания случайного автомобиля, делегируя непосредственную генерацию внешнему объекту типа Random\+Generation. Поддерживает принцип инверсии зависимости (DI), позволяя легко заменять способ генерации в тестах или при расширении функциональности. 
+
+См. определение в файле \mbox{\hyperlink{GenerationCar_8java_source}{Generation\+Car.\+java}} строка \mbox{\hyperlink{GenerationCar_8java_source_l00012}{12}}
+
+
+
+\doxysubsection{Конструктор(ы)}
+\Hypertarget{classorg_1_1aston_1_1app_1_1random_1_1GenerationCar_a1c880d4a5700614f937172fcb9bc7ecb}\label{classorg_1_1aston_1_1app_1_1random_1_1GenerationCar_a1c880d4a5700614f937172fcb9bc7ecb} 
+\index{org.aston.app.random.GenerationCar@{org.aston.app.random.GenerationCar}!GenerationCar@{GenerationCar}}
+\index{GenerationCar@{GenerationCar}!org.aston.app.random.GenerationCar@{org.aston.app.random.GenerationCar}}
+\doxysubsubsection{\texorpdfstring{GenerationCar()}{GenerationCar()}}
+{\footnotesize\ttfamily org.\+aston.\+app.\+random.\+Generation\+Car.\+Generation\+Car (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interfaceorg_1_1aston_1_1app_1_1random_1_1RandomGeneration}{Random\+Generation}}}]{random }\end{DoxyParamCaption})}
+
+
+
+Конструктор класса Generation\+Car. 
+
+
+\begin{DoxyParams}{Аргументы}
+{\em random} & объект реализации Random\+Generation, который будет использоваться для генерации данных \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Исключения}
+{\em Null\+Pointer\+Exception} & если переданный объект random равен null \\
+\hline
+\end{DoxyExceptions}
+
+
+См. определение в файле \mbox{\hyperlink{GenerationCar_8java_source}{Generation\+Car.\+java}} строка \mbox{\hyperlink{GenerationCar_8java_source_l00025}{25}}
+
+
+
+\doxysubsection{Методы}
+\Hypertarget{classorg_1_1aston_1_1app_1_1random_1_1GenerationCar_a6c95e15d9387270bdd6f705f242a66a3}\label{classorg_1_1aston_1_1app_1_1random_1_1GenerationCar_a6c95e15d9387270bdd6f705f242a66a3} 
+\index{org.aston.app.random.GenerationCar@{org.aston.app.random.GenerationCar}!generationRandomCar@{generationRandomCar}}
+\index{generationRandomCar@{generationRandomCar}!org.aston.app.random.GenerationCar@{org.aston.app.random.GenerationCar}}
+\doxysubsubsection{\texorpdfstring{generationRandomCar()}{generationRandomCar()}}
+{\footnotesize\ttfamily Car org.\+aston.\+app.\+random.\+Generation\+Car.\+generation\+Random\+Car (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Создаёт и возвращает новый объект Car со случайно сгенерированными полями. 
+
+Использует делегирование к объекту random для получения значений всех полей автомобиля.
+
+\begin{DoxyReturn}{Возвращает}
+новый экземпляр Car с заполненными моделью, мощностью и годом выпуска 
+\end{DoxyReturn}
+
+
+См. определение в файле \mbox{\hyperlink{GenerationCar_8java_source}{Generation\+Car.\+java}} строка \mbox{\hyperlink{GenerationCar_8java_source_l00036}{36}}
+
+Граф вызовов\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classorg_1_1aston_1_1app_1_1random_1_1GenerationCar_a6c95e15d9387270bdd6f705f242a66a3_cgraph}
+\end{center}
+\end{figure}
+
+
+Объявления и описания членов класса находятся в файле\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/org/aston/app/random/\mbox{\hyperlink{GenerationCar_8java}{Generation\+Car.\+java}}\end{DoxyCompactItemize}

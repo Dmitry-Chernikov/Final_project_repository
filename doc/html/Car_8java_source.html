@@ -1,0 +1,260 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Система сортировки автомобилей: Исходный файл src/main/java/org/aston/app/model/Car.java</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+<link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="LogoAston.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Система сортировки автомобилей<span id="projectnumber">&#160;0.0.1</span>
+   </div>
+   <div id="projectbrief">Проект реализует консольное приложение для сортировки коллекций объектов типа Автомобиль.</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function() { init_codefold(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(document).ready(function(){initNavTree('Car_8java_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+<div class="header">
+  <div class="headertitle"><div class="title">Car.java</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="Car_8java.html">См. документацию.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="namespaceorg_1_1aston_1_1app_1_1model.html">    1</a></span><span class="keyword">package </span>org.aston.app.model;</div>
+<div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span> </div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">import</span> org.aston.app.exception.CarValidationException;</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> org.aston.app.validator.CarValidator;</div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">import</span> java.util.ArrayList;</div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="keyword">import</span> java.util.List;</div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="keyword">import</span> java.util.Objects;</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="classorg_1_1aston_1_1app_1_1model_1_1Car.html">   15</a></span><span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="classorg_1_1aston_1_1app_1_1model_1_1Car.html">Car</a> <span class="keyword">implements</span> Comparable&lt;Car&gt; {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">private</span> <span class="keyword">final</span> String model;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keywordtype">int</span> power;</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keyword">private</span> <span class="keyword">final</span> <span class="keywordtype">int</span> year;</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keyword">private</span> <a class="code hl_class" href="classorg_1_1aston_1_1app_1_1model_1_1Car.html">Car</a>(<span class="keyword">final</span> String model, <span class="keyword">final</span> <span class="keywordtype">int</span> power, <span class="keyword">final</span> <span class="keywordtype">int</span> year) {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>        this.model = model;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>        this.power = power;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        this.year = year;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    }</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
+<div class="foldopen" id="foldopen00051" data-start="{" data-end="}">
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno"><a class="line" href="classorg_1_1aston_1_1app_1_1model_1_1Car.html#a07fae1bbf7a33d23ce7bffdaed045456">   51</a></span>    <span class="keyword">public</span> <a class="code hl_function" href="classorg_1_1aston_1_1app_1_1model_1_1Car.html#a07fae1bbf7a33d23ce7bffdaed045456">Car</a>(Builder builder){</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <span class="keyword">this</span>(builder.model, builder.power, builder.year);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    }</div>
+</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="foldopen" id="foldopen00060" data-start="{" data-end="}">
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="classorg_1_1aston_1_1app_1_1model_1_1Car.html#a9f48ea4386e398bd039fca94794c1806">   60</a></span>    <span class="keyword">public</span> String <a class="code hl_function" href="classorg_1_1aston_1_1app_1_1model_1_1Car.html#a9f48ea4386e398bd039fca94794c1806">getModel</a>() {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        <span class="keywordflow">return</span> model;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    }</div>
+</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="foldopen" id="foldopen00069" data-start="{" data-end="}">
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno"><a class="line" href="classorg_1_1aston_1_1app_1_1model_1_1Car.html#ac245d52e987ee844fb9231abf5899556">   69</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classorg_1_1aston_1_1app_1_1model_1_1Car.html#ac245d52e987ee844fb9231abf5899556">getPower</a>() {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>        <span class="keywordflow">return</span> power;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    }</div>
+</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="foldopen" id="foldopen00078" data-start="{" data-end="}">
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno"><a class="line" href="classorg_1_1aston_1_1app_1_1model_1_1Car.html#aa6070e325aa87fb0fcef0a110937dce8">   78</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classorg_1_1aston_1_1app_1_1model_1_1Car.html#aa6070e325aa87fb0fcef0a110937dce8">getYear</a>() {</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>        <span class="keywordflow">return</span> year;</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    }</div>
+</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span>Builder {</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        <span class="keyword">private</span> <span class="keywordtype">int</span> power;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span> </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keyword">private</span> String model;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        <span class="keyword">private</span> <span class="keywordtype">int</span> year;</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keyword">private</span> List&lt;CarValidator&gt; validators = <span class="keyword">new</span> ArrayList&lt;&gt;();</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>        <span class="keyword">public</span> Builder setPower(<span class="keyword">final</span> <span class="keywordtype">int</span> power) {</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>            this.power = power;</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>            <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        }</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span> </div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>        <span class="keyword">public</span> Builder setModel(<span class="keyword">final</span> String model) {</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            this.model = model;</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>            <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        }</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        <span class="keyword">public</span> Builder setYear(<span class="keyword">final</span> <span class="keywordtype">int</span> year) {</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>            this.year = year;</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>            <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>        }</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span> </div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>        <span class="keyword">public</span> Car build() {</div>
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span>            var car = <span class="keyword">new</span> Car(model, power, year);</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>            validate(car);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>            <span class="keywordflow">return</span> car;</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span>        }</div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span> </div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        <span class="keyword">private</span> <span class="keywordtype">void</span> validate(Car car) {</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>            <span class="keywordflow">if</span> (!validators.isEmpty()) {</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>                validators.forEach(validator -&gt; validator.validate(car));</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>            }</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>        }</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span> </div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span>        <span class="keyword">public</span> Builder addValidator(List&lt;CarValidator&gt; validators) {</div>
+<div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>            this.validators.addAll(validators);</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>            <span class="keywordflow">return</span> <span class="keyword">this</span>;</div>
+<div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>        }</div>
+<div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>    }</div>
+<div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span> </div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>    @Override</div>
+<div class="foldopen" id="foldopen00175" data-start="{" data-end="}">
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno"><a class="line" href="classorg_1_1aston_1_1app_1_1model_1_1Car.html#a4ae9da0937ebb03eb111b991b0b58044">  175</a></span>    <span class="keyword">public</span> <span class="keywordtype">boolean</span> <a class="code hl_function" href="classorg_1_1aston_1_1app_1_1model_1_1Car.html#a4ae9da0937ebb03eb111b991b0b58044">equals</a>(Object o) {</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>        <span class="keywordflow">if</span> (<span class="keyword">this</span> == o) <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>        <span class="keywordflow">if</span> (o == <span class="keyword">null</span>) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>        <span class="keywordflow">if</span> (!(o instanceof <a class="code hl_class" href="classorg_1_1aston_1_1app_1_1model_1_1Car.html">Car</a>)) <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span>        <a class="code hl_class" href="classorg_1_1aston_1_1app_1_1model_1_1Car.html">Car</a> car = (<a class="code hl_class" href="classorg_1_1aston_1_1app_1_1model_1_1Car.html">Car</a>) o;</div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>        <span class="keywordflow">return</span> power == car.power &amp;&amp;</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>            year == car.year &amp;&amp;</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>            model.<a class="code hl_function" href="classorg_1_1aston_1_1app_1_1model_1_1Car.html#a4ae9da0937ebb03eb111b991b0b58044">equals</a>(car.model);</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    }</div>
+</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    @Override</div>
+<div class="foldopen" id="foldopen00192" data-start="{" data-end="}">
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno"><a class="line" href="classorg_1_1aston_1_1app_1_1model_1_1Car.html#a65a5589da7a3e53365003947c82c25af">  192</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classorg_1_1aston_1_1app_1_1model_1_1Car.html#a65a5589da7a3e53365003947c82c25af">hashCode</a>() {</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        <span class="keywordflow">return</span> Objects.hash(power, model, year);</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>    }</div>
+</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span> </div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>    @Override</div>
+<div class="foldopen" id="foldopen00203" data-start="{" data-end="}">
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno"><a class="line" href="classorg_1_1aston_1_1app_1_1model_1_1Car.html#aa57a0bdb746a66a5c5190fad32b93820">  203</a></span>    <span class="keyword">public</span> String <a class="code hl_function" href="classorg_1_1aston_1_1app_1_1model_1_1Car.html#aa57a0bdb746a66a5c5190fad32b93820">toString</a>() {</div>
+<div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Car{&quot;</span> +</div>
+<div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span>            <span class="stringliteral">&quot;horse power=&quot;</span> + power +</div>
+<div class="line"><a id="l00206" name="l00206"></a><span class="lineno">  206</span>            <span class="stringliteral">&quot;, model name=&#39;&quot;</span> + model + <span class="charliteral">&#39;\&#39;&#39;</span> +</div>
+<div class="line"><a id="l00207" name="l00207"></a><span class="lineno">  207</span>            <span class="stringliteral">&quot;, production year=&quot;</span> + year +</div>
+<div class="line"><a id="l00208" name="l00208"></a><span class="lineno">  208</span>            <span class="charliteral">&#39;}&#39;</span>;</div>
+<div class="line"><a id="l00209" name="l00209"></a><span class="lineno">  209</span>    }</div>
+</div>
+<div class="line"><a id="l00210" name="l00210"></a><span class="lineno">  210</span> </div>
+<div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span> </div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>    @Override</div>
+<div class="foldopen" id="foldopen00224" data-start="{" data-end="}">
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno"><a class="line" href="classorg_1_1aston_1_1app_1_1model_1_1Car.html#a5f71c918d71aaec79de010eaa9fe26bd">  224</a></span>    <span class="keyword">public</span> <span class="keywordtype">int</span> <a class="code hl_function" href="classorg_1_1aston_1_1app_1_1model_1_1Car.html#a5f71c918d71aaec79de010eaa9fe26bd">compareTo</a>(<a class="code hl_class" href="classorg_1_1aston_1_1app_1_1model_1_1Car.html">Car</a> other) <span class="keywordflow">throws</span> NullPointerException {</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>        <span class="keywordflow">if</span> (other == <span class="keyword">null</span>) <span class="keywordflow">throw</span> <span class="keyword">new</span> NullPointerException(<span class="stringliteral">&quot;Cannot compare to null&quot;</span>);</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span> </div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        <span class="keywordtype">int</span> compare = this.model.compareTo(other.model);</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>        <span class="keywordflow">if</span> (compare != 0) <span class="keywordflow">return</span> compare;</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span> </div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>        compare = Integer.compare(this.power, other.power);</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        <span class="keywordflow">if</span> (compare != 0) <span class="keywordflow">return</span> compare;</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        <span class="keywordflow">return</span> Integer.compare(this.year, other.year);</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>    }</div>
+</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>}</div>
+</div>
+<div class="ttc" id="aclassorg_1_1aston_1_1app_1_1model_1_1Car_html"><div class="ttname"><a href="classorg_1_1aston_1_1app_1_1model_1_1Car.html">org.aston.app.model.Car</a></div><div class="ttdoc">Класс, представляющий автомобиль.</div><div class="ttdef"><b>Definition</b> <a href="Car_8java_source.html#l00015">Car.java:15</a></div></div>
+<div class="ttc" id="aclassorg_1_1aston_1_1app_1_1model_1_1Car_html_a07fae1bbf7a33d23ce7bffdaed045456"><div class="ttname"><a href="classorg_1_1aston_1_1app_1_1model_1_1Car.html#a07fae1bbf7a33d23ce7bffdaed045456">org.aston.app.model.Car.Car</a></div><div class="ttdeci">Car(Builder builder)</div><div class="ttdoc">Конструктор, принимающий экземпляр билдера.</div><div class="ttdef"><b>Definition</b> <a href="Car_8java_source.html#l00051">Car.java:51</a></div></div>
+<div class="ttc" id="aclassorg_1_1aston_1_1app_1_1model_1_1Car_html_a4ae9da0937ebb03eb111b991b0b58044"><div class="ttname"><a href="classorg_1_1aston_1_1app_1_1model_1_1Car.html#a4ae9da0937ebb03eb111b991b0b58044">org.aston.app.model.Car.equals</a></div><div class="ttdeci">boolean equals(Object o)</div><div class="ttdoc">Проверяет, равен ли текущий объект другому объекту.</div><div class="ttdef"><b>Definition</b> <a href="Car_8java_source.html#l00175">Car.java:175</a></div></div>
+<div class="ttc" id="aclassorg_1_1aston_1_1app_1_1model_1_1Car_html_a5f71c918d71aaec79de010eaa9fe26bd"><div class="ttname"><a href="classorg_1_1aston_1_1app_1_1model_1_1Car.html#a5f71c918d71aaec79de010eaa9fe26bd">org.aston.app.model.Car.compareTo</a></div><div class="ttdeci">int compareTo(Car other)</div><div class="ttdoc">Сравнивает этот объект Car с другим объектом Car для определения порядка.</div><div class="ttdef"><b>Definition</b> <a href="Car_8java_source.html#l00224">Car.java:224</a></div></div>
+<div class="ttc" id="aclassorg_1_1aston_1_1app_1_1model_1_1Car_html_a65a5589da7a3e53365003947c82c25af"><div class="ttname"><a href="classorg_1_1aston_1_1app_1_1model_1_1Car.html#a65a5589da7a3e53365003947c82c25af">org.aston.app.model.Car.hashCode</a></div><div class="ttdeci">int hashCode()</div><div class="ttdoc">Возвращает хеш-код объекта на основе его полей.</div><div class="ttdef"><b>Definition</b> <a href="Car_8java_source.html#l00192">Car.java:192</a></div></div>
+<div class="ttc" id="aclassorg_1_1aston_1_1app_1_1model_1_1Car_html_a9f48ea4386e398bd039fca94794c1806"><div class="ttname"><a href="classorg_1_1aston_1_1app_1_1model_1_1Car.html#a9f48ea4386e398bd039fca94794c1806">org.aston.app.model.Car.getModel</a></div><div class="ttdeci">String getModel()</div><div class="ttdoc">Возвращает модель автомобиля.</div><div class="ttdef"><b>Definition</b> <a href="Car_8java_source.html#l00060">Car.java:60</a></div></div>
+<div class="ttc" id="aclassorg_1_1aston_1_1app_1_1model_1_1Car_html_aa57a0bdb746a66a5c5190fad32b93820"><div class="ttname"><a href="classorg_1_1aston_1_1app_1_1model_1_1Car.html#aa57a0bdb746a66a5c5190fad32b93820">org.aston.app.model.Car.toString</a></div><div class="ttdeci">String toString()</div><div class="ttdoc">Возвращает строковое представление объекта Car.</div><div class="ttdef"><b>Definition</b> <a href="Car_8java_source.html#l00203">Car.java:203</a></div></div>
+<div class="ttc" id="aclassorg_1_1aston_1_1app_1_1model_1_1Car_html_aa6070e325aa87fb0fcef0a110937dce8"><div class="ttname"><a href="classorg_1_1aston_1_1app_1_1model_1_1Car.html#aa6070e325aa87fb0fcef0a110937dce8">org.aston.app.model.Car.getYear</a></div><div class="ttdeci">int getYear()</div><div class="ttdoc">Возвращает год производства автомобиля.</div><div class="ttdef"><b>Definition</b> <a href="Car_8java_source.html#l00078">Car.java:78</a></div></div>
+<div class="ttc" id="aclassorg_1_1aston_1_1app_1_1model_1_1Car_html_ac245d52e987ee844fb9231abf5899556"><div class="ttname"><a href="classorg_1_1aston_1_1app_1_1model_1_1Car.html#ac245d52e987ee844fb9231abf5899556">org.aston.app.model.Car.getPower</a></div><div class="ttdeci">int getPower()</div><div class="ttdoc">Возвращает мощность двигателя.</div><div class="ttdef"><b>Definition</b> <a href="Car_8java_source.html#l00069">Car.java:69</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dir_5eb159725f84c66aafd839904a4acdd0.html">main</a></li><li class="navelem"><a class="el" href="dir_fd3f6763802dee1ad875f6c80eac0bda.html">java</a></li><li class="navelem"><a class="el" href="dir_daf7592b8ade76cad5a1e82d805df54b.html">org</a></li><li class="navelem"><a class="el" href="dir_6731ac4a8bdd4a654cf310ace42bc18f.html">aston</a></li><li class="navelem"><a class="el" href="dir_f0350216b77b7c6a6b05f842e3435737.html">app</a></li><li class="navelem"><a class="el" href="dir_b2dbfb22720617fbe31ce7dbdc59f6b5.html">model</a></li><li class="navelem"><a class="el" href="Car_8java.html">Car.java</a></li>
+    <li class="footer">Создано системой <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8 </li>
+  </ul>
+</div>
+</body>
+</html>
